@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass campus/posgrados:campus/posgrados --no-source-map --style compressed",
-    "watch": "sass --watch campus/posgrados:campus/posgrados --no-source-map --style compressed",
+    "build": "sass public/campus/posgrados:public/campus/posgrados --no-source-map --style compressed",
+    "watch": "sass --watch public/campus/posgrados:public/campus/posgrados --no-source-map --style compressed",
     "all": "node server.js & sass --watch campus/posgrados:campus/posgrados --no-source-map --style compressed"
   },
   "keywords": [],
