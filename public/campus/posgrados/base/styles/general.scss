@@ -3,6 +3,9 @@
 $primary: #152F4E;
 $secondary: #7BC5B6;
 $accent: #FFD658;
+$grey1: #F0F0F0;
+$grey2: #B4C1CE;
+$grey3: #8394A6;
 
 // TAMAÑOS DE FUENTE
 
@@ -37,24 +40,296 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 
+/* HOME */
 
+body.home {
+  #page-content {
+    #region-main-box {
+      #region-main {
+        div[role="main"] {
+          .course-content {
+            ul.topics {
+              li#section-0 {
+        
+              }
+              li.section {
+                .course-section-header {
+                  h3.sectionname {
+                    a:first-of-type {
+                      @include title;
+                      text-transform: uppercase;
+                    }
+                  }        
+                }
+                .content {
+                  .my-3 {
+                    
+                    .course-description-item.summarytext {
+                      .description-inner {
+                        .no-overflow {
+                          margin-top: 0 !important;
 
-/* MARCO GENERAL DE INTERIORES */
+                          h2 {
+                            @include subtitle;
+                            border: none !important;
+                            background-color: transparent;
+                            padding: 0 !important;
+                          }
+                          p.fecha {
+                                                          
+                          }
+                        }
+                      } 
+                    }
+                  }
+                  ul.section {
+                    display: none !important;                                      
+                  }
+                  .mdl-left.py-2.changenumsections {
+                    a {
+                      color: black;                                    
+                    }                                      
+                  }
+                }
+              }
 
-#page-header h1.h2{
-    @include body;
-    border: none !important;
-}
+              /* módulo completado */
 
-.drawer-left-toggle {
-  display: none !important;
-}
+              li.section.completo {
+                background-color: $grey1;
+                
+                .course-section-header {
+                  h3.sectionname {
+                    a:first-of-type {
+                                            
+                    }
+                  }
+                }
 
-.drawer-right-toggle {
-  .btn {
-    background-color: $primary !important;
+                .content {
+                  .my-3 {                    
+                    .course-description-item.summarytext {
+                      .description-inner {
+                        .no-overflow {
+                          h2 {
+                                                   
+                          }
+                          p.fecha {
+                                                     
+                          }                          
+                        }
+                      } 
+                    }
+                  }
+                  ul.section {                                                      
+                  }
+                  .mdl-left.py-2.changenumsections {
+                    a {
+                                                                          
+                    }                                                    
+                  }
+                }
+              }
+
+              /* módulo incompleto */
+
+              li.section.incompleto {
+                background-color: white;
+                border: 1px solid $grey2;
+                
+                .course-section-header {
+                  h3.sectionname {
+                    a:first-of-type {
+                                            
+                    }
+                  }
+                }
+
+                .content {
+                  .my-3 {                    
+                    .course-description-item.summarytext {
+                      .description-inner {
+                        .no-overflow {
+                          h2 {
+                                                   
+                          }
+                          p.fecha {
+                                                     
+                          }                          
+                        }
+                      } 
+                    }
+                  }
+                  ul.section {                                                      
+                  }
+                  .mdl-left.py-2.changenumsections {
+                    a {
+                                                                          
+                    }                                                    
+                  }
+                }
+              }
+
+              /* módulo destacado / actual */
+
+              li.section.current {
+                background-color: $primary;
+                &::before {
+                  display: none !important;                                                    
+                }
+                .course-section-header {
+                  h3.sectionname {
+                    a:first-of-type {
+                      color: white !important;                      
+                    }
+                  }
+                }
+
+                .content {
+                  .my-3 {                    
+                    .course-description-item.summarytext {
+                      .description-inner {
+                        .no-overflow {
+                          h2 {
+                            color: white !important;                          
+                          }
+                          p.fecha {
+                            color: white !important;                          
+                          }                          
+                        }
+                      } 
+                    }
+                  }
+                  ul.section {                                                      
+                  }
+                  .mdl-left.py-2.changenumsections {
+                    a {
+                      color: white;                                                     
+                    }                                                    
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+} 
+
+/* GENERAL */
+
+#page {
+  #topofscroll {
+
+    /* solapitas */  
+    .drawer-toggles {
+      .drawer-left-toggle {
+        display: none !important;
+      }      
+      .drawer-right-toggle {
+        .btn {
+          background-color: $primary !important;
+        }
+      }      
+    }
+
+    /* header */
+    header#page-header {
+      .w-100 {
+        .page-header-headings {
+          h1.h2{
+            @include body;
+            border: none !important;
+          }
+        }
+      }
+    }
+
+    /* navbar de administración del curso */
+    .secondary-navigation.d-print-none {
+      
+    }
+
+    /* contenido general */
+    #page-content {
+      #region-main-box {
+        #region-main {
+          div[role="main"] {
+            .course-content {
+              ul.topics {                
+                li.section {
+                  &::before {
+                    display: none !important;                                                    
+                  }
+                  .course-section-header {
+                    .sectionbadges {
+                      display: none !important;                                                    
+                    }
+                  }
+                  .content {
+                    .my-3 {
+                      padding: 0;
+                      border: 0;
+                      .course-description-item.summarytext {
+                        .description-inner {
+                          .no-overflow {              
+
+                            
+                          }
+                        } 
+                      }
+                    }
+                    ul.section {
+                                                           
+                    }
+                  }
+                }
+                li#section-0 {
+                  background-color: transparent;
+                  .course-section-header {                    
+                    display: none !important;                   
+                  }
+                  .content {
+                    .my-3 {                      
+                      .course-description-item.summarytext {
+                        .description-inner {
+                          .no-overflow {           
+                            h1 {           
+                              @include title;
+                            
+                            }
+                            p {   
+                              a {   
+                                color: $primary;
+                              
+                              }
+                            }
+                            
+                          }
+                        } 
+                      }
+                    }
+                    ul.section {
+                                                           
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
+
+
+
+
+
+
 
 /* MÓDULOS */
 
@@ -72,4 +347,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 /* ACTIVIDAD */
+
+
+
 
