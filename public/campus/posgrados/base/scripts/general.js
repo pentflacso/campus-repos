@@ -1,5 +1,7 @@
+/* SCRIPT PARA HABILITAR UN CSS DE MODO DEV */
+
 document.addEventListener("DOMContentLoaded", () => {
-    const DEV_CSS_PATH = "https://localhost:3000/campus/posgrados/diplo-eel/4/styles/course.css";
+    const DEV_CSS_HOST = "https://localhost:3000";
     const ORIGINAL_CSS_PATH = document.getElementById("pent-styles").href;
     const LOCAL_STORAGE_KEY = "devModeEnabled";
 
@@ -14,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Verificar si el body tiene la clase "editing"
     if (!document.body.classList.contains("editing")) {
-        console.warn("El modo dev solo puede activarse si el <body> tiene la clase 'editing'.");
         return;
     }
 
@@ -73,7 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("El elemento <link id=\"pent-styles\"> no existe en la página.");
             return;
         }
+
+        // Extraer la ruta del archivo CSS original
+        const originalURL = new URL(ORIGINAL_CSS_PATH);
+        const cssPath = originalURL.pathname; // Ruta interna del archivo
+
+        // Construir la nueva URL con el host de desarrollo
+        const devCSSURL = new URL(cssPath, DEV_CSS_HOST);
+
+        // Añadir un timestamp para evitar el caché
         const timestamp = new Date().getTime();
-        stylesLink.href = `${DEV_CSS_PATH}?t=${timestamp}`;
+        stylesLink.href = `${devCSSURL.href}?t=${timestamp}`;
     }
 });
