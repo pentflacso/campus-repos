@@ -1,24 +1,39 @@
 // COLORES
 
-$primary: red;
+$primary: #152F4E;
 $secondary: #7BC5B6;
 $accent: #FFD658;
 
 // TAMAÑOS DE FUENTE
 
-// $fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
-// $fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
-// $fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
-// $fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
-// $fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-// $fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
-// $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+$fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+$fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+$fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+$fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+$fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+$fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+$fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+
+
+@mixin title {
+  font-family: 'Roboto' !important;
+  font-size: $fs-lg !important;
+  color: $primary !important;
+  font-weight: 500 !important;
+}
 
 @mixin subtitle {
   font-family: 'Roboto' !important;
-  font-size: 16px !important;
+  font-size: $fs-md !important;
   color: $primary !important;
   font-weight: 500 !important;
+}
+
+@mixin body {
+  font-family: 'Roboto' !important;
+  font-size: $fs-base !important;
+  color: $primary !important;
+  font-weight: 400 !important;
 }
 
 
@@ -26,13 +41,35 @@ $accent: #FFD658;
 
 /* MARCO GENERAL DE INTERIORES */
 
-
-
 #page-header h1.h2{
-    @include subtitle;
+    @include body;
     border: none !important;
 }
 
+.drawer-left-toggle {
+  display: none !important;
+}
+
+.drawer-right-toggle {
+  .btn {
+    background-color: $primary !important;
+  }
+}
+
+/* MÓDULOS */
+
+.single-section {
+
+  .section-navigation.navigationtitle.d-flex.justify-content-between {
+    display: none !important;
+}
+
+  h3.sectionname {
+    a:first-of-type {
+      @include title;
+    }
+  }
+}
 
 /* ACTIVIDAD */
 

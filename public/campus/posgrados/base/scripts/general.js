@@ -87,3 +87,117 @@ document.addEventListener("DOMContentLoaded", () => {
         stylesLink.href = `${devCSSURL.href}?t=${timestamp}`;
     }
 });
+
+
+
+  
+// Para que la section-0 muestre el titulo o el volver según este en la portada o en un módulo. 
+  
+// Espera a que el DOM esté completamente cargado
+
+document.addEventListener("DOMContentLoaded", function() {
+    let body = document.body;   
+    
+    //SI estamos en la portada del curso
+    if (body.classList.contains('pagelayout-course')) {
+        if (window.innerWidth < 1200) {  
+        
+            let regionMainBox = document.getElementById('region-main-box');
+            let regionMain = document.getElementById('region-main');   
+            let columna = document.querySelector('[data-region="blocks-column"]');
+            
+            // Crear contenedor de menu
+            const  contentMenu = document.createElement('div');
+            contentMenu.id = 'content-menu-column';
+            
+            const  overley = document.createElement('div');
+            overley.id = 'overley';
+            body.appendChild(overley);
+    
+            // Crear el botón
+            const btnBlocksColumn = document.createElement('button');
+            btnBlocksColumn.id = 'btn-blocks-column';
+            btnBlocksColumn.textContent = 'Mas Info';
+
+            contentMenu.appendChild(btnBlocksColumn);
+            contentMenu.appendChild(columna);
+            body.appendChild(contentMenu);
+            
+            btnBlocksColumn.addEventListener('click', function () {
+                body.classList.toggle('active-menu-column');                    
+                
+                setTimeout(function() {
+                    overley.classList.toggle('visible');
+                    contentMenu.classList.toggle('active');
+                    btnBlocksColumn.classList.toggle('active');
+                }, 1);
+            });
+        
+        }
+        
+    }
+
+    // Función para controlar la visibilidad del h1 y la etiqueta a
+    function controlarVisibilidad() {
+        var singleSection = document.querySelector(".course-content .single-section");
+        var section0H1 = document.querySelector(".course-content #section-0 h1");
+        var section0Link = document.querySelector(".course-content #section-0 a.volver");
+
+        if (singleSection) {
+            // Si existe el div .single-section, ocultar el h1
+            section0H1.style.display = "none";
+        } else {
+            // Si no existe el div .single-section, ocultar la etiqueta a
+            section0Link.style.display = "none";
+            // Agregar la clase .home al body
+            document.body.classList.add("home");
+        }
+    }
+
+    // Llama a la función para controlar la visibilidad cuando se cargue la página
+    controlarVisibilidad();
+
+    // Observador de mutaciones para detectar cambios en el DOM
+    var observer = new MutationObserver(function(mutationsList, observer) {
+        // Llama a la función para controlar la visibilidad cada vez que haya cambios en el DOM
+        controlarVisibilidad();
+    });
+
+    // Configura el observador para que observe cambios en el div .course-content
+    observer.observe(document.querySelector(".course-content"), { childList: true, subtree: true });
+    
+    
+     // AGREGA CLASES A ETIQUETAS LI PARA DIFERENCIAR LAS CARDS DE LOS MÓDULOS EN COMPLETOS E INCOMPLETOS
+    
+    // Encontrar la etiqueta <li> con la clase .current
+    var currentListItem = document.querySelector(".course-content .current");
+
+    // Verificar si se encontró la etiqueta <li> con la clase .current
+    if (currentListItem) {
+        // Obtener todos los elementos <li> dentro de la misma lista (<ul>)
+        var listItems = currentListItem.parentElement.querySelectorAll("li");
+
+        // Bandera para indicar si ya hemos encontrado la etiqueta <li> con la clase .current
+        var foundCurrent = false;
+
+        // Iterar sobre los elementos <li> y agregar la clase .completo o .incompleto
+        listItems.forEach(function(item) {
+            if (!foundCurrent) {
+                // Si aún no hemos encontrado la etiqueta <li> con la clase .current, agregamos la clase .completo
+                if (item !== currentListItem) {
+                    item.classList.add("completo");
+                }
+
+                // Si encontramos la etiqueta <li> con la clase .current, cambiamos la bandera
+                if (item === currentListItem) {
+                    foundCurrent = true;
+                }
+            } else {
+                // Si ya hemos encontrado la etiqueta <li> con la clase .current, agregamos la clase .incompleto
+                item.classList.add("incompleto");
+            }
+        });
+    }               
+    
+    
+});
