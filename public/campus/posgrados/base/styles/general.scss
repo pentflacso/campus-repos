@@ -208,13 +208,15 @@ body:not(.home) {
                                                     }
                                                 }
                                             }
-                                            ul.section {}
                                         }
                                     }
                                     li#section-0 {
                                         background-color: transparent;
                                         .course-section-header {
                                             h3 {
+                                                display: none !important;
+                                            }
+                                            .section_action_menu {
                                                 display: none !important;
                                             }
                                         }
@@ -235,7 +237,9 @@ body:not(.home) {
                                                     }
                                                 }
                                             }
-                                            ul.section {}
+                                            button.btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center.p-3.mb-3 {
+                                                display: none !important;
+                                            }
                                         }
                                     }
                                 }
