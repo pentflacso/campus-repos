@@ -36,6 +36,42 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 
+/* NAVBAR DE ADMINISTRACION DEL CURSO */
+
+.secondary-navigation.d-print-none {
+    nav.moremenu.navigation.observed {
+        padding: 0;
+        border-bottom: 0;
+        ul {
+            li {
+                margin-right: 10px;
+                a.nav-link.active.active_tree_node {
+                    background: $primary;
+                    &:hover {
+                        background-color: $grey2;
+                        color: $primary;
+                    }
+                }
+                a.nav-link {
+                    padding: 0.5rem 1rem;
+                    border-radius: 500px;
+                    height: initial;
+                    border-bottom: 0;
+                    &:hover {
+                        border-bottom: 0;
+                        background-color: $grey2;
+                        color: $primary;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /* EXCLUSIVO DE HOME */
 
 body.home {
@@ -266,6 +302,37 @@ body:not(.home) {
 }
 
 
+/* EXCLUSIVO NOT EDITING */
+
+body:not(.editing) {
+    ul.section {
+        li.activity {
+            .activityiconcontainer {
+                display: none;
+            }
+            .media-body {
+                .text-uppercase {
+                    display: none;
+                }
+            }
+            a {
+                .instancename {
+                    background-image: url(../../../base/img/punto-verde.svg);
+                    padding-left: 70px;
+                    background-size: 19px auto;
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    display: block;
+                    @include body;
+                }
+            }
+        }
+    }
+}
+
+
 /* GENERAL */
 
 #page {
@@ -292,8 +359,6 @@ body:not(.home) {
                 }
             }
         }
-        /* navbar de administración del curso */
-        .secondary-navigation.d-print-none {}
         /* contenido general */
         #page-content {
             #region-main-box {
