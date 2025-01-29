@@ -319,7 +319,7 @@ body:not(.editing) {
                 color: $primary;
                 &:hover {
                     color: $grey3 !important;
-                    text-decoration: none;
+                    text-decoration: none !important;
                 }
                 .instancename {
                     background-image: url(../../../base/img/punto-verde.svg);
@@ -332,9 +332,6 @@ body:not(.editing) {
                     display: block;
                     font-size: $fs-base;
                     font-weight: 500;
-                    &:hover {
-                        color: $grey3 !important;
-                    }
                 }
             }
         }
