@@ -318,6 +318,9 @@ body:not(.editing) {
         padding: 0 !important;
         .course-section-header {
             position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
             h3.sectionname {
                 position: absolute;
                 width: 100%;
@@ -331,7 +334,7 @@ body:not(.editing) {
                     width: 100%;
                     height: 100%;
                     display: block;
-                    z-index: 1;
+                    z-index: 10000;
                     &:hover {
                         text-decoration: none;
                         background-color: rgba(0, 0, 0, 0.1);
@@ -339,7 +342,7 @@ body:not(.editing) {
                 }
             }
             .section_action_menu {
-                z-index: 2000 !important;
+                //z-index: 2000 !important;
             }
         }
         .content {
@@ -694,113 +697,115 @@ body:not(.editing) {
 
 /* PAGINAS - (ACTIVIDAD) */
 
-#page-content {
-    #region-main-box {
-        #region-main {
-            h2 {
-                display: none;
-            }
-            div[role="main"] {
-                .box.py-3.generalbox.center.clearfix {
-                    .no-overflow {
-                        .page-actividad {
-                            img {
-                                margin: 3rem 0;
-                            }
-                            a {
-                                text-decoration-style: solid;
-                                text-decoration-color: $primary;
-                                text-decoration-thickness: .10em;
-                                text-underline-offset: .15em;
-                                color: $primary;
-                                font-family: 'Roboto';
-                                font-weight: bold;
-                                &:hover {
-                                    color: $grey3;
-                                    text-decoration-color: $grey3;
+body:not(.home) {
+    #page-content {
+        #region-main-box {
+            #region-main {
+                h2 {
+                    display: none;
+                }
+                div[role="main"] {
+                    .box.py-3.generalbox.center.clearfix {
+                        .no-overflow {
+                            .page-actividad {
+                                img {
+                                    margin: 3rem 0;
                                 }
-                            }
-                            a.volver {
-                                color: $primary;
-                                text-decoration: none;
-                                font-weight: 400;
-                                &:hover {
-                                    color: $grey3;
-                                    text-decoration: none;
-                                }
-                            }
-                            h1 {
-                                @include title;
-                                margin-bottom: 3rem;
-                            }
-                            h3 {
-                                @include subtitle;
-                                border-bottom: 0;
-                            }
-                            ul {
-                                @include body;
-                                li::marker {
+                                a {
+                                    text-decoration-style: solid;
+                                    text-decoration-color: $primary;
+                                    text-decoration-thickness: .10em;
+                                    text-underline-offset: .15em;
                                     color: $primary;
-                                    font-size: 1.5rem;
+                                    font-family: 'Roboto';
+                                    font-weight: bold;
+                                    &:hover {
+                                        color: $grey3;
+                                        text-decoration-color: $grey3;
+                                    }
                                 }
-                            }
-                            .momento {
-                                background-color: #fff;
-                                background-repeat: no-repeat;
-                                background-size: 50px auto;
-                                background-position: left 2.5rem top 3.5rem;
-                                padding: 4rem 2.5rem 4rem 8rem;
-                                /* box-shadow: 0px 0px 10px 0px #ccc; */
-                                text-align: left;
-                                border: 1px solid $grey2;
-                                margin: 40px 0;
-                                @media (max-width: 576px) {
-                                    padding: 8rem 4rem 4rem 4rem;
+                                a.volver {
+                                    color: $primary;
+                                    text-decoration: none;
+                                    font-weight: 400;
+                                    &:hover {
+                                        color: $grey3;
+                                        text-decoration: none;
+                                    }
+                                }
+                                h1 {
+                                    @include title;
+                                    margin-bottom: 3rem;
                                 }
                                 h3 {
-                                    margin-bottom: 2rem;
+                                    @include subtitle;
+                                    border-bottom: 0;
                                 }
-                            }
-                            .mom-1 {
-                                background-image: url(../../../base/img/sesion1.svg);
-                            }
-                            .mom-2 {
-                                background-image: url(../../../base/img/sesion2.svg);
-                            }
-                            .mom-3 {
-                                background-image: url(../../../base/img/sesion3.svg);
-                            }
-                            .mom-4 {
-                                background-image: url(../../../base/img/sesion4.svg);
-                            }
-                            .mom-5 {
-                                background-image: url(../../../base/img/sesion5.svg);
-                            }
-                            .mom-6 {
-                                background-image: url(../../../base/img/sesion6.svg);
-                            }
-                            .act-importante {
-                                background-color: $accent;
-                                margin-left: 0 !important;
-                                margin-right: 0 !important;
-                                padding: 2.5rem;
-                                line-height: 1.4;
-                            }
-                            .destacado {
-                                background-color: $grey1;
-                                /* margin: initial;
-                                margin-left: 0 !important;
-                                margin-right: 0 !important; */
-                                padding: 2.5rem !important;
-                                margin-bottom: 20px;
-                                box-shadow: none !important;
-                                //line-height: initial;
+                                ul {
+                                    @include body;
+                                    li::marker {
+                                        color: $primary;
+                                        font-size: 1.5rem;
+                                    }
+                                }
+                                .momento {
+                                    background-color: #fff;
+                                    background-repeat: no-repeat;
+                                    background-size: 50px auto;
+                                    background-position: left 2.5rem top 3.5rem;
+                                    padding: 4rem 2.5rem 4rem 8rem;
+                                    /* box-shadow: 0px 0px 10px 0px #ccc; */
+                                    text-align: left;
+                                    border: 1px solid $grey2;
+                                    margin: 40px 0;
+                                    @media (max-width: 576px) {
+                                        padding: 8rem 4rem 4rem 4rem;
+                                    }
+                                    h3 {
+                                        margin-bottom: 2rem;
+                                    }
+                                }
+                                .mom-1 {
+                                    background-image: url(../../../base/img/sesion1.svg);
+                                }
+                                .mom-2 {
+                                    background-image: url(../../../base/img/sesion2.svg);
+                                }
+                                .mom-3 {
+                                    background-image: url(../../../base/img/sesion3.svg);
+                                }
+                                .mom-4 {
+                                    background-image: url(../../../base/img/sesion4.svg);
+                                }
+                                .mom-5 {
+                                    background-image: url(../../../base/img/sesion5.svg);
+                                }
+                                .mom-6 {
+                                    background-image: url(../../../base/img/sesion6.svg);
+                                }
+                                .act-importante {
+                                    background-color: $accent;
+                                    margin-left: 0 !important;
+                                    margin-right: 0 !important;
+                                    padding: 2.5rem;
+                                    line-height: 1.4;
+                                }
+                                .destacado {
+                                    background-color: $grey1;
+                                    /* margin: initial;
+                                    margin-left: 0 !important;
+                                    margin-right: 0 !important; */
+                                    padding: 2.5rem !important;
+                                    margin-bottom: 20px;
+                                    box-shadow: none !important;
+                                    //line-height: initial;
+                                }
                             }
                         }
                     }
-                }
-                .modified {
-                    display: none;
+                    .modified {
+                        display: none;
+                    }
                 }
             }
         }
