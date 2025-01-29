@@ -83,7 +83,13 @@ body.home {
                 div[role="main"] {
                     .course-content {
                         ul.topics {
-                            li#section-0 {}
+                            li#section-0 {
+                                margin-bottom: 4rem;
+                                border-bottom: none;
+                                .mdl-left.py-2.changenumsections {
+                                    display: none;
+                                }
+                            }
                             li.section {
                                 .course-section-header {
                                     h3.sectionname {
@@ -306,7 +312,68 @@ body:not(.home) {
 
 /* EXCLUSIVO NOT EDITING */
 
-body:not(.editing) {
+body {
+    li:not(#section-0).section {
+        min-height: 140px;
+        padding: 20px;
+        .course-section-header {
+            position: relative;
+            h3.sectionname {
+                position: absolute;
+                width: 100%;
+                height: 100px;
+                /*display: block;*/
+                //z-index: 1000;
+                a:first-of-type {
+                    @include title;
+                    text-transform: uppercase;
+                    position: absolute;
+                    width: 100%;
+                    height: 100px;
+                    display: block;
+                    z-index: 1;
+                    &:hover {
+                        text-decoration: none;
+                        background-color: $grey2;
+                    }
+                }
+            }
+            .section_action_menu {
+                z-index: 2000 !important;
+            }
+        }
+        .content {
+            .my-3 {
+                .course-description-item.summarytext {
+                    .description-inner {
+                        .no-overflow {
+                            position: relative;
+                            margin-top: 0 !important;
+                            h2 {
+                                @include subtitle;
+                                border: none !important;
+                                background-color: transparent;
+                                padding: 0 !important;
+                            }
+                            p.fecha {
+                                position: absolute;
+                                top: 22%;
+                                right: 7px;
+                                line-height: 130%;
+                                text-align: right;
+                                font-size: 18px;
+                                color: #152F4E;
+                                @media (max-width: 576px) {
+                                    position: initial;
+                                    text-align: initial;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     ul.section {
         li.activity {
             .activityiconcontainer {
@@ -433,6 +500,7 @@ body:not(.editing) {
                                 .section-navigation {
                                     a {
                                         color: $primary;
+                                        text-transform: uppercase;
                                         &:hover {
                                             color: $grey3;
                                         }
@@ -442,6 +510,10 @@ body:not(.editing) {
                                             }
                                         }
                                     }
+                                }
+                                .section-navigation.mdl-bottom {
+                                    border-top: 1px solid $grey2;
+                                    margin-top: 8rem;
                                 }
                             }
                         }
