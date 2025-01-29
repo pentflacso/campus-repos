@@ -521,6 +521,18 @@ body:not(.editing) {
                             }
                         }
                     }
+                    .activity-navigation {
+                        border-top: 1px solid $grey2;
+                        margin-top: 8rem;
+                        .float-left {
+                            a.btn-link {
+                                color: $primary;
+                                &:hover {
+                                    color: $grey3;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
