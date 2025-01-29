@@ -10,12 +10,13 @@ $fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
 $fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
 $fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
 $fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+$fs-lg-xl: clamp(1.75rem, 1.28vi + 1.44rem, 2.46rem);
 $fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
 $fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
 $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 @mixin title {
     font-family: 'Roboto' !important;
-    font-size: $fs-lg !important;
+    font-size: $fs-lg-xl !important;
     color: $primary !important;
     font-weight: 500 !important;
 }
@@ -39,6 +40,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 /* NAVBAR DE ADMINISTRACION DEL CURSO */
 
 .secondary-navigation.d-print-none {
+    margin-top: 3rem;
     nav.moremenu.navigation.observed {
         padding: 0;
         border-bottom: 0;
@@ -425,135 +427,18 @@ body:not(.editing) {
                             .single-section {
                                 ul.topics {
                                     li.section {
-                                        .content {
-                                            // MODULOS GENERAL
-                                            ul.section {
-                                                .hero {
-                                                    position: relative;
-                                                    min-height: 460px;
-                                                    @media (max-width: 576px) {
-                                                        margin-bottom: 3rem;
-                                                    }
-                                                    h1 {
-                                                        @include title;
-                                                        margin-bottom: 40px;
-                                                        z-index: 100;
-                                                    }
-                                                    a {
-                                                        color: $secondary;
-                                                    }
-                                                    p {
-                                                        @include body;
-                                                    }
-                                                    .col-textos {
-                                                        width: 50%;
-                                                        color: #152F4E;
-                                                        @media (max-width: 768px) {
-                                                            width: 100%;
-                                                        }
-                                                        .card {
-                                                            border: none;
-                                                            background-color: transparent;
-                                                        }
-                                                        [role="button"] {
-                                                            box-shadow: none;
-                                                        }
-                                                    }
-                                                    .img-modulos {
-                                                        position: absolute;
-                                                        right: 0;
-                                                        top: 0;
-                                                        width: 45%;
-                                                        @media (max-width: 768px) {
-                                                            position: initial;
-                                                            width: 100%;
-                                                            img {
-                                                                margin-top: 40px;
-                                                            }
-                                                        }
-                                                    }
-                                                    .card-body {
-                                                        padding: 0;
-                                                    }
-                                                    .botonera {
-                                                        margin-top: 5rem;
-                                                        .btn-hero {
-                                                            border: 1px solid $grey2;
-                                                            border-radius: 500px;
-                                                            padding: 10px 20px 10px 50px;
-                                                            text-decoration: none !important;
-                                                            color: $primary !important;
-                                                            font-weight: 400;
-                                                            background-repeat: no-repeat;
-                                                            background-position: left 20px center;
-                                                            display: inline-block;
-                                                            background-size: 20px;
-                                                            margin-right: 20px;
-                                                            margin-bottom: 20px;
-                                                            &:hover {
-                                                                border-color: $secondary;
-                                                                background-color: $secondary;
-                                                                color: $primary;
-                                                            }
-                                                        }
-                                                        .btn-vermas {
-                                                            background-image: url(../../../base/img/icon_plus.svg);
-                                                        }
-                                                        .btn-ed {
-                                                            background-image: url(../../../base/img/icon_chat.svg);
-                                                        }
-                                                        .btn-wp {
-                                                            background-image: url(../../../base/img/icon-wp.svg);
-                                                        }
-                                                    }
-                                                }
-                                                .pent-sesion {
-                                                    padding-left: 70px;
-                                                    background-repeat: no-repeat;
-                                                    background-size: 50px;
-                                                    max-width: 800px;
-                                                    margin-top: 5rem;
-                                                    @media (max-width: 576px) {
-                                                        padding-left: 0;
-                                                        padding-top: 5rem;
-                                                    }
-                                                    h3 {
-                                                        @include subtitle;
-                                                        background: transparent;
-                                                        border-right: none;
-                                                        padding: 0;
-                                                        padding-top: 5px;
-                                                    }
-                                                    h6 {
-                                                        color: $grey3;
-                                                        font-size: $fs-base;
-                                                        font-weight: 400 !important;
-                                                        font-family: 'Roboto';
-                                                        margin-bottom: 2rem;
-                                                        line-height: 120%;
-                                                    }
-                                                }
-                                                .pent-sesion-1 {
-                                                    background-image: url(../../../base/img/sesion1.svg);
-                                                    @media (max-width: 768px) {
-                                                        margin-top: 0;
-                                                    }
-                                                }
-                                                .pent-sesion-2 {
-                                                    background-image: url(../../../base/img/sesion2.svg);
-                                                }
-                                                .pent-sesion-3 {
-                                                    background-image: url(../../../base/img/sesion3.svg);
-                                                }
-                                                .pent-sesion-4 {
-                                                    background-image: url(../../../base/img/sesion4.svg);
-                                                }
-                                                .pent-sesion-5 {
-                                                    background-image: url(../../../base/img/sesion5.svg);
-                                                }
-                                                .pent-sesion-6 {
-                                                    background-image: url(../../../base/img/sesion6.svg);
-                                                }
+                                        .content {}
+                                    }
+                                }
+                                .section-navigation {
+                                    a {
+                                        color: $primary;
+                                        &:hover {
+                                            color: $grey3;
+                                        }
+                                        span {
+                                            &:after {
+                                                color: $primary;
                                             }
                                         }
                                     }
@@ -603,9 +488,133 @@ body:not(.editing) {
     .section-navigation.navigationtitle.d-flex.justify-content-between {
         display: none !important;
     }
-    h3.sectionname {
-        a:first-of-type {
-            @include title;
+    ul.section {
+        .hero {
+            position: relative;
+            min-height: 460px;
+            @media (max-width: 576px) {
+                margin-bottom: 3rem;
+            }
+            h1 {
+                @include title;
+                margin-bottom: 40px;
+                z-index: 100;
+            }
+            a {
+                color: $secondary;
+            }
+            p {
+                @include body;
+            }
+            .col-textos {
+                width: 50%;
+                color: #152F4E;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+                .card {
+                    border: none;
+                    background-color: transparent;
+                }
+                [role="button"] {
+                    box-shadow: none;
+                }
+            }
+            .img-modulos {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 45%;
+                @media (max-width: 768px) {
+                    position: initial;
+                    width: 100%;
+                    img {
+                        margin-top: 40px;
+                    }
+                }
+            }
+            .card-body {
+                padding: 0;
+            }
+            .botonera {
+                margin-top: 5rem;
+                .btn-hero {
+                    border: 1px solid $grey2;
+                    border-radius: 500px;
+                    padding: 10px 20px 10px 50px;
+                    text-decoration: none !important;
+                    color: $primary !important;
+                    font-weight: 400;
+                    background-repeat: no-repeat;
+                    background-position: left 20px center;
+                    display: inline-block;
+                    background-size: 20px;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    &:hover {
+                        border-color: $secondary;
+                        background-color: $secondary;
+                        color: $primary;
+                    }
+                }
+                .btn-vermas {
+                    background-image: url(../../../base/img/icon_plus.svg);
+                }
+                .btn-ed {
+                    background-image: url(../../../base/img/icon_chat.svg);
+                }
+                .btn-wp {
+                    background-image: url(../../../base/img/icon-wp.svg);
+                }
+            }
+        }
+        .pent-sesion {
+            padding-left: 70px;
+            background-repeat: no-repeat;
+            background-size: 50px;
+            max-width: 800px;
+            margin-top: 5rem;
+            @media (max-width: 576px) {
+                padding-left: 0;
+                padding-top: 5rem;
+            }
+            h3 {
+                @include subtitle;
+                background: transparent;
+                border-right: none;
+                padding: 0;
+                padding-top: 5px;
+                margin-bottom: 2rem;
+            }
+            h6 {
+                color: $grey3;
+                font-size: $fs-base;
+                font-weight: 400 !important;
+                font-family: 'Roboto';
+                margin-bottom: 2rem;
+                line-height: 120%;
+            }
+        }
+        .pent-sesion-1 {
+            background-image: url(../../../base/img/sesion1.svg);
+            @media (max-width: 768px) {
+                margin-top: 0;
+            }
+        }
+        .pent-sesion-2 {
+            background-image: url(../../../base/img/sesion2.svg);
+        }
+        .pent-sesion-3 {
+            background-image: url(../../../base/img/sesion3.svg);
+        }
+        .pent-sesion-4 {
+            background-image: url(../../../base/img/sesion4.svg);
+        }
+        .pent-sesion-5 {
+            background-image: url(../../../base/img/sesion5.svg);
+        }
+        .pent-sesion-6 {
+            background-image: url(../../../base/img/sesion6.svg);
         }
     }
 }
@@ -675,6 +684,9 @@ body:not(.editing) {
                                 margin: 40px 0;
                                 @media (max-width: 576px) {
                                     padding: 8rem 4rem 4rem 4rem;
+                                }
+                                h3 {
+                                    margin-bottom: 2rem;
                                 }
                             }
                             .mom-1 {
