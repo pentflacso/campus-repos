@@ -32,6 +32,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
     font-size: $fs-base !important;
     color: $primary !important;
     font-weight: 400 !important;
+    line-height: 1.4 !important;
 }
 
 
@@ -68,6 +69,11 @@ body.home {
                                                     }
                                                 }
                                             }
+                                        }
+                                    }
+                                    .section-summary-activities {
+                                        span.activity-count {
+                                            display: none;
                                         }
                                     }
                                     ul.section {
@@ -232,8 +238,12 @@ body:not(.home) {
                                                                 @include title;
                                                             }
                                                             p {
-                                                                a {
+                                                                a.volver {
                                                                     color: $primary;
+                                                                    &:hover {
+                                                                        color: $grey3;
+                                                                        text-decoration: none;
+                                                                    }
                                                                 }
                                                             }
                                                         }
@@ -370,6 +380,13 @@ body:not(.home) {
                                                         @media (max-width: 768px) {
                                                             width: 100%;
                                                         }
+                                                        .card {
+                                                            border: none;
+                                                            background-color: transparent;
+                                                        }
+                                                        [role="button"] {
+                                                            box-shadow: none;
+                                                        }
                                                     }
                                                     .img-modulos {
                                                         position: absolute;
@@ -387,33 +404,36 @@ body:not(.home) {
                                                     .card-body {
                                                         padding: 0;
                                                     }
-                                                    .btn-hero {
-                                                        border: 1px solid $grey2;
-                                                        border-radius: 500px;
-                                                        padding: 10px 20px 10px 50px;
-                                                        text-decoration: none !important;
-                                                        color: $primary !important;
-                                                        font-weight: 400;
-                                                        background-repeat: no-repeat;
-                                                        background-position: left 20px center;
-                                                        display: inline-block;
-                                                        background-size: 20px;
-                                                        margin-right: 20px;
-                                                        margin-bottom: 20px;
-                                                    }
-                                                    .btn-vermas {
-                                                        background-image: url(../../../base/img/icon_plus.svg);
-                                                    }
-                                                    .btn-ed {
-                                                        background-image: url(../../../base/img/icon_chat.svg);
-                                                    }
-                                                    .btn-wp {
-                                                        background-image: url(../../../base/img/icon-wp.svg);
-                                                    }
-                                                    .btn-hero:hover {
-                                                        border-color: $secondary;
-                                                        background-color: $secondary;
-                                                        color: $primary;
+                                                    .botonera {
+                                                        margin-top: 5rem;
+                                                        .btn-hero {
+                                                            border: 1px solid $grey2;
+                                                            border-radius: 500px;
+                                                            padding: 10px 20px 10px 50px;
+                                                            text-decoration: none !important;
+                                                            color: $primary !important;
+                                                            font-weight: 400;
+                                                            background-repeat: no-repeat;
+                                                            background-position: left 20px center;
+                                                            display: inline-block;
+                                                            background-size: 20px;
+                                                            margin-right: 20px;
+                                                            margin-bottom: 20px;
+                                                            &:hover {
+                                                                border-color: $secondary;
+                                                                background-color: $secondary;
+                                                                color: $primary;
+                                                            }
+                                                        }
+                                                        .btn-vermas {
+                                                            background-image: url(../../../base/img/icon_plus.svg);
+                                                        }
+                                                        .btn-ed {
+                                                            background-image: url(../../../base/img/icon_chat.svg);
+                                                        }
+                                                        .btn-wp {
+                                                            background-image: url(../../../base/img/icon-wp.svg);
+                                                        }
                                                     }
                                                 }
                                                 .pent-sesion {
@@ -520,4 +540,114 @@ body:not(.home) {
 }
 
 
-/* ACTIVIDAD */
+/* PAGINAS - (ACTIVIDAD) */
+
+#page-content {
+    #region-main-box {
+        #region-main {
+            h2 {
+                display: none;
+            }
+            div[role="main"] {
+                .box.py-3.generalbox.center.clearfix {
+                    .no-overflow {
+                        .page-actividad {
+                            img {
+                                margin: 3rem 0;
+                            }
+                            a {
+                                text-decoration-style: solid;
+                                text-decoration-color: $primary;
+                                text-decoration-thickness: .10em;
+                                text-underline-offset: .15em;
+                                color: $primary;
+                                font-family: 'Roboto';
+                                font-weight: bold;
+                                &:hover {
+                                    color: $grey3;
+                                    text-decoration-color: $grey3;
+                                }
+                            }
+                            a.volver {
+                                color: $primary;
+                                text-decoration: none;
+                                font-weight: 400;
+                                &:hover {
+                                    color: $grey3;
+                                    text-decoration: none;
+                                }
+                            }
+                            h1 {
+                                @include title;
+                                margin-bottom: 3rem;
+                            }
+                            h3 {
+                                @include subtitle;
+                                border-bottom: 0;
+                            }
+                            ul {
+                                @include body;
+                                li::marker {
+                                    color: $primary;
+                                    font-size: 1.5rem;
+                                }
+                            }
+                            .momento {
+                                background-color: #fff;
+                                background-repeat: no-repeat;
+                                background-size: 50px auto;
+                                background-position: left 2.5rem top 3.5rem;
+                                padding: 4rem 2.5rem 4rem 8rem;
+                                /* box-shadow: 0px 0px 10px 0px #ccc; */
+                                text-align: left;
+                                border: 1px solid $grey2;
+                                margin: 40px 0;
+                                @media (max-width: 576px) {
+                                    padding: 8rem 4rem 4rem 4rem;
+                                }
+                            }
+                            .mom-1 {
+                                background-image: url(../../../base/img/sesion1.svg);
+                            }
+                            .mom-2 {
+                                background-image: url(../../../base/img/sesion2.svg);
+                            }
+                            .mom-3 {
+                                background-image: url(../../../base/img/sesion3.svg);
+                            }
+                            .mom-4 {
+                                background-image: url(../../../base/img/sesion4.svg);
+                            }
+                            .mom-5 {
+                                background-image: url(../../../base/img/sesion5.svg);
+                            }
+                            .mom-6 {
+                                background-image: url(../../../base/img/sesion6.svg);
+                            }
+                            .act-importante {
+                                background-color: $accent;
+                                margin-left: 0 !important;
+                                margin-right: 0 !important;
+                                padding: 2.5rem;
+                                line-height: 1.4;
+                            }
+                            .destacado {
+                                background-color: $grey1;
+                                /* margin: initial;
+                                margin-left: 0 !important;
+                                margin-right: 0 !important; */
+                                padding: 2.5rem !important;
+                                margin-bottom: 20px;
+                                box-shadow: none !important;
+                                //line-height: initial;
+                            }
+                        }
+                    }
+                }
+                .modified {
+                    display: none;
+                }
+            }
+        }
+    }
+}
