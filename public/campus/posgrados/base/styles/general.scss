@@ -316,6 +316,11 @@ body:not(.editing) {
                 }
             }
             a {
+                color: $primary;
+                &:hover {
+                    color: $grey3 !important;
+                    text-decoration: none;
+                }
                 .instancename {
                     background-image: url(../../../base/img/punto-verde.svg);
                     padding-left: 70px;
@@ -325,7 +330,11 @@ body:not(.editing) {
                     padding-top: 5px;
                     padding-bottom: 5px;
                     display: block;
-                    @include body;
+                    font-size: $fs-base;
+                    font-weight: 500;
+                    &:hover {
+                        color: $grey3 !important;
+                    }
                 }
             }
         }
