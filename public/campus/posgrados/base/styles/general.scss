@@ -312,16 +312,16 @@ body:not(.home) {
 
 /* EXCLUSIVO NOT EDITING */
 
-body {
+body:not(.editing) {
     li:not(#section-0).section {
         min-height: 140px;
-        padding: 20px;
+        padding: 0 !important;
         .course-section-header {
             position: relative;
             h3.sectionname {
                 position: absolute;
                 width: 100%;
-                height: 100px;
+                height: 100%;
                 /*display: block;*/
                 //z-index: 1000;
                 a:first-of-type {
@@ -329,12 +329,12 @@ body {
                     text-transform: uppercase;
                     position: absolute;
                     width: 100%;
-                    height: 100px;
+                    height: 100%;
                     display: block;
                     z-index: 1;
                     &:hover {
                         text-decoration: none;
-                        background-color: $grey2;
+                        background-color: rgba(0, 0, 0, 0.1);
                     }
                 }
             }
