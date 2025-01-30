@@ -84,13 +84,13 @@ body.home {
                     .course-content {
                         ul.topics {
                             li#section-0 {
-                                margin-bottom: 4rem;
                                 border-bottom: none;
                                 .mdl-left.py-2.changenumsections {
                                     display: none;
                                 }
                             }
                             li.section {
+                                margin-bottom: 4rem;
                                 .course-section-header {
                                     h3.sectionname {
                                         a:first-of-type {
@@ -230,14 +230,22 @@ body.home {
 }
 
 
-/* HOME CON EDICIÓN DESACTIVADA */
+/* HOME: EXCLUSIVO CON EDICIÓN ACTIVADA */
+
+body.home.editing {
+    li.section {
+        padding: 2rem !important;
+    }
+}
+
+
+/* HOME: EXCLUSIVO CON EDICIÓN DESACTIVADA */
 
 body.home:not(.editing) {
     li:not(#section-0).section {
         position: relative;
         min-height: 12rem;
         border-bottom: 0;
-        margin-bottom: 4rem;
         padding: 0 !important;
         .course-section-header {
             position: absolute;
@@ -345,7 +353,7 @@ body.home:not(.editing) {
 }
 
 
-/* GENERAL - incluye home y modulos */
+/* GENERAL - para elementos repetidos en home y modulos */
 
 #page {
     #topofscroll {
@@ -717,7 +725,7 @@ body:not(.home) {
 }
 
 
-/* MODULOS CON EDICIÓN DESACTIVADA */
+/* MODULOS: EXCLUSIVO CON EDICIÓN DESACTIVADA */
 
 body:not(.editing) {
     ul.section {
