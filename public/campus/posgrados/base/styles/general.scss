@@ -315,29 +315,32 @@ body:not(.home) {
 body:not(.editing) {
     li:not(#section-0).section {
         min-height: 140px;
-        padding: 0 !important;
+        padding: 2rem !important;
+        border-bottom: 0;
         .course-section-header {
             position: relative;
-            width: 100%;
+            /* width: 100%;
             height: 100%;
-            display: block;
+            display: block; */
             h3.sectionname {
                 position: absolute;
                 width: 100%;
-                height: 100%;
-                /*display: block;*/
-                //z-index: 1000;
-                a:first-of-type {
-                    @include title;
-                    text-transform: uppercase;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                    z-index: 10000;
-                    &:hover {
-                        text-decoration: none;
-                        background-color: rgba(0, 0, 0, 0.1);
+                height: 100px;
+                //display: block;
+                z-index: 1000;
+                span.inplaceeditable {
+                    a:first-of-type {
+                        @include title;
+                        text-transform: uppercase;
+                        position: absolute;
+                        width: 100%;
+                        height: 100px;
+                        display: block;
+                        z-index: 1000;
+                        &:hover {
+                            text-decoration: none;
+                            background-color: rgba(0, 0, 0, 0.1);
+                        }
                     }
                 }
             }
