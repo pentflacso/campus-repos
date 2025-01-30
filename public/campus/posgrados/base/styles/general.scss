@@ -310,7 +310,7 @@ body:not(.home) {
 }
 
 
-/* EXCLUSIVO NOT EDITING */
+/* EXCLUSIVO HOME NOT EDITING */
 
 body.home:not(.editing) {
     li:not(#section-0).section {
@@ -420,37 +420,6 @@ body.home:not(.editing) {
                     left: 1.5rem;
                 }
             } */
-        }
-    }
-    ul.section {
-        li.activity {
-            .activityiconcontainer {
-                display: none;
-            }
-            .media-body {
-                .text-uppercase {
-                    display: none;
-                }
-            }
-            a {
-                color: $primary;
-                &:hover {
-                    color: $grey3 !important;
-                    text-decoration: none !important;
-                }
-                .instancename {
-                    background-image: url(../../../base/img/punto-verde.svg);
-                    padding-left: 70px;
-                    background-size: 19px auto;
-                    background-position: left center;
-                    background-repeat: no-repeat;
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    display: block;
-                    font-size: $fs-base;
-                    font-weight: 500;
-                }
-            }
         }
     }
 }
@@ -608,6 +577,43 @@ body.home:not(.editing) {
             100% {
                 transform: scaleX(1);
                 transform-origin: left;
+            }
+        }
+    }
+}
+
+
+/* MODULOS NOT EDITING */
+
+body:not(.editing) {
+    ul.section {
+        li.activity {
+            .activityiconcontainer {
+                display: none;
+            }
+            .media-body {
+                .text-uppercase {
+                    display: none;
+                }
+            }
+            a {
+                color: $primary;
+                &:hover {
+                    color: $grey3 !important;
+                    text-decoration: none !important;
+                }
+                .instancename {
+                    background-image: url(../../../base/img/punto-verde.svg);
+                    padding-left: 70px;
+                    background-size: 19px auto;
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    display: block;
+                    font-size: $fs-base;
+                    font-weight: 500;
+                }
             }
         }
     }
