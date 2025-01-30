@@ -243,7 +243,7 @@ body.home.editing {
 
 /* HOME: EXCLUSIVO CON EDICIÓN DESACTIVADA */
 
-body.home:not(.editing) {
+body.home {
     li:not(#section-0).section {
         position: relative;
         overflow: hidden; // Evita que la animación se salga de la tarjeta
@@ -275,21 +275,19 @@ body.home:not(.editing) {
                     &:before {
                         content: "";
                         position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 0%; // Comienza sin ancho
-                        height: 100%;
+                        top: 50%;
+                        left: 50%;
+                        width: 10px; // Tamaño inicial pequeño
+                        height: 10px;
                         background-color: rgba(0, 0, 0, 0.15);
-                        transition: width 0.3s ease-out; // Suaviza el crecimiento
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%) scale(0);
+                        transition: transform 0.3s ease-out;
                         z-index: -1;
                     }
                     &:hover:before {
-                        width: 100%; // Se llena completamente de izquierda a derecha
+                        transform: translate(-50%, -50%) scale(110); // Crece uniformemente
                     }
-                    /* &:hover {
-                        text-decoration: none;
-                        background-color: rgba(0, 0, 0, 0.15);
-                    } */
                     @media (max-width: 576px) {
                         padding: 1.5rem 1.5rem;
                     }
