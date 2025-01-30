@@ -40,10 +40,10 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 /* NAVBAR DE ADMINISTRACION DEL CURSO */
 
 .secondary-navigation.d-print-none {
-    margin-top: 3rem;
     padding-bottom: 0 !important;
+    //margin-top: 2rem;
     nav.moremenu.navigation.observed {
-        //padding: 0;
+        padding: 0 0.5rem;
         border-bottom: 0;
         ul {
             li {
@@ -392,6 +392,7 @@ body.home:not(.editing) {
         }
         /* header */
         header#page-header {
+            display: none;
             .w-100 {
                 .page-header-headings {
                     h1.h2 {
