@@ -91,6 +91,7 @@ body.home {
                             }
                             li.section {
                                 margin-bottom: 4rem;
+                                border-radius: 0;
                                 .course-section-header {
                                     h3.sectionname {
                                         a:first-of-type {
@@ -422,6 +423,9 @@ body.home:not(.editing) {
                                                     .no-overflow {
                                                         h1 {
                                                             @include title;
+                                                            @media (max-width: 576px) {
+                                                                @include subtitle;
+                                                            }
                                                         }
                                                         p {
                                                             a {
