@@ -312,7 +312,7 @@ body:not(.home) {
 
 /* EXCLUSIVO NOT EDITING */
 
-body:not(.editing) {
+body.home:not(.editing) {
     li:not(#section-0).section {
         position: relative;
         min-height: 12rem;
