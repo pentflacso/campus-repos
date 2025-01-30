@@ -76,7 +76,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 
 /* HOME */
 
-body.home {
+body.home.editing {
     #page-content {
         #region-main-box {
             #region-main {
@@ -505,7 +505,7 @@ body.home:not(.editing) {
 
 /* MÓDULOS */
 
-body:not(.home) {
+body:not(.home).editing {
     #page {
         #topofscroll {
             /* contenido general */
