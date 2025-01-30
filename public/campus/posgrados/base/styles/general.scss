@@ -351,9 +351,10 @@ body:not(.editing) {
             }
         }
         .content {
-            padding-top: 40px !important;
+            padding-top: 50px !important;
             .my-3 {
                 .course-description-item.summarytext {
+                    margin: 0 !important;
                     .description-inner {
                         .no-overflow {
                             position: relative;
@@ -366,7 +367,7 @@ body:not(.editing) {
                             }
                             p.fecha {
                                 position: absolute;
-                                top: 22%;
+                                bottom: 13%;
                                 right: 7px;
                                 line-height: 130%;
                                 text-align: right;
