@@ -74,7 +74,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 
-/* EXCLUSIVO DE HOME */
+/* HOME */
 
 body.home {
     #page-content {
@@ -230,87 +230,7 @@ body.home {
 }
 
 
-/* EXCLUSIVO NOT HOME */
-
-body:not(.home) {
-    #page {
-        #topofscroll {
-            /* contenido general */
-            #page-content {
-                #region-main-box {
-                    #region-main {
-                        div[role="main"] {
-                            .course-content {
-                                ul.topics {
-                                    li.section {
-                                        .course-section-header {
-                                            h3.sectionname {
-                                                display: none;
-                                            }
-                                        }
-                                        .content {
-                                            .my-3 {
-                                                .course-description-item.summarytext {
-                                                    .description-inner {
-                                                        .no-overflow {
-                                                            h2,
-                                                            p.fecha {
-                                                                display: none;
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    li#section-0 {
-                                        background-color: transparent;
-                                        .course-section-header {
-                                            h3 {
-                                                display: none !important;
-                                            }
-                                            .section_action_menu {
-                                                display: none !important;
-                                            }
-                                        }
-                                        .content {
-                                            .my-3 {
-                                                .course-description-item.summarytext {
-                                                    .description-inner {
-                                                        .no-overflow {
-                                                            h1 {
-                                                                @include title;
-                                                            }
-                                                            p {
-                                                                a.volver {
-                                                                    color: $primary;
-                                                                    &:hover {
-                                                                        color: $grey3;
-                                                                        text-decoration: none;
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            button.btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center.p-3.mb-3 {
-                                                display: none !important;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-/* EXCLUSIVO HOME NOT EDITING */
+/* HOME CON EDICIÓN DESACTIVADA */
 
 body.home:not(.editing) {
     li:not(#section-0).section {
@@ -425,7 +345,7 @@ body.home:not(.editing) {
 }
 
 
-/* GENERAL */
+/* GENERAL - incluye home y modulos */
 
 #page {
     #topofscroll {
@@ -583,7 +503,221 @@ body.home:not(.editing) {
 }
 
 
-/* MODULOS NOT EDITING */
+/* MÓDULOS */
+
+body:not(.home) {
+    #page {
+        #topofscroll {
+            /* contenido general */
+            #page-content {
+                #region-main-box {
+                    #region-main {
+                        div[role="main"] {
+                            .course-content {
+                                ul.topics {
+                                    li.section {
+                                        .course-section-header {
+                                            h3.sectionname {
+                                                display: none;
+                                            }
+                                        }
+                                        .content {
+                                            .my-3 {
+                                                .course-description-item.summarytext {
+                                                    .description-inner {
+                                                        .no-overflow {
+                                                            h2,
+                                                            p.fecha {
+                                                                display: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    li#section-0 {
+                                        background-color: transparent;
+                                        .course-section-header {
+                                            h3 {
+                                                display: none !important;
+                                            }
+                                            .section_action_menu {
+                                                display: none !important;
+                                            }
+                                        }
+                                        .content {
+                                            .my-3 {
+                                                .course-description-item.summarytext {
+                                                    .description-inner {
+                                                        .no-overflow {
+                                                            h1 {
+                                                                @include title;
+                                                            }
+                                                            p {
+                                                                a.volver {
+                                                                    color: $primary;
+                                                                    &:hover {
+                                                                        color: $grey3;
+                                                                        text-decoration: none;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            button.btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center.p-3.mb-3 {
+                                                display: none !important;
+                                            }
+                                        }
+                                    }
+                                }
+                                .single-section {
+                                    .section-navigation.navigationtitle.d-flex.justify-content-between {
+                                        display: none !important;
+                                    }
+                                    ul.section {
+                                        .hero {
+                                            position: relative;
+                                            min-height: 460px;
+                                            @media (max-width: 576px) {
+                                                margin-bottom: 3rem;
+                                            }
+                                            h1 {
+                                                @include title;
+                                                margin-bottom: 40px;
+                                                z-index: 100;
+                                            }
+                                            a {
+                                                color: $secondary;
+                                            }
+                                            p {
+                                                @include body;
+                                            }
+                                            .col-textos {
+                                                width: 50%;
+                                                color: #152F4E;
+                                                @media (max-width: 768px) {
+                                                    width: 100%;
+                                                }
+                                                .card {
+                                                    border: none;
+                                                    background-color: transparent;
+                                                }
+                                                [role="button"] {
+                                                    box-shadow: none;
+                                                }
+                                            }
+                                            .img-modulos {
+                                                position: absolute;
+                                                right: 0;
+                                                top: 0;
+                                                width: 45%;
+                                                @media (max-width: 768px) {
+                                                    position: initial;
+                                                    width: 100%;
+                                                    img {
+                                                        margin-top: 40px;
+                                                    }
+                                                }
+                                            }
+                                            .card-body {
+                                                padding: 0;
+                                            }
+                                            .botonera {
+                                                margin-top: 5rem;
+                                                .btn-hero {
+                                                    border: 1px solid $grey2;
+                                                    border-radius: 500px;
+                                                    padding: 10px 20px 10px 50px;
+                                                    text-decoration: none !important;
+                                                    color: $primary !important;
+                                                    font-weight: 400;
+                                                    background-repeat: no-repeat;
+                                                    background-position: left 20px center;
+                                                    display: inline-block;
+                                                    background-size: 20px;
+                                                    margin-right: 20px;
+                                                    margin-bottom: 20px;
+                                                    &:hover {
+                                                        border-color: $secondary;
+                                                        background-color: $secondary;
+                                                        color: $primary;
+                                                    }
+                                                }
+                                                .btn-vermas {
+                                                    background-image: url(../../../base/img/icon_plus.svg);
+                                                }
+                                                .btn-ed {
+                                                    background-image: url(../../../base/img/icon_chat.svg);
+                                                }
+                                                .btn-wp {
+                                                    background-image: url(../../../base/img/icon-wp.svg);
+                                                }
+                                            }
+                                        }
+                                        .pent-sesion {
+                                            padding-left: 70px;
+                                            background-repeat: no-repeat;
+                                            background-size: 50px;
+                                            max-width: 800px;
+                                            margin-top: 5rem;
+                                            @media (max-width: 576px) {
+                                                padding-left: 0;
+                                                padding-top: 5rem;
+                                            }
+                                            h3 {
+                                                @include subtitle;
+                                                background: transparent;
+                                                border-right: none;
+                                                padding: 0;
+                                                padding-top: 5px;
+                                                margin-bottom: 2rem;
+                                            }
+                                            h6 {
+                                                color: $grey3;
+                                                font-size: $fs-base;
+                                                font-weight: 400 !important;
+                                                font-family: 'Roboto';
+                                                margin-bottom: 2rem;
+                                                line-height: 120%;
+                                            }
+                                        }
+                                        .pent-sesion-1 {
+                                            background-image: url(../../../base/img/sesion1.svg);
+                                            @media (max-width: 768px) {
+                                                margin-top: 0;
+                                            }
+                                        }
+                                        .pent-sesion-2 {
+                                            background-image: url(../../../base/img/sesion2.svg);
+                                        }
+                                        .pent-sesion-3 {
+                                            background-image: url(../../../base/img/sesion3.svg);
+                                        }
+                                        .pent-sesion-4 {
+                                            background-image: url(../../../base/img/sesion4.svg);
+                                        }
+                                        .pent-sesion-5 {
+                                            background-image: url(../../../base/img/sesion5.svg);
+                                        }
+                                        .pent-sesion-6 {
+                                            background-image: url(../../../base/img/sesion6.svg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* MODULOS CON EDICIÓN DESACTIVADA */
 
 body:not(.editing) {
     ul.section {
@@ -620,145 +754,7 @@ body:not(.editing) {
 }
 
 
-/* MÓDULOS */
-
-.single-section {
-    .section-navigation.navigationtitle.d-flex.justify-content-between {
-        display: none !important;
-    }
-    ul.section {
-        .hero {
-            position: relative;
-            min-height: 460px;
-            @media (max-width: 576px) {
-                margin-bottom: 3rem;
-            }
-            h1 {
-                @include title;
-                margin-bottom: 40px;
-                z-index: 100;
-            }
-            a {
-                color: $secondary;
-            }
-            p {
-                @include body;
-            }
-            .col-textos {
-                width: 50%;
-                color: #152F4E;
-                @media (max-width: 768px) {
-                    width: 100%;
-                }
-                .card {
-                    border: none;
-                    background-color: transparent;
-                }
-                [role="button"] {
-                    box-shadow: none;
-                }
-            }
-            .img-modulos {
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 45%;
-                @media (max-width: 768px) {
-                    position: initial;
-                    width: 100%;
-                    img {
-                        margin-top: 40px;
-                    }
-                }
-            }
-            .card-body {
-                padding: 0;
-            }
-            .botonera {
-                margin-top: 5rem;
-                .btn-hero {
-                    border: 1px solid $grey2;
-                    border-radius: 500px;
-                    padding: 10px 20px 10px 50px;
-                    text-decoration: none !important;
-                    color: $primary !important;
-                    font-weight: 400;
-                    background-repeat: no-repeat;
-                    background-position: left 20px center;
-                    display: inline-block;
-                    background-size: 20px;
-                    margin-right: 20px;
-                    margin-bottom: 20px;
-                    &:hover {
-                        border-color: $secondary;
-                        background-color: $secondary;
-                        color: $primary;
-                    }
-                }
-                .btn-vermas {
-                    background-image: url(../../../base/img/icon_plus.svg);
-                }
-                .btn-ed {
-                    background-image: url(../../../base/img/icon_chat.svg);
-                }
-                .btn-wp {
-                    background-image: url(../../../base/img/icon-wp.svg);
-                }
-            }
-        }
-        .pent-sesion {
-            padding-left: 70px;
-            background-repeat: no-repeat;
-            background-size: 50px;
-            max-width: 800px;
-            margin-top: 5rem;
-            @media (max-width: 576px) {
-                padding-left: 0;
-                padding-top: 5rem;
-            }
-            h3 {
-                @include subtitle;
-                background: transparent;
-                border-right: none;
-                padding: 0;
-                padding-top: 5px;
-                margin-bottom: 2rem;
-            }
-            h6 {
-                color: $grey3;
-                font-size: $fs-base;
-                font-weight: 400 !important;
-                font-family: 'Roboto';
-                margin-bottom: 2rem;
-                line-height: 120%;
-            }
-        }
-        .pent-sesion-1 {
-            background-image: url(../../../base/img/sesion1.svg);
-            @media (max-width: 768px) {
-                margin-top: 0;
-            }
-        }
-        .pent-sesion-2 {
-            background-image: url(../../../base/img/sesion2.svg);
-        }
-        .pent-sesion-3 {
-            background-image: url(../../../base/img/sesion3.svg);
-        }
-        .pent-sesion-4 {
-            background-image: url(../../../base/img/sesion4.svg);
-        }
-        .pent-sesion-5 {
-            background-image: url(../../../base/img/sesion5.svg);
-        }
-        .pent-sesion-6 {
-            background-image: url(../../../base/img/sesion6.svg);
-        }
-    }
-}
-
-
-/* PAGINAS - (ACTIVIDAD) */
+/* PAGINAS - ACTIVIDAD */
 
 body:not(.home) {
     #page-content {
