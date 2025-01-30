@@ -275,18 +275,16 @@ body.home:not(.editing) {
                     &:before {
                         content: "";
                         position: absolute;
-                        top: 40%;
-                        left: 10%;
-                        width: 10px; // Tamaño inicial pequeño
-                        height: 10px;
+                        top: 0;
+                        left: 0;
+                        width: 0%; // Comienza sin ancho
+                        height: 100%;
                         background-color: rgba(0, 0, 0, 0.15);
-                        border-radius: 50%;
-                        transform: translate(-50%, -50%) scale(0);
-                        transition: transform 0.5s ease-out;
+                        transition: width 0.3s ease-out; // Suaviza el crecimiento
                         z-index: -1;
                     }
                     &:hover:before {
-                        transform: translate(-50%, -50%) scale(250); // Crece uniformemente
+                        width: 100%; // Se llena completamente de izquierda a derecha
                     }
                     /* &:hover {
                         text-decoration: none;
