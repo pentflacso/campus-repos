@@ -317,6 +317,7 @@ body:not(.editing) {
         min-height: 140px;
         padding: 2rem !important;
         border-bottom: 0;
+        margin-bottom: 4rem;
         .course-section-header {
             position: relative;
             /* width: 100%;
@@ -341,12 +342,16 @@ body:not(.editing) {
                         background-color: rgba(0, 0, 0, 0.1);
                     }
                 }
+                a.quickeditlink.aalink {
+                    display: none;
+                }
             }
             .section_action_menu {
                 //z-index: 2000 !important;
             }
         }
         .content {
+            padding-top: 20px;
             .my-3 {
                 .course-description-item.summarytext {
                     .description-inner {
