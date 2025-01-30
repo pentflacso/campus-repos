@@ -342,7 +342,10 @@ body:not(.editing) {
                     z-index: 1000;
                     &:hover {
                         text-decoration: none;
-                        background-color: rgba(0, 0, 0, 0.1);
+                        background-color: rgba(0, 0, 0, 0.15);
+                    }
+                    @media (max-width: 576px) {
+                        padding: 1.5rem 1.5rem;
                     }
                 }
                 /* a.quickeditlink.aalink {
@@ -384,6 +387,9 @@ body:not(.editing) {
                                 position: absolute;
                                 bottom: 3rem;
                                 left: 1.5rem;
+                                @media (max-width: 576px) {
+                                    bottom: 6.5rem;
+                                }
                             }
                             p.fecha {
                                 position: absolute;
@@ -394,7 +400,8 @@ body:not(.editing) {
                                 font-size: 18px;
                                 color: #152F4E;
                                 @media (max-width: 576px) {
-                                    position: initial;
+                                    bottom: 1.5rem;
+                                    left: 1.5rem;
                                     text-align: initial;
                                 }
                             }
