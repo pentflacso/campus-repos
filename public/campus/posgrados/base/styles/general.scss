@@ -338,8 +338,8 @@ body:not(.editing) {
                         display: block;
                         z-index: 1000;
                         &:hover {
-                            text-decoration: none;
-                            background-color: rgba(0, 0, 0, 0.1);
+                            text-decoration: none !important;
+                            background-color: rgba(0, 0, 0, 0.1) !important;
                         }
                     }
                 }
