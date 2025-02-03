@@ -90,30 +90,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  
+
 // Para que la section-0 muestre el titulo o el volver según este en la portada o en un módulo. 
-  
+
 // Espera a que el DOM esté completamente cargado
 
 document.addEventListener("DOMContentLoaded", function() {
-    let body = document.body;   
-    
+    let body = document.body;
+
     //SI estamos en la portada del curso
     if (body.classList.contains('pagelayout-course')) {
-        if (window.innerWidth < 1200) {  
-        
+        if (window.innerWidth < 1200) {
+
             let regionMainBox = document.getElementById('region-main-box');
-            let regionMain = document.getElementById('region-main');   
+            let regionMain = document.getElementById('region-main');
             let columna = document.querySelector('[data-region="blocks-column"]');
-            
+
             // Crear contenedor de menu
-            const  contentMenu = document.createElement('div');
+            const contentMenu = document.createElement('div');
             contentMenu.id = 'content-menu-column';
-            
-            const  overley = document.createElement('div');
+
+            const overley = document.createElement('div');
             overley.id = 'overley';
             body.appendChild(overley);
-    
+
             // Crear el botón
             const btnBlocksColumn = document.createElement('button');
             btnBlocksColumn.id = 'btn-blocks-column';
@@ -122,26 +122,26 @@ document.addEventListener("DOMContentLoaded", function() {
             contentMenu.appendChild(btnBlocksColumn);
             contentMenu.appendChild(columna);
             body.appendChild(contentMenu);
-            
-            btnBlocksColumn.addEventListener('click', function () {
-                body.classList.toggle('active-menu-column');                    
-                
+
+            btnBlocksColumn.addEventListener('click', function() {
+                body.classList.toggle('active-menu-column');
+
                 setTimeout(function() {
                     overley.classList.toggle('visible');
                     contentMenu.classList.toggle('active');
                     btnBlocksColumn.classList.toggle('active');
                 }, 1);
             });
-        
+
         }
-        
+
     }
 
     // Función para controlar la visibilidad del h1 y la etiqueta a
     function controlarVisibilidad() {
         var singleSection = document.querySelector(".course-content .single-section");
         var section0H1 = document.querySelector(".course-content #section-0 h1");
-        var section0Link = document.querySelector(".course-content #section-0 a.volver");
+        var section0Link = document.querySelector(".course-content #section-0 p#volver a");
 
         if (singleSection) {
             // Si existe el div .single-section, ocultar el h1
@@ -165,10 +165,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Configura el observador para que observe cambios en el div .course-content
     observer.observe(document.querySelector(".course-content"), { childList: true, subtree: true });
-    
-    
-     // AGREGA CLASES A ETIQUETAS LI PARA DIFERENCIAR LAS CARDS DE LOS MÓDULOS EN COMPLETOS E INCOMPLETOS
-    
+
+
+    // AGREGA CLASES A ETIQUETAS LI PARA DIFERENCIAR LAS CARDS DE LOS MÓDULOS EN COMPLETOS E INCOMPLETOS
+
     // Encontrar la etiqueta <li> con la clase .current
     var currentListItem = document.querySelector(".course-content .current");
 
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 item.classList.add("incompleto");
             }
         });
-    }               
-    
-    
+    }
+
+
 });

@@ -377,168 +377,170 @@ body.home:not(.editing) {
 
 /* GENERAL - para elementos repetidos en home y modulos */
 
-#page {
-    /* #theme_boost-drawers-blocks {
-        background-color: red;
+#page-wrapper {
+    /* solapa derecha */
+    #theme_boost-drawers-blocks {
         .drawerheader {
             .drawertoggle {
                 background-color: $primary !important;
             }
         }
-    } */
-    #topofscroll {
-        /* solapitas */
-        .drawer-toggles {
-            .drawer-left-toggle {
-                display: none !important;
-            }
-            .drawer-right-toggle {
-                .btn {
-                    background-color: $primary !important;
+    }
+    #page {
+        #topofscroll {
+            /* solapa izquierda */
+            .drawer-toggles {
+                .drawer-left-toggle {
+                    display: none !important;
                 }
-            }
-        }
-        /* header */
-        header#page-header {
-            .w-100 {
-                display: none;
-                .page-header-headings {
-                    h1.h2 {
-                        @include body;
-                        border: none !important;
+                .drawer-right-toggle {
+                    .btn {
+                        background-color: $primary !important;
                     }
                 }
             }
-        }
-        /* contenido general */
-        #page-content {
-            #region-main-box {
-                #region-main {
-                    div[role="main"] {
-                        .course-content {
-                            ul.topics {
-                                li.section {
-                                    &::before {
-                                        display: none !important;
-                                    }
-                                    .course-section-header {
-                                        .sectionbadges {
+            /* header */
+            header#page-header {
+                .w-100 {
+                    display: none;
+                    .page-header-headings {
+                        h1.h2 {
+                            @include body;
+                            border: none !important;
+                        }
+                    }
+                }
+            }
+            /* contenido general */
+            #page-content {
+                #region-main-box {
+                    #region-main {
+                        div[role="main"] {
+                            .course-content {
+                                ul.topics {
+                                    li.section {
+                                        &::before {
                                             display: none !important;
                                         }
-                                    }
-                                    .content {
-                                        .my-3 {
-                                            padding: 0;
-                                            border: 0;
-                                            .course-description-item.summarytext {
-                                                .description-inner {
-                                                    .no-overflow {}
-                                                }
+                                        .course-section-header {
+                                            .sectionbadges {
+                                                display: none !important;
                                             }
                                         }
-                                        ul.section {}
-                                    }
-                                }
-                                li#section-0 {
-                                    background-color: transparent;
-                                    .course-section-header {
-                                        h3 {
-                                            display: none !important;
+                                        .content {
+                                            .my-3 {
+                                                padding: 0;
+                                                border: 0;
+                                                .course-description-item.summarytext {
+                                                    .description-inner {
+                                                        .no-overflow {}
+                                                    }
+                                                }
+                                            }
+                                            ul.section {}
                                         }
                                     }
-                                    .content {
-                                        .my-3 {
-                                            .course-description-item.summarytext {
-                                                .description-inner {
-                                                    .no-overflow {
-                                                        h1 {
-                                                            @include title;
-                                                            @media (max-width: 576px) {
-                                                                @include subtitle;
+                                    li#section-0 {
+                                        background-color: transparent;
+                                        .course-section-header {
+                                            h3 {
+                                                display: none !important;
+                                            }
+                                        }
+                                        .content {
+                                            .my-3 {
+                                                .course-description-item.summarytext {
+                                                    .description-inner {
+                                                        .no-overflow {
+                                                            h1 {
+                                                                @include title;
+                                                                @media (max-width: 576px) {
+                                                                    @include subtitle;
+                                                                }
                                                             }
-                                                        }
-                                                        p {
-                                                            a {
-                                                                color: $primary;
+                                                            p {
+                                                                a {
+                                                                    color: $primary;
+                                                                }
                                                             }
                                                         }
                                                     }
                                                 }
                                             }
+                                            ul.section {}
                                         }
-                                        ul.section {}
                                     }
                                 }
-                            }
-                            .single-section {
-                                ul.topics {
-                                    li.section {
-                                        .content {}
-                                    }
-                                }
-                                .section-navigation {
-                                    a {
-                                        color: $primary;
-                                        text-transform: uppercase;
-                                        &:hover {
-                                            color: $grey3;
+                                .single-section {
+                                    ul.topics {
+                                        li.section {
+                                            .content {}
                                         }
-                                        span {
-                                            &:after {
-                                                color: $primary;
+                                    }
+                                    .section-navigation {
+                                        a {
+                                            color: $primary;
+                                            text-transform: uppercase;
+                                            &:hover {
+                                                color: $grey3;
+                                            }
+                                            span {
+                                                &:after {
+                                                    color: $primary;
+                                                }
                                             }
                                         }
                                     }
-                                }
-                                .section-navigation.mdl-bottom {
-                                    border-top: 1px solid $grey2;
-                                    margin-top: 8rem;
+                                    .section-navigation.mdl-bottom {
+                                        border-top: 1px solid $grey2;
+                                        margin-top: 8rem;
+                                    }
                                 }
                             }
                         }
-                    }
-                    .activity-navigation {
-                        border-top: 1px solid $grey2;
-                        margin-top: 8rem;
-                        .float-left {
-                            a.btn-link {
-                                color: $primary;
-                                &:hover {
-                                    color: $grey3;
+                        .activity-navigation {
+                            border-top: 1px solid $grey2;
+                            margin-top: 8rem;
+                            .float-left {
+                                a.btn-link {
+                                    color: $primary;
+                                    &:hover {
+                                        color: $grey3;
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-        p {
-            @include body;
-        }
-        // subrayado
-        .subrayado {
-            position: relative;
-            z-index: 2;
-        }
-        .subrayado::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 5px;
-            bottom: 0px;
-            left: 0;
-            background-color: #FFD658;
-            z-index: -1;
-            animation: animarSubrayado 1s linear forwards;
-        }
-        @keyframes animarSubrayado {
-            0% {
-                transform: scaleX(0);
-                transform-origin: left;
+            p {
+                @include body;
             }
-            100% {
-                transform: scaleX(1);
-                transform-origin: left;
+            // subrayado
+            .subrayado {
+                position: relative;
+                z-index: 2;
+            }
+            .subrayado::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 5px;
+                bottom: 0px;
+                left: 0;
+                background-color: #FFD658;
+                z-index: -1;
+                animation: animarSubrayado 1s linear forwards;
+            }
+            @keyframes animarSubrayado {
+                0% {
+                    transform: scaleX(0);
+                    transform-origin: left;
+                }
+                100% {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
             }
         }
     }
@@ -843,7 +845,7 @@ body:not(.home) {
                         .no-overflow {
                             .page-actividad {
                                 img {
-                                    margin: 3rem 0;
+                                    margin: 4rem 0;
                                 }
                                 a {
                                     text-decoration-style: solid;
@@ -858,22 +860,29 @@ body:not(.home) {
                                         text-decoration-color: $grey3;
                                     }
                                 }
-                                a.volver {
-                                    color: $primary;
-                                    text-decoration: none;
-                                    font-weight: 400;
-                                    &:hover {
-                                        color: $grey3;
+                                p.volver {
+                                    margin-bottom: 0;
+                                    a {
+                                        color: $primary;
                                         text-decoration: none;
+                                        font-weight: 400;
+                                        &:hover {
+                                            color: $grey3;
+                                            text-decoration: none;
+                                        }
+                                        &:focus {
+                                            box-shadow: none;
+                                        }
                                     }
                                 }
                                 h1 {
                                     @include title;
-                                    margin-bottom: 3rem;
+                                    margin-bottom: 4rem;
                                 }
                                 h3 {
                                     @include subtitle;
                                     border-bottom: 0;
+                                    margin-bottom: 2rem;
                                 }
                                 ul {
                                     @include body;
@@ -891,7 +900,7 @@ body:not(.home) {
                                     /* box-shadow: 0px 0px 10px 0px #ccc; */
                                     text-align: left;
                                     border: 1px solid $grey2;
-                                    margin: 40px 0;
+                                    margin-bottom: 4rem;
                                     @media (max-width: 576px) {
                                         padding: 8rem 4rem 4rem 4rem;
                                     }
@@ -923,14 +932,16 @@ body:not(.home) {
                                     margin-right: 0 !important;
                                     padding: 2.5rem;
                                     line-height: 1.4;
+                                    margin-bottom: 4rem;
                                 }
                                 .destacado {
                                     background-color: $grey1;
-                                    /* margin: initial;
+                                    margin: initial !important;
+                                    /* 
                                     margin-left: 0 !important;
                                     margin-right: 0 !important; */
                                     padding: 2.5rem !important;
-                                    margin-bottom: 20px;
+                                    margin-bottom: 2.4rem !important;
                                     box-shadow: none !important;
                                     //line-height: initial;
                                 }
