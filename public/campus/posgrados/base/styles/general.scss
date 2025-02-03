@@ -120,6 +120,10 @@ body.home {
                                         a:first-of-type {
                                             @include title;
                                             text-transform: uppercase;
+                                            &:focus {
+                                                box-shadow: none;
+                                                background-color: transparent;
+                                            }
                                         }
                                     }
                                 }
@@ -598,12 +602,15 @@ body:not(.home) {
                                                             h1 {
                                                                 @include title;
                                                             }
-                                                            p {
-                                                                a.volver {
+                                                            p#volver {
+                                                                a {
                                                                     color: $primary;
                                                                     &:hover {
                                                                         color: $grey3;
                                                                         text-decoration: none;
+                                                                    }
+                                                                    &:focus {
+                                                                        box-shadow: none;
                                                                     }
                                                                 }
                                                             }
