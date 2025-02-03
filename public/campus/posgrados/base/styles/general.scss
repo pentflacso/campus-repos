@@ -378,6 +378,14 @@ body.home:not(.editing) {
 /* GENERAL - para elementos repetidos en home y modulos */
 
 #page {
+    /* #theme_boost-drawers-blocks {
+        background-color: red;
+        .drawerheader {
+            .drawertoggle {
+                background-color: $primary !important;
+            }
+        }
+    } */
     #topofscroll {
         /* solapitas */
         .drawer-toggles {
@@ -392,8 +400,8 @@ body.home:not(.editing) {
         }
         /* header */
         header#page-header {
-            display: none;
             .w-100 {
+                display: none;
                 .page-header-headings {
                     h1.h2 {
                         @include body;
