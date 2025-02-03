@@ -1,31 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const CSS_URL = "https://campus-repos.vercel.app/campus/posgrados/base/styles/custom.css";
-    const JS_URL = "https://campus-repos.vercel.app/campus/posgrados/base/scripts/general-v2.js";
-
-    function injectCSS(url) {
-        if (!document.querySelector(`link[href="${url}"]`)) {
-            const link = document.createElement("link");
-            link.rel = "stylesheet";
-            link.href = url;
-            document.head.appendChild(link);
-        }
-    }
-
-    function injectJS(url) {
-        if (!document.querySelector(`script[src="${url}"]`)) {
-            const script = document.createElement("script");
-            script.src = url + "?t=" + new Date().getTime(); // Evita caché
-            script.defer = true;
-            document.body.appendChild(script);
-        }
-    }
-
-    injectCSS(CSS_URL);
-    injectJS(JS_URL);
-});
-
-
-
 /* SCRIPT PARA HABILITAR UN CSS DE MODO DEV */
 
 document.addEventListener("DOMContentLoaded", () => {
