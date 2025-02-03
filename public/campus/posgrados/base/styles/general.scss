@@ -165,6 +165,7 @@ body.home {
                             /* módulo completado */
                             li.section.completo {
                                 background-color: $grey1;
+                                border: none !important;
                                 .course-section-header {
                                     h3.sectionname {
                                         a:first-of-type {}
