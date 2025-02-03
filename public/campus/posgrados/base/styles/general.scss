@@ -603,11 +603,16 @@ body.home:not(.editing) {
                         .activity-navigation {
                             border-top: 1px solid $grey2;
                             margin-top: 8rem;
-                            .float-left {
+                            .float-left,
+                            .float-right {
                                 a.btn-link {
                                     color: $primary;
                                     &:hover {
                                         color: $grey3;
+                                    }
+                                    &:focus {
+                                        box-shadow: none;
+                                        text-decoration: none;
                                     }
                                 }
                             }
