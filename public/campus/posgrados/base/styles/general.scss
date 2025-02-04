@@ -54,7 +54,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
                     padding: 0.5rem 1rem;
                     border-radius: 500px;
                     height: initial;
-                    border-bottom: 0;
+                    border: 1px solid $grey2;
                     transition: color 0.3s ease-out;
                     z-index: 2; // Asegura que el texto esté por encima del círculo
                     &:hover {
@@ -79,7 +79,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
                         z-index: -1; // Mantiene el círculo detrás del texto
                     }
                     &:hover:before {
-                        transform: translate(-50%, -50%) scale(20);
+                        transform: translate(-50%, -50%) scale(30);
                     }
                     // Ajuste especial para el botón activo
                     &.active.active_tree_node {
@@ -1043,6 +1043,9 @@ body:not(.home) {
 
 /* FOROS */
 
+
+/* home del foro */
+
 #page-mod-forum-view {
     #region-main {
         .activity-header {
@@ -1053,6 +1056,112 @@ body:not(.home) {
                 @include title;
                 margin-top: 4rem;
             }
+        }
+        /* tablas */
+        table {
+            font-family: 'Roboto';
+            a:not(.dropdown-item) {
+                color: $primary !important;
+                text-decoration: underline;
+                &:hover {
+                    color: $grey3 !important;
+                }
+                &:focus {
+                    box-shadow: none;
+                    background: transparent;
+                }
+                time {
+                    color: $primary;
+                    &:hover {
+                        color: $grey3 !important;
+                    }
+                }
+            }
+            thead {
+                tr {
+                    th {
+                        background-color: $grey2;
+                        .text-primary {
+                            color: $primary !important;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        background-color: $grey1;
+                        .custom-control-label::after {
+                            background-color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Conversación dentro del foro */
+
+#page-mod-forum-discuss {
+    div[role="main"] {
+        h3.discussionname {
+            @include title;
+            margin-block: 4rem;
+        }
+        input.btn.btn-secondary.ml-1 {
+            background-color: white !important;
+            color: $primary !important;
+            background-image: none;
+            padding: 0.5rem 1rem;
+            border-radius: 500px;
+            border: 1px solid $grey2;
+            height: initial;
+            &:hover {
+                background-color: $grey2 !important;
+                color: $primary;
+                outline: none;
+                box-shadow: none !important;
+            }
+            &:focus {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+        }
+        article.forum-post-container {
+            /* posteo principal */
+            .forumpost {
+                border: 1px solid $grey2 !important;
+                header {
+                    h3 {
+                        @include subtitle;
+                    }
+                    .mb-3 {
+                        a {
+                            color: $primary;
+                            text-decoration: underline;
+                            &:hover {
+                                color: $grey3 !important;
+                            }
+                        }
+                    }
+                }
+                .body-content-container {
+                    .post-content-container {
+                        p {
+                            span {
+                                @include body;
+                            }
+                        }
+                    }
+                    .text_to_html {
+                        @include body;
+                    }
+                }
+            }
+            /* respuesta al posteo principal */
+            .indent {}
         }
     }
 }
