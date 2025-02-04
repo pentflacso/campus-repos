@@ -1131,8 +1131,15 @@ body:not(.home) {
         }
         article.forum-post-container {
             /* posteo principal */
+            .forumpost.firstpost.starter {
+                background: $grey1;
+                border: none !important;
+            }
             .forumpost {
                 border: 1px solid $grey2 !important;
+                &:before {
+                    background: $grey3;
+                }
                 header {
                     h3 {
                         @include subtitle;
@@ -1145,6 +1152,9 @@ body:not(.home) {
                                 color: $grey3 !important;
                             }
                         }
+                        time {
+                            color: $grey3;
+                        }
                     }
                 }
                 .body-content-container {
@@ -1155,13 +1165,87 @@ body:not(.home) {
                             }
                         }
                     }
+                    .post-actions {
+                        border-top: 0 !important;
+                        margin-top: 0;
+                        a {
+                            color: $primary;
+                            text-decoration: underline;
+                            &:hover {
+                                color: $grey3 !important;
+                                background: transparent;
+                            }
+                        }
+                    }
                     .text_to_html {
                         @include body;
                     }
                 }
+                div[data-content="inpage-reply-content"] {
+                    .card-body {
+                        padding: 0;
+                        margin: 0;
+                        border: none;
+                        background: transparent !important;
+                        form {
+                            textarea {
+                                @include body;
+                                border-color: $grey2;
+                                &:focus {
+                                    box-shadow: none;
+                                }
+                            }
+                            .btn-primary {
+                                background-color: $primary !important;
+                                color: white !important;
+                                background-image: none;
+                                padding: 0.5rem 1rem;
+                                border-radius: 500px;
+                                border: 1px solid $primary;
+                                height: initial;
+                                &:hover {
+                                    background-color: $grey2 !important;
+                                    color: $primary !important;
+                                    outline: none;
+                                    box-shadow: none !important;
+                                    border-color: $grey2 !important;
+                                }
+                                &:focus {
+                                    box-shadow: none !important;
+                                    outline: none !important;
+                                }
+                            }
+                            .btn-secondary {
+                                background-color: white !important;
+                                color: $primary !important;
+                                background-image: none;
+                                padding: 0.5rem 1rem;
+                                border-radius: 500px;
+                                border: 1px solid $grey2;
+                                height: initial;
+                                &:hover {
+                                    background-color: $grey2 !important;
+                                    color: $primary;
+                                    outline: none;
+                                    box-shadow: none !important;
+                                }
+                                &:focus {
+                                    box-shadow: none !important;
+                                    outline: none !important;
+                                }
+                            }
+                            button.btn.btn-link.float-right {
+                                color: $primary;
+                                text-decoration: underline;
+                                &:hover {
+                                    color: $grey3 !important;
+                                    background: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            /* respuesta al posteo principal */
-            .indent {}
         }
     }
 }
