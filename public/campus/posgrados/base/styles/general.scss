@@ -500,6 +500,8 @@ body.home:not(.editing) {
                 .drawer-right-toggle {
                     .btn {
                         background-color: $primary !important;
+                        border-block: 1px solid white;
+                        border-left: 1px solid white;
                     }
                 }
             }
@@ -1255,6 +1257,91 @@ body:not(.home) {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+
+/* BASE DE DATOS */
+
+#page-mod-data-view {
+    #page-content {
+        div[role="main"] {
+            /* Buscador */
+            form#options {
+                #advsearch-save-sec {
+                    .btn-secondary {
+                        background-color: white !important;
+                        color: $primary !important;
+                        background-image: none;
+                        padding: 0.5rem 1rem;
+                        border-radius: 500px;
+                        border: 1px solid $grey2;
+                        height: initial;
+                        &:hover {
+                            background-color: $grey2 !important;
+                            color: $primary;
+                            outline: none;
+                            box-shadow: none !important;
+                        }
+                        &:focus {
+                            box-shadow: none !important;
+                            outline: none !important;
+                        }
+                    }
+                }
+            }
+            /* Añadir entrada */
+            #defaulttemplate-addentry {
+                .fp-pathbar {
+                    a.aalink {
+                        color: $primary !important;
+                        text-decoration: underline;
+                        &:hover {
+                            color: $grey3 !important;
+                        }
+                        &:focus {
+                            box-shadow: none;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+            /* Vista individual */
+            #data-singleview-content {
+                a:not(.btn-icon) {
+                    color: $primary !important;
+                    text-decoration: underline;
+                    &:hover {
+                        color: $grey3 !important;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                        background: transparent;
+                    }
+                }
+            }
+            /* Vista de lista */
+            #data-listview-content {
+                a:not(.btn-icon) {
+                    color: $primary !important;
+                    text-decoration: underline;
+                    &:hover {
+                        color: $grey3 !important;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                        background: transparent;
+                    }
+                }
+                .defaulttemplate-listentry {
+                    .row.h-100 {}
+                }
+            }
+            /* Footer que contiene btn añadir entrada */
+            #sticky-footer {
+                border-top: 0 !important;
             }
         }
     }
