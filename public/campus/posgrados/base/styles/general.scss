@@ -389,6 +389,9 @@ body.home:not(.editing) {
     h1 {
         @include title;
     }
+    p {
+        @include body;
+    }
     .alert-info {
         color: $primary;
         background-color: $grey2;
@@ -662,9 +665,9 @@ body.home:not(.editing) {
                     }
                 }
             }
-            p {
+            /* p {
                 @include body;
-            }
+            } */
             // subrayado
             .subrayado {
                 position: relative;
@@ -776,8 +779,10 @@ body:not(.home) {
                                             a {
                                                 color: $primary;
                                                 text-decoration: underline;
+                                                font-weight: 500;
                                                 &:hover {
                                                     color: $grey3 !important;
+                                                    text-decoration: underline;
                                                 }
                                                 &:focus {
                                                     box-shadow: none;
