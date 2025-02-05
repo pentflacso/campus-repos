@@ -416,6 +416,34 @@ body.home:not(.editing) {
             box-shadow: $focus;
         }
     }
+    .page-item {
+        a {
+            &:focus {
+                box-shadow: $focus !important;
+            }
+            span {
+                color: $primary !important;
+                &:hover {
+                    color: $grey3 !important;
+                }
+            }
+        }
+        &.active {
+            .page-link {
+                background-color: $primary;
+                border-color: $primary;
+                &:focus {
+                    box-shadow: $focus !important;
+                }
+                span {
+                    color: white !important;
+                    &:hover {
+                        color: $grey3 !important;
+                    }
+                }
+            }
+        }
+    }
     /* boton primario */
     a.btn.btn-primary {
         position: relative;
@@ -518,6 +546,36 @@ body.home:not(.editing) {
         .drawerheader {
             .drawertoggle {
                 background-color: $primary !important;
+            }
+        }
+    }
+    #modal-content {
+        #modal-footer {
+            .btn-primary {
+                background-color: $primary !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 500px;
+                background: none;
+                &:hover {
+                    background-color: $grey2 !important;
+                    color: $primary !important;
+                    box-shadow: none !important;
+                    outline: none !important;
+                }
+            }
+            .btn-secondary {
+                background-color: white !important;
+                color: $primary !important;
+                border: 1px solid $grey2 !important;
+                border-radius: 500px;
+                background: none;
+                &:hover {
+                    background-color: $grey2 !important;
+                    color: $primary !important;
+                    box-shadow: none !important;
+                    outline: none !important;
+                }
             }
         }
     }
