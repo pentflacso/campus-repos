@@ -521,6 +521,16 @@ body.home:not(.editing) {
             #page-content {
                 #region-main-box {
                     #region-main {
+                        /* Header con titulo subrayado y boton volver de varios recursos como foros y base de datos */
+                        .activity-header {
+                            background-color: transparent;
+                            padding: 0;
+                            border: none;
+                            h1 {
+                                @include title;
+                                margin-top: 4rem;
+                            }
+                        }
                         div[role="main"] {
                             .course-content {
                                 ul.topics {
@@ -1060,15 +1070,6 @@ body:not(.home) {
 
 #page-mod-forum-view {
     #region-main {
-        .activity-header {
-            background-color: transparent;
-            padding: 0;
-            border: none;
-            h1 {
-                @include title;
-                margin-top: 4rem;
-            }
-        }
         /* tablas */
         table {
             font-family: 'Roboto';
