@@ -5,6 +5,7 @@ $accent: #FFD658;
 $grey1: #F0F0F0;
 $grey2: #B4C1CE;
 $grey3: #8394A6;
+$focus: 0 0 0 .2rem rgba(131, 148, 166, 0.75);
 // TAMAÑOS DE FUENTE
 $fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
 $fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
@@ -385,6 +386,9 @@ body.home:not(.editing) {
 /* GENERAL - para elementos repetidos en home y modulos */
 
 #page-wrapper {
+    h1 {
+        @include title;
+    }
     .alert-info {
         color: $primary;
         background-color: $grey2;
@@ -392,10 +396,21 @@ body.home:not(.editing) {
     .text-info {
         color: $grey3 !important;
     }
+    button[data-action="open-chooser"] {
+        color: $primary;
+        background-color: $grey1;
+        border-color: $primary;
+        &:focus {
+            box-shadow: $focus;
+        }
+        .pluscontainer {
+            border: 0;
+        }
+    }
     input,
     select {
         &:focus {
-            box-shadow: 0 0 0 .2rem rgba(131, 148, 166, 0.75);
+            box-shadow: $focus;
         }
     }
     /* boton primario */
@@ -1399,7 +1414,7 @@ body:not(.home) {
             }
             /* Vista de lista */
             #data-listview-content {
-                a:not(.btn-icon) {
+                a:not(.btn-icon):not(.dropdown-item) {
                     color: $primary !important;
                     text-decoration: underline;
                     &:hover {
