@@ -134,7 +134,10 @@ body.home {
                                                 .no-overflow {
                                                     margin-top: 0 !important;
                                                     h2 {
-                                                        @include subtitle;
+                                                        font-family: 'Roboto' !important;
+                                                        font-size: $fs-base !important;
+                                                        color: $primary !important;
+                                                        font-weight: 500 !important;
                                                         border: none !important;
                                                         background-color: transparent;
                                                         padding: 0 !important;
@@ -346,7 +349,6 @@ body.home:not(.editing) {
                             height: 100%;
                             margin-top: 0 !important;
                             h2 {
-                                @include body;
                                 border: none !important;
                                 background-color: transparent;
                                 padding: 0 !important;
