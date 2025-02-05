@@ -346,7 +346,7 @@ body.home:not(.editing) {
                             height: 100%;
                             margin-top: 0 !important;
                             h2 {
-                                @include subtitle;
+                                @include body;
                                 border: none !important;
                                 background-color: transparent;
                                 padding: 0 !important;
@@ -732,7 +732,15 @@ body:not(.home) {
                                                 z-index: 100;
                                             }
                                             a {
-                                                color: $secondary;
+                                                color: $primary;
+                                                text-decoration: underline;
+                                                &:hover {
+                                                    color: $grey3 !important;
+                                                }
+                                                &:focus {
+                                                    box-shadow: none;
+                                                    background: transparent;
+                                                }
                                             }
                                             p {
                                                 @include body;
