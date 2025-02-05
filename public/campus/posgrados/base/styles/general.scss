@@ -385,6 +385,19 @@ body.home:not(.editing) {
 /* GENERAL - para elementos repetidos en home y modulos */
 
 #page-wrapper {
+    .alert-info {
+        color: $primary;
+        background-color: $grey2;
+    }
+    .text-info {
+        color: $grey3 !important;
+    }
+    input,
+    select {
+        &:focus {
+            box-shadow: 0 0 0 .2rem rgba(131, 148, 166, 0.75);
+        }
+    }
     /* boton primario */
     a.btn.btn-primary {
         position: relative;
@@ -1066,6 +1079,81 @@ body:not(.home) {
 /* FOROS */
 
 
+/* foros general */
+
+#mformforum {
+    h3 {
+        @include subtitle;
+    }
+    #fgroup_id_buttonar {
+        .btn-primary {
+            background-color: $primary !important;
+            color: white !important;
+            background-image: none;
+            padding: 0.5rem 1rem;
+            border-radius: 500px;
+            border: 1px solid $primary;
+            height: initial;
+            &:hover {
+                background-color: $grey2 !important;
+                color: $primary !important;
+                outline: none;
+                box-shadow: none !important;
+                border-color: $grey2 !important;
+            }
+            &:focus {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+        }
+        .btn-secondary {
+            background-color: white !important;
+            color: $primary !important;
+            background-image: none;
+            padding: 0.5rem 1rem;
+            border-radius: 500px;
+            border: 1px solid $grey2;
+            height: initial;
+            &:hover {
+                background-color: $grey2 !important;
+                color: $primary;
+                outline: none;
+                box-shadow: none !important;
+            }
+            &:focus {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+        }
+        .btn-link {
+            color: $primary;
+            text-decoration: underline;
+            &:hover {
+                color: $grey3 !important;
+                background: transparent;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.fp-pathbar {
+    a.aalink {
+        color: $primary !important;
+        text-decoration: underline;
+        &:hover {
+            color: $grey3 !important;
+        }
+        &:focus {
+            box-shadow: none;
+            background: transparent;
+        }
+    }
+}
+
+
 /* home del foro */
 
 #page-mod-forum-view {
@@ -1294,21 +1382,7 @@ body:not(.home) {
                 }
             }
             /* Añadir entrada */
-            #defaulttemplate-addentry {
-                .fp-pathbar {
-                    a.aalink {
-                        color: $primary !important;
-                        text-decoration: underline;
-                        &:hover {
-                            color: $grey3 !important;
-                        }
-                        &:focus {
-                            box-shadow: none;
-                            background: transparent;
-                        }
-                    }
-                }
-            }
+            #defaulttemplate-addentry {}
             /* Vista individual */
             #data-singleview-content {
                 a:not(.btn-icon) {
@@ -1340,10 +1414,39 @@ body:not(.home) {
                     .row.h-100 {}
                 }
             }
-            /* Footer que contiene btn añadir entrada */
-            #sticky-footer {
-                border-top: 0 !important;
-            }
         }
+    }
+}
+
+#sticky-footer {
+    border-top: 0 !important;
+    .btn-primary {
+        background-color: $primary !important;
+        color: white !important;
+        background-image: none;
+        padding: 0.5rem 1rem;
+        border-radius: 500px;
+        border: 1px solid $primary;
+        height: initial;
+        &:hover {
+            background-color: $grey2 !important;
+            color: $primary !important;
+            outline: none;
+            box-shadow: none !important;
+            border-color: $grey2 !important;
+        }
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+    }
+}
+
+.defaulttemplate-single-body,
+.defaulttemplate-list-body,
+#defaulttemplate-addentry {
+    .font-weight-bold {
+        color: $primary;
+        font-weight: 500 !important;
     }
 }
