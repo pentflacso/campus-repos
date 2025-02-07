@@ -621,6 +621,54 @@ body.home:not(.editing) {
                             }
                         }
                         div[role="main"] {
+                            /* marquesina */
+                            .contenedor-marquesina {
+                                height: 200px;
+                                .marquesina {
+                                    position: absolute; // Se sale del flujo normal de los divs padres
+                                    //left: 0;
+                                    top: 40px;
+                                    width: 100vw; // Ocupa todo el ancho de la pantalla
+                                    white-space: nowrap;
+                                    height: 100%;
+                                }
+                                .texto {
+                                    display: flex;
+                                    gap: 2rem;
+                                    animation: marquee 40s linear infinite;
+                                    width: max-content;
+                                    height: 100%;
+                                    .bloque {
+                                        position: relative;
+                                        display: inline-block;
+                                        font-size: 180px;
+                                        text-transform: uppercase;
+                                        font-weight: bold;
+                                        height: 100%;
+                                        .borde {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            color: transparent;
+                                            -webkit-text-stroke: 6px $secondary;
+                                            z-index: 1;
+                                        }
+                                        .relleno {
+                                            position: relative;
+                                            color: white;
+                                            z-index: 2;
+                                        }
+                                    }
+                                    @keyframes marquee {
+                                        from {
+                                            transform: translateX(0%);
+                                        }
+                                        to {
+                                            transform: translateX(-50%);
+                                        }
+                                    }
+                                }
+                            }
                             .course-content {
                                 ul.topics {
                                     li.section {
