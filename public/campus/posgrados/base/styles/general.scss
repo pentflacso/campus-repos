@@ -635,7 +635,7 @@ body.home:not(.editing) {
                                 .texto {
                                     display: flex;
                                     gap: 2rem;
-                                    animation: marquee 40s linear infinite;
+                                    animation: marquee 45s linear infinite;
                                     width: max-content;
                                     height: 100%;
                                     .bloque {
@@ -661,10 +661,10 @@ body.home:not(.editing) {
                                     }
                                     @keyframes marquee {
                                         from {
-                                            transform: translateX(0%);
+                                            transform: translateX(-5%);
                                         }
                                         to {
-                                            transform: translateX(-50%);
+                                            transform: translateX(-80%);
                                         }
                                     }
                                 }
