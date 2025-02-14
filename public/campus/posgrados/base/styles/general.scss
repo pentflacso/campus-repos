@@ -548,6 +548,45 @@ body.home:not(.editing) {
                 background-color: $primary !important;
             }
         }
+        .drawercontent.drag-container {
+            #block-region-side-pre {
+                section.block_html {
+                    .card-body {
+                        h5 {
+                            background-color: $primary;
+                        }
+                        .card-text.content.mt-3 {
+                            .no-overflow {
+                                .accesos {
+                                    display: inline-block;
+                                    background-size: auto 17px;
+                                    padding-left: 28px;
+                                    background-repeat: no-repeat;
+                                    background-position: left center;
+                                    color: $primary;
+                                    &:hover {
+                                        color: $grey3;
+                                        text-decoration: none;
+                                    }
+                                }
+                                .recursos {
+                                    background-image: url(../../../base/img/recursos-icon.svg);
+                                }
+                                .pasaporte {
+                                    background-image: url(../../../base/img/pasaporte-icon.svg);
+                                }
+                                .participantes {
+                                    background-image: url(../../../base/img/participantes-icon.svg);
+                                }
+                                .ayuda {
+                                    background-image: url(../../../base/img/ayuda-icon.svg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     #modal-content {
         #modal-footer {
