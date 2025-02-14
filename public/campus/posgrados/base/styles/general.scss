@@ -791,6 +791,17 @@ body.home:not(.editing) {
                                     }
                                 }
                             }
+                            #local-accessibility-buttoncontainer {
+                                button.btn-primary {
+                                    background-image: none;
+                                    background-color: $grey3;
+                                    &:hover {
+                                        background-color: $grey2;
+                                        outline: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
                         }
                         .activity-navigation {
                             border-top: 1px solid $grey2;
