@@ -553,6 +553,8 @@ body.home:not(.editing) {
                 section.block_html {
                     .card-body {
                         h5 {
+                            font-family: 'Roboto';
+                            font-weight: 400 !important;
                             background-color: $primary;
                         }
                         .card-text.content.mt-3 {
