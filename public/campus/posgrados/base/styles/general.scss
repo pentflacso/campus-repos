@@ -854,6 +854,23 @@ body.home:not(.editing) {
             }
         }
     }
+    /* tablas */
+    table {
+        font-family: 'Roboto';
+        color: $primary;
+        tbody {
+            tr {
+                th {
+                    background-color: $grey1 !important;
+                    border: 1px solid $grey2;
+                }
+                td {
+                    border: 1px solid $grey2;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
 }
 
 
