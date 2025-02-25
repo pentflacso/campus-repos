@@ -638,7 +638,6 @@ body.home:not(.editing) {
             /* header */
             header#page-header {
                 .w-100 {
-                    display: none;
                     .page-header-headings {
                         h1.h2 {
                             @include body;
