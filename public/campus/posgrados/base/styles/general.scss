@@ -642,6 +642,7 @@ body.home:not(.editing) {
                         h1.h2 {
                             @include body;
                             border: none !important;
+                            color: $grey3 !important;
                         }
                     }
                 }
