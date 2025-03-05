@@ -1023,6 +1023,7 @@ body:not(.home) {
                                                 span {
                                                     position: relative;
                                                     z-index: 2; // Mantiene el texto por encima del círculo
+                                                    color: $primary;
                                                     &:hover {
                                                         color: $primary;
                                                     }
