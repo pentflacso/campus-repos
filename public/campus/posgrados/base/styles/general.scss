@@ -458,6 +458,13 @@ body.home:not(.editing) {
                     }
                 }
             }
+            .sectionbadges {
+                span.badge.badge-pill {
+                    position: abosolute;
+                    right: 1.5rem;
+                    top: 1.5rem;
+                }
+            }
         }
         .content {
             //padding-top: 50px !important;
