@@ -1602,7 +1602,7 @@ body:not(.home) {
             }
             /* Vista de lista */
             #data-listview-content {
-                a:not(.btn-icon):not(.dropdown-item) {
+                a:not(.btn-icon):not(.dropdown-item):not(.data-field-link) {
                     color: $primary !important;
                     text-decoration: underline;
                     &:hover {
@@ -1681,6 +1681,9 @@ body:not(.home) {
         font-weight: 500 !important;
     }
 }
+
+
+/* Base de datos: Espacio de trabajo - Citar canciones - Diplo-eel CH4 - Embarque */
 
 .cmid-2974749 {
     #data-listview-content {
