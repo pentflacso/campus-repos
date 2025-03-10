@@ -37,6 +37,140 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
     line-height: 1.4 !important;
 }
 
+@mixin hoja-recursos {
+    // Estilos para filtros
+    #filtros {
+        display: flex;
+        flex-direction: row;
+        label {
+            color: rgba(21, 47, 78, 1);
+            display: flex;
+            align-items: center;
+        }
+        select {
+            color: rgba(21, 47, 78, 1);
+            padding: 5px;
+            border: 1px solid rgba(21, 47, 78, 1);
+            margin-left: 10px;
+            margin-right: 50px;
+            background: transparent;
+        }
+        input {
+            color: rgba(21, 47, 78, 1);
+            padding: 5px;
+            border: 1px solid rgba(21, 47, 78, 1);
+            margin-right: 10px;
+            border-radius: 0px !important;
+            height: 20px;
+            width: 20px;
+            background: white !important;
+        }
+    }
+    // Card de recurso
+    .recurso {
+        background-color: #F0F0F0;
+        padding: 40px;
+        font-size: 16px;
+        font-family: 'Roboto';
+        margin: 40px 0;
+        position: relative;
+        .sesion {
+            font-size: 24px;
+            font-weight: 400;
+            color: #152F4E;
+            margin-left: 8px;
+        }
+        .modulosesion {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .modulo {
+            color: #152F4E;
+            border-bottom: 4px solid #FFD658;
+            display: inline-block;
+            font-weight: 400;
+            font-size: 24px;
+            .highlight {
+                color: #333 !important;
+            }
+        }
+        .complementario .basico,
+        .basico .complementario {
+            display: none;
+        }
+        .tipo {
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #152F4E;
+            float: right;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+        h3 {
+            font-weight: 500 !important;
+            font-family: 'Roboto';
+            color: #152F4E;
+        }
+        .extra {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            margin: 5px 0;
+            color: #152F4E;
+        }
+        .autoria {
+            color: #152F4E;
+        }
+        .archivo a.data-field-link,
+        .url a.data-field-link {
+            color: #032E59;
+            text-decoration: none !important;
+            margin: 20px 0;
+            border: 1px solid #032E59;
+            padding: 5px 40px 5px 20px;
+            display: inline-block;
+            border-radius: 500px;
+            background-repeat: no-repeat;
+            background-size: 10px;
+            background-position: center right 20px;
+            &:hover {
+                border: 1px solid #A0D4CA;
+                background-color: #A0D4CA;
+                color: #152F4E !important;
+            }
+        }
+        .archivo a.data-field-link {
+            background-image: url(https://campus-repos.vercel.app/campus/posgrados/base/img/arrowdown-icon.svg);
+        }
+        .url a.data-field-link {
+            background-image: url(https://campus-repos.vercel.app/campus/posgrados/base/img/topright-arrow.svg);
+        }
+        .archivo img {
+            display: none;
+        }
+        .url img {
+            transform: rotate(45deg);
+        }
+        .contenido {
+            margin: 10px 0;
+            h4,
+            h3 {
+                color: #152F4E;
+                font-weight: 400;
+                font-size: 24px !important;
+            }
+        }
+        @media screen and (max-width: 567px) {
+            .tipo {
+                position: initial;
+                float: initial;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
 
 /* NAVBAR DE ADMINISTRACION DEL CURSO */
 
@@ -373,6 +507,17 @@ body.home:not(.editing) {
                                     left: 1.5rem;
                                     text-align: initial;
                                 }
+                            }
+                            span.titulo_naranja {
+                                position: absolute;
+                                top: 1.5rem;
+                                right: 1.5rem;
+                                text-align: right;
+                            }
+                            p {
+                                position: absolute;
+                                bottom: 0;
+                                left: 1.5rem;
                             }
                         }
                     }
