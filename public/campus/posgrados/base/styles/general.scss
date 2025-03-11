@@ -232,6 +232,173 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 
+/* HOME */
+
+body.home {
+    #page-content {
+        #region-main-box {
+            #region-main {
+                div[role="main"] {
+                    .course-content {
+                        ul.topics {
+                            li#section-0 {
+                                border-bottom: none;
+                                .mdl-left.py-2.changenumsections {
+                                    display: none;
+                                }
+                            }
+                            li.section:not(#section-0) {
+                                margin-bottom: 3rem;
+                                border-radius: 0;
+                                .course-section-header {
+                                    h3.sectionname {
+                                        a:first-of-type {
+                                            @include title;
+                                            text-transform: uppercase;
+                                            &:focus {
+                                                box-shadow: none;
+                                                background-color: transparent;
+                                            }
+                                        }
+                                    }
+                                }
+                                .content {
+                                    .my-3 {
+                                        .course-description-item.summarytext {
+                                            .description-inner {
+                                                .no-overflow {
+                                                    margin-top: 0 !important;
+                                                    h2 {
+                                                        font-family: 'Roboto' !important;
+                                                        font-size: $fs-base !important;
+                                                        color: $primary !important;
+                                                        font-weight: 500 !important;
+                                                        border: none !important;
+                                                        background-color: transparent;
+                                                        padding: 0 !important;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .section-summary-activities {
+                                        span.activity-count {
+                                            display: none;
+                                        }
+                                    }
+                                    ul.section {
+                                        display: none !important;
+                                    }
+                                    button.btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center.p-3.mb-3 {
+                                        display: none !important;
+                                    }
+                                    .mdl-left.py-2.changenumsections {
+                                        border-top: 0;
+                                        a {
+                                            color: black;
+                                        }
+                                    }
+                                }
+                            }
+                            /* módulo completado */
+                            li.section.completo {
+                                background-color: $grey1;
+                                border: none !important;
+                                .course-section-header {
+                                    h3.sectionname {
+                                        a:first-of-type {}
+                                    }
+                                }
+                                .content {
+                                    .my-3 {
+                                        .course-description-item.summarytext {
+                                            .description-inner {
+                                                .no-overflow {
+                                                    h2 {}
+                                                    p.fecha {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ul.section {}
+                                    .mdl-left.py-2.changenumsections {
+                                        a {}
+                                    }
+                                }
+                            }
+                            /* módulo incompleto */
+                            li.section.incompleto {
+                                background-color: white;
+                                border: 1px solid $grey2;
+                                .course-section-header {
+                                    h3.sectionname {
+                                        a:first-of-type {}
+                                    }
+                                }
+                                .content {
+                                    .my-3 {
+                                        .course-description-item.summarytext {
+                                            .description-inner {
+                                                .no-overflow {
+                                                    h2 {}
+                                                    p.fecha {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ul.section {}
+                                    .mdl-left.py-2.changenumsections {
+                                        a {}
+                                    }
+                                }
+                            }
+                            /* módulo destacado / actual */
+                            li.section.current {
+                                background-color: $primary;
+                                &::before {
+                                    display: none !important;
+                                }
+                                .course-section-header {
+                                    h3.sectionname {
+                                        span {
+                                            a {
+                                                color: white !important;
+                                            }
+                                        }
+                                    }
+                                }
+                                .content {
+                                    .my-3 {
+                                        .course-description-item.summarytext {
+                                            .description-inner {
+                                                .no-overflow {
+                                                    h2 {
+                                                        color: white !important;
+                                                    }
+                                                    p.fecha {
+                                                        color: white !important;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ul.section {}
+                                    .mdl-left.py-2.changenumsections {
+                                        a {
+                                            color: white !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /* HOME: EXCLUSIVO CON EDICIÓN ACTIVADA */
 
 body.home.editing {
@@ -349,6 +516,31 @@ body.home:not(.editing) {
                                     left: 1.5rem;
                                     text-align: initial;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    li.section.current {
+        .course-section-header {
+            h3.sectionname {
+                a {
+                    color: white !important;
+                }
+            }
+        }
+        .content {
+            .my-3 {
+                .course-description-item.summarytext {
+                    .description-inner {
+                        .no-overflow {
+                            h2 {
+                                color: white !important;
+                            }
+                            p.fecha {
+                                color: white !important;
                             }
                         }
                     }
@@ -1248,173 +1440,6 @@ body:not(.home) {
                     }
                     .modified {
                         display: none;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-/* HOME */
-
-body.home {
-    #page-content {
-        #region-main-box {
-            #region-main {
-                div[role="main"] {
-                    .course-content {
-                        ul.topics {
-                            li#section-0 {
-                                border-bottom: none;
-                                .mdl-left.py-2.changenumsections {
-                                    display: none;
-                                }
-                            }
-                            li.section:not(#section-0) {
-                                margin-bottom: 3rem;
-                                border-radius: 0;
-                                .course-section-header {
-                                    h3.sectionname {
-                                        a:first-of-type {
-                                            @include title;
-                                            text-transform: uppercase;
-                                            &:focus {
-                                                box-shadow: none;
-                                                background-color: transparent;
-                                            }
-                                        }
-                                    }
-                                }
-                                .content {
-                                    .my-3 {
-                                        .course-description-item.summarytext {
-                                            .description-inner {
-                                                .no-overflow {
-                                                    margin-top: 0 !important;
-                                                    h2 {
-                                                        font-family: 'Roboto' !important;
-                                                        font-size: $fs-base !important;
-                                                        color: $primary !important;
-                                                        font-weight: 500 !important;
-                                                        border: none !important;
-                                                        background-color: transparent;
-                                                        padding: 0 !important;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    .section-summary-activities {
-                                        span.activity-count {
-                                            display: none;
-                                        }
-                                    }
-                                    ul.section {
-                                        display: none !important;
-                                    }
-                                    button.btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center.p-3.mb-3 {
-                                        display: none !important;
-                                    }
-                                    .mdl-left.py-2.changenumsections {
-                                        border-top: 0;
-                                        a {
-                                            color: black;
-                                        }
-                                    }
-                                }
-                            }
-                            /* módulo completado */
-                            li.section.completo {
-                                background-color: $grey1;
-                                border: none !important;
-                                .course-section-header {
-                                    h3.sectionname {
-                                        a:first-of-type {}
-                                    }
-                                }
-                                .content {
-                                    .my-3 {
-                                        .course-description-item.summarytext {
-                                            .description-inner {
-                                                .no-overflow {
-                                                    h2 {}
-                                                    p.fecha {}
-                                                }
-                                            }
-                                        }
-                                    }
-                                    ul.section {}
-                                    .mdl-left.py-2.changenumsections {
-                                        a {}
-                                    }
-                                }
-                            }
-                            /* módulo incompleto */
-                            li.section.incompleto {
-                                background-color: white;
-                                border: 1px solid $grey2;
-                                .course-section-header {
-                                    h3.sectionname {
-                                        a:first-of-type {}
-                                    }
-                                }
-                                .content {
-                                    .my-3 {
-                                        .course-description-item.summarytext {
-                                            .description-inner {
-                                                .no-overflow {
-                                                    h2 {}
-                                                    p.fecha {}
-                                                }
-                                            }
-                                        }
-                                    }
-                                    ul.section {}
-                                    .mdl-left.py-2.changenumsections {
-                                        a {}
-                                    }
-                                }
-                            }
-                            /* módulo destacado / actual */
-                            li.section.current {
-                                background-color: $primary;
-                                &::before {
-                                    display: none !important;
-                                }
-                                .course-section-header {
-                                    h3.sectionname {
-                                        span {
-                                            a {
-                                                color: white !important;
-                                            }
-                                        }
-                                    }
-                                }
-                                .content {
-                                    .my-3 {
-                                        .course-description-item.summarytext {
-                                            .description-inner {
-                                                .no-overflow {
-                                                    h2 {
-                                                        color: white !important;
-                                                    }
-                                                    p.fecha {
-                                                        color: white !important;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    ul.section {}
-                                    .mdl-left.py-2.changenumsections {
-                                        a {
-                                            color: white !important;
-                                        }
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
