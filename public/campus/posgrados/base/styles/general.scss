@@ -271,7 +271,7 @@ body.home {
                                                     h2 {
                                                         font-family: 'Roboto' !important;
                                                         font-size: $fs-base !important;
-                                                        color: $primary !important;
+                                                        color: $primary;
                                                         font-weight: 500 !important;
                                                         border: none !important;
                                                         background-color: transparent;
@@ -369,7 +369,7 @@ body.home {
                                 }
                                 .content {
                                     .my-3 {
-                                        .course-description-item.summarytext {
+                                        .course-description-item {
                                             .description-inner {
                                                 .no-overflow {
                                                     h2 {
@@ -533,7 +533,7 @@ body.home:not(.editing) {
         }
         .content {
             .my-3 {
-                .course-description-item.summarytext {
+                .course-description-item {
                     .description-inner {
                         .no-overflow {
                             h2 {
