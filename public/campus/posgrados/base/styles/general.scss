@@ -523,7 +523,7 @@ body.home:not(.editing) {
             }
         }
     }
-    /* li.section.current {
+    li.section.current {
         .course-section-header {
             h3.sectionname {
                 a {
@@ -531,23 +531,7 @@ body.home:not(.editing) {
                 }
             }
         }
-        .content {
-            .my-3 {
-                .course-description-item {
-                    .description-inner {
-                        .no-overflow {
-                            h2 {
-                                color: white !important;
-                            }
-                            p.fecha {
-                                color: white !important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    } */
+    }
 }
 
 
