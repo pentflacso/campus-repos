@@ -1,1 +1,13 @@
 @use '../../../base/styles/general';
+
+/* Hoja de recursos */
+
+.cmid-2975771:not(.editing) {
+    form#options {
+        display: none;
+    }
+}
+
+.cmid-2975771 {
+    @include general.hoja-recursos;
+}

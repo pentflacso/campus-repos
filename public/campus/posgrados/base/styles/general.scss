@@ -38,15 +38,6 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 @mixin hoja-recursos {
-    #page-mod-data-view:not(.editing) {
-        div[role="main"] {
-            .datapreferences {
-                form#options {
-                    display: none;
-                }
-            }
-        }
-    }
     // Estilos para filtros
     #filtros {
         display: flex;
@@ -77,7 +68,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
     }
     // Card de recurso
     .recurso {
-        background-color: #F0F0F0;
+        background-color: $grey1;
         padding: 40px;
         font-size: 16px;
         font-family: 'Roboto';
@@ -86,7 +77,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
         .sesion {
             font-size: 24px;
             font-weight: 400;
-            color: #152F4E;
+            color: $primary;
             margin-left: 8px;
         }
         .modulosesion {
@@ -94,8 +85,8 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
             margin-bottom: 20px;
         }
         .modulo {
-            color: #152F4E;
-            border-bottom: 4px solid #FFD658;
+            color: $primary;
+            border-bottom: 4px solid $accent;
             display: inline-block;
             font-weight: 400;
             font-size: 24px;
@@ -110,7 +101,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
         .tipo {
             font-weight: 400;
             text-transform: uppercase;
-            color: #152F4E;
+            color: $primary;
             float: right;
             position: absolute;
             top: 40px;
@@ -119,24 +110,24 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
         h3 {
             font-weight: 500 !important;
             font-family: 'Roboto';
-            color: #152F4E;
+            color: $primary;
         }
         .extra {
             font-weight: 400;
             font-size: 16px;
             line-height: 160%;
             margin: 5px 0;
-            color: #152F4E;
+            color: $primary;
         }
         .autoria {
-            color: #152F4E;
+            color: $primary;
         }
         .archivo a.data-field-link,
         .url a.data-field-link {
-            color: #032E59;
+            color: $primary;
             text-decoration: none !important;
             margin: 20px 0;
-            border: 1px solid #032E59;
+            border: 1px solid $primary;
             padding: 5px 40px 5px 20px;
             display: inline-block;
             border-radius: 500px;
@@ -144,9 +135,9 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
             background-size: 10px;
             background-position: center right 20px;
             &:hover {
-                border: 1px solid #A0D4CA;
-                background-color: #A0D4CA;
-                color: #152F4E !important;
+                border: 1px solid $secondary;
+                background-color: $secondary;
+                color: $primary !important;
             }
         }
         .archivo a.data-field-link {
@@ -165,7 +156,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
             margin: 10px 0;
             h4,
             h3 {
-                color: #152F4E;
+                color: $primary;
                 font-weight: 400;
                 font-size: 24px !important;
             }
@@ -517,7 +508,7 @@ body.home:not(.editing) {
                                 line-height: 130%;
                                 text-align: right;
                                 font-size: 18px;
-                                color: #152F4E;
+                                color: $primary;
                                 @media (max-width: 576px) {
                                     bottom: 1.5rem;
                                     left: 1.5rem;
@@ -1127,7 +1118,7 @@ body:not(.home) {
                                             }
                                             .col-textos {
                                                 width: 50%;
-                                                color: #152F4E;
+                                                color: $primary;
                                                 @media (max-width: 768px) {
                                                     width: 100%;
                                                 }

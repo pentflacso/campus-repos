@@ -1,1 +1,7 @@
 @use '../../../base/styles/general';
+
+/* Hoja de recursos */
+
+.cmid-2975439 {
+    @include general.hoja-recursos;
+}
