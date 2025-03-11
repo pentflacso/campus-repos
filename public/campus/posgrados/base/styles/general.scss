@@ -18,7 +18,7 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 @mixin title {
     font-family: 'Roboto' !important;
     font-size: $fs-lg-xl !important;
-    color: $primary !important;
+    color: $primary;
     font-weight: 500 !important;
 }
 
@@ -247,7 +247,7 @@ body.home {
                                     display: none;
                                 }
                             }
-                            li.section {
+                            li.section:not(#section-0) {
                                 margin-bottom: 3rem;
                                 border-radius: 0;
                                 .course-section-header {
@@ -360,8 +360,10 @@ body.home {
                                 }
                                 .course-section-header {
                                     h3.sectionname {
-                                        a:first-of-type {
-                                            color: white !important;
+                                        span {
+                                            a {
+                                                color: white !important;
+                                            }
                                         }
                                     }
                                 }
@@ -383,7 +385,7 @@ body.home {
                                     ul.section {}
                                     .mdl-left.py-2.changenumsections {
                                         a {
-                                            color: white;
+                                            color: white !important;
                                         }
                                     }
                                 }
@@ -524,7 +526,7 @@ body.home:not(.editing) {
 }
 
 
-/* GENERAL - para elementos repetidos en home y modulos */
+/* GENERAL - para elementos repetidos en home, modulos y demás */
 
 #page-wrapper {
     h1 {
@@ -539,6 +541,12 @@ body.home:not(.editing) {
     }
     .text-info {
         color: $grey3 !important;
+    }
+    .pildora-verde {
+        background-color: $secondary;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 500px;
     }
     button[data-action="open-chooser"] {
         color: $primary;
@@ -898,14 +906,6 @@ body.home:not(.editing) {
                                                                     color: $primary;
                                                                 }
                                                             }
-                                                            .banner {
-                                                                background-color: $secondary;
-                                                                margin-left: 0 !important;
-                                                                margin-right: 0 !important;
-                                                                padding: 2.5rem;
-                                                                line-height: 1.4;
-                                                                margin-bottom: 2.4rem !important;
-                                                            }
                                                         }
                                                     }
                                                 }
@@ -1077,6 +1077,9 @@ body:not(.home) {
                                                         }
                                                     }
                                                 }
+                                            }
+                                            ul.section {
+                                                display: none !important;
                                             }
                                             button.btn.btn-link.text-decoration-none.section-modchooser.section-modchooser-link.activity-add.d-flex.align-items-center.p-3.mb-3 {
                                                 display: none !important;
