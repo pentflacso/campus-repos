@@ -355,6 +355,7 @@ body.home {
                             /* módulo destacado / actual */
                             li.section.current {
                                 background-color: $primary;
+                                color: white !important;
                                 &::before {
                                     display: none !important;
                                 }
