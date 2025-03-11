@@ -1,12 +1,28 @@
 @use '../../../base/styles/general';
 
-/* Hoja de recursos */
+/* HOJA DE RECURSOS */
+
+
+/* Oculto buscador avanzado - con edición desactivada */
 
 .cmid-2975771:not(.editing) {
-    form#options {
-        display: none;
+    div[role="main"] {
+        hr {
+            display: none;
+        }
+        .datapreferences {
+            hr {
+                display: none;
+            }
+            form#options {
+                display: none;
+            }
+        }
     }
 }
+
+
+/* Le pongo los estilos con mixin */
 
 .cmid-2975771 {
     @include general.hoja-recursos;
