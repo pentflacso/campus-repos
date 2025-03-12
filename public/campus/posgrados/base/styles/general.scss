@@ -625,6 +625,8 @@ body.home:not(.editing) {
     a.btn.btn-primary {
         position: relative;
         background-color: $primary !important;
+        color: white !important;
+        font-weight: 400 !important;
         background-image: none;
         overflow: hidden; // Evita desbordamientos
         padding: 0.5rem 1rem;
@@ -635,7 +637,7 @@ body.home:not(.editing) {
         z-index: 2; // Asegura que el texto esté por encima del círculo
         &:hover {
             border-bottom: 0;
-            color: $primary;
+            color: $primary !important;
             outline: none;
         }
         &:focus {
@@ -1382,6 +1384,7 @@ body:not(.home) {
                                     color: $primary;
                                     font-family: 'Roboto';
                                     font-weight: bold;
+                                    word-wrap: break-word;
                                     &:hover {
                                         color: $grey3;
                                         text-decoration-color: $grey3;
