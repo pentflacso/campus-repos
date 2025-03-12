@@ -557,6 +557,25 @@ body.home:not(.editing) {
         padding: 0.5rem 1rem;
         border-radius: 500px;
     }
+    .act-importante {
+        background-color: $accent;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 2.5rem;
+        line-height: 1.4;
+        margin-bottom: 2.4rem !important;
+    }
+    .destacado {
+        background-color: $grey1;
+        margin: initial !important;
+        /* 
+        margin-left: 0 !important;
+        margin-right: 0 !important; */
+        padding: 2.5rem !important;
+        margin-bottom: 2.4rem !important;
+        box-shadow: none !important;
+        //line-height: initial;
+    }
     button[data-action="open-chooser"] {
         color: $primary;
         background-color: $grey1;
@@ -1418,25 +1437,6 @@ body:not(.home) {
                                 }
                                 .mom-6 {
                                     background-image: url(../../../base/img/sesion6.svg);
-                                }
-                                .act-importante {
-                                    background-color: $accent;
-                                    margin-left: 0 !important;
-                                    margin-right: 0 !important;
-                                    padding: 2.5rem;
-                                    line-height: 1.4;
-                                    margin-bottom: 2.4rem !important;
-                                }
-                                .destacado {
-                                    background-color: $grey1;
-                                    margin: initial !important;
-                                    /* 
-                                    margin-left: 0 !important;
-                                    margin-right: 0 !important; */
-                                    padding: 2.5rem !important;
-                                    margin-bottom: 2.4rem !important;
-                                    box-shadow: none !important;
-                                    //line-height: initial;
                                 }
                             }
                         }
