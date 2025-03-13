@@ -27,3 +27,62 @@
 .cmid-2975751 {
     @include general.hoja-recursos;
 }
+
+
+/* BASE DE DATOS: ESPACIO DE TRABAJO - CITAR CANCIONES - EMBARQUE */
+
+.cmid-2974749 {
+    #data-listview-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        font-size: general.$fs-base;
+        .defaulttemplate-listentry {
+            background-color: general.$grey1;
+            border: none;
+            margin-bottom: 0 !important;
+            margin-top: 0 !important;
+            .row.my-6 {
+                margin: 0 !important;
+                flex-wrap: initial;
+                .col-auto {
+                    padding: 0;
+                }
+                .col {
+                    padding: 0;
+                    .row.h-100 {
+                        margin-left: initial;
+                        align-items: center;
+                        .col-3 {
+                            display: block;
+                            flex: initial;
+                            max-width: initial;
+                        }
+                        .col-4 {
+                            width: initial;
+                        }
+                    }
+                }
+            }
+            .defaulttemplate-list-body {
+                margin-top: initial;
+                //color: $primary;
+                .row.my-3 {
+                    display: block;
+                    border-bottom: none;
+                    margin-right: initial;
+                    margin-left: initial;
+                    .col-4.col-lg-3 {
+                        max-width: initial;
+                        padding: 0;
+                        font-weight: 600 !important;
+                    }
+                    .col-8.col-lg-9.ml-n3 {
+                        border-left: none;
+                        max-width: initial;
+                    }
+                }
+            }
+        }
+    }
+}

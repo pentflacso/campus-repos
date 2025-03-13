@@ -37,6 +37,130 @@ $fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
     line-height: 1.4 !important;
 }
 
+@mixin btn-primario {
+    background-color: $primary !important;
+    color: white !important;
+    background-image: none;
+    padding: 0.5rem 1rem;
+    border-radius: 500px;
+    border: 1px solid $primary;
+    height: initial;
+    &:hover {
+        background-color: $grey2 !important;
+        color: $primary !important;
+        outline: none;
+        box-shadow: none !important;
+        border-color: $grey2 !important;
+    }
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+
+@mixin btn-secundario {
+    background-color: white !important;
+    color: $primary !important;
+    background-image: none;
+    padding: 0.5rem 1rem;
+    border-radius: 500px;
+    border: 1px solid $grey2;
+    height: initial;
+    &:hover {
+        background-color: $grey2 !important;
+        color: $primary;
+        outline: none;
+        box-shadow: none !important;
+    }
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+
+@mixin btn-primario-animado {
+    position: relative;
+    background-color: $primary !important;
+    color: white !important;
+    font-weight: 400 !important;
+    background-image: none;
+    overflow: hidden; // Evita desbordamientos
+    padding: 0.5rem 1rem;
+    border-radius: 500px;
+    height: initial;
+    border-bottom: 0;
+    transition: color 0.3s ease-out;
+    z-index: 2; // Asegura que el texto esté por encima del círculo
+    &:hover {
+        border-bottom: 0;
+        color: $primary !important;
+        outline: none;
+    }
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+    // Efecto de círculo expansivo en hover
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: $grey2; // Color de hover
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.3s ease-out;
+        z-index: -1; // Mantiene el círculo detrás del texto
+    }
+    &:hover:before {
+        transform: translate(-50%, -50%) scale(40);
+    }
+}
+
+@mixin btn-secundario-animado {
+    position: relative;
+    background-color: white !important;
+    color: $primary !important;
+    background-image: none;
+    overflow: hidden; // Evita desbordamientos
+    padding: 0.5rem 1rem;
+    border-radius: 500px;
+    border: 1px solid $grey2;
+    border-bottom: 1px solid $grey2 !important;
+    height: initial;
+    border-bottom: 0;
+    transition: color 0.3s ease-out;
+    z-index: 2; // Asegura que el texto esté por encima del círculo
+    &:hover {
+        border-bottom: 0;
+        color: $primary;
+        outline: none;
+    }
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+    // Efecto de círculo expansivo en hover
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: $grey2; // Color de hover
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.3s ease-out;
+        z-index: -1; // Mantiene el círculo detrás del texto
+    }
+    &:hover:before {
+        transform: translate(-50%, -50%) scale(40);
+    }
+}
+
 @mixin hoja-recursos {
     // Estilos para filtros
     #filtros {
@@ -648,7 +772,7 @@ body.home:not(.editing) {
             }
         }
     }
-    /* boton primario */
+    /* boton primario animado */
     a.btn.btn-primary {
         position: relative;
         background-color: $primary !important;
@@ -689,7 +813,7 @@ body.home:not(.editing) {
             transform: translate(-50%, -50%) scale(40);
         }
     }
-    /* boton secundario */
+    /* boton secundario animado */
     a.btn.btn-secondary {
         position: relative;
         background-color: white !important;
@@ -1823,6 +1947,17 @@ body:not(.home) {
                     }
                 }
                 .defaulttemplate-listentry {
+                    a {
+                        color: $primary !important;
+                        text-decoration: underline;
+                        &:hover {
+                            color: $grey3 !important;
+                        }
+                        &:focus {
+                            box-shadow: none;
+                            background: transparent;
+                        }
+                    }
                     .row.my-6 {
                         .col {
                             .row.h-100 {
@@ -1896,101 +2031,9 @@ body:not(.home) {
 
 #page-course-view-participants {
     .btn-primary {
-        background-color: $primary !important;
-        color: white !important;
-        background-image: none;
-        padding: 0.5rem 1rem;
-        border-radius: 500px;
-        border: 1px solid $primary;
-        height: initial;
-        &:hover {
-            background-color: $grey2 !important;
-            color: $primary !important;
-            outline: none;
-            box-shadow: none !important;
-            border-color: $grey2 !important;
-        }
-        &:focus {
-            box-shadow: none !important;
-            outline: none !important;
-        }
+        @include btn-primario;
     }
     .btn-secondary {
-        background-color: white !important;
-        color: $primary !important;
-        background-image: none;
-        padding: 0.5rem 1rem;
-        border-radius: 500px;
-        border: 1px solid $grey2;
-        height: initial;
-        &:hover {
-            background-color: $grey2 !important;
-            color: $primary;
-            outline: none;
-            box-shadow: none !important;
-        }
-        &:focus {
-            box-shadow: none !important;
-            outline: none !important;
-        }
-    }
-}
-
-
-/* Base de datos: Espacio de trabajo - Citar canciones - Diplo-eel CH4 - Embarque */
-
-.cmid-2974749 {
-    #data-listview-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        font-size: $fs-base;
-        .defaulttemplate-listentry {
-            background-color: $grey1;
-            border: none;
-            margin-bottom: 0 !important;
-            margin-top: 0 !important;
-            .row.my-6 {
-                margin: 0 !important;
-                flex-wrap: initial;
-                .col-auto {
-                    padding: 0;
-                }
-                .col {
-                    padding: 0;
-                    .row.h-100 {
-                        margin-left: initial;
-                        align-items: center;
-                        .col-3 {
-                            display: block;
-                            flex: initial;
-                            max-width: initial;
-                        }
-                        .col-4 {
-                            width: initial;
-                        }
-                    }
-                }
-            }
-            .defaulttemplate-list-body {
-                margin-top: initial;
-                //color: $primary;
-                .row.my-3 {
-                    display: block;
-                    border-bottom: none;
-                    margin-right: initial;
-                    margin-left: initial;
-                    .col-4.col-lg-3 {
-                        max-width: initial;
-                        padding: 0;
-                        font-weight: 600 !important;
-                    }
-                    .col-8.col-lg-9.ml-n3 {
-                        border-left: none;
-                        max-width: initial;
-                    }
-                }
-            }
-        }
+        @include btn-secundario;
     }
 }
