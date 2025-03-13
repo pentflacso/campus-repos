@@ -1547,6 +1547,9 @@ body:not(.home) {
                                         color: $grey3;
                                         text-decoration-color: $grey3;
                                     }
+                                    &:focus {
+                                        box-shadow: none;
+                                    }
                                 }
                                 h1 {
                                     @include title;
