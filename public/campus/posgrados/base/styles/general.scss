@@ -790,6 +790,9 @@ body.home:not(.editing) {
                                 .ayuda {
                                     background-image: url(../../../base/img/ayuda-icon.svg);
                                 }
+                                .ia {
+                                    background-image: url(../../../base/img/ia-icon.svg);
+                                }
                             }
                         }
                     }
@@ -1885,6 +1888,51 @@ body:not(.home) {
     .font-weight-bold {
         color: $primary !important;
         font-weight: 500 !important;
+    }
+}
+
+
+/* PARTICIPANTES */
+
+#page-course-view-participants {
+    .btn-primary {
+        background-color: $primary !important;
+        color: white !important;
+        background-image: none;
+        padding: 0.5rem 1rem;
+        border-radius: 500px;
+        border: 1px solid $primary;
+        height: initial;
+        &:hover {
+            background-color: $grey2 !important;
+            color: $primary !important;
+            outline: none;
+            box-shadow: none !important;
+            border-color: $grey2 !important;
+        }
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+    }
+    .btn-secondary {
+        background-color: white !important;
+        color: $primary !important;
+        background-image: none;
+        padding: 0.5rem 1rem;
+        border-radius: 500px;
+        border: 1px solid $grey2;
+        height: initial;
+        &:hover {
+            background-color: $grey2 !important;
+            color: $primary;
+            outline: none;
+            box-shadow: none !important;
+        }
+        &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
     }
 }
 
