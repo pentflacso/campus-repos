@@ -541,6 +541,9 @@ body.home:not(.editing) {
     h1 {
         @include title;
     }
+    h3 {
+        @include subtitle;
+    }
     p {
         @include body;
     }
@@ -735,6 +738,7 @@ body.home:not(.editing) {
             color: $primary;
             text-decoration: none !important;
             font-weight: 400 !important;
+            font-family: 'Roboto' !important;
             &:hover {
                 color: $grey3 !important;
                 text-decoration: none;
@@ -1285,6 +1289,9 @@ body:not(.home) {
                                             }
                                             .btn-fechas:after {
                                                 background-image: url(../../../base/img/calendar-icon.svg);
+                                            }
+                                            .btn-ia:after {
+                                                background-image: url(../../../base/img/ia-icon.svg);
                                             }
                                         }
                                         .pent-sesion {
