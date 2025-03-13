@@ -50,12 +50,18 @@
     }
 }
 
+
+/* estilos */
+
 .cmid-2974749 {
     #data-listview-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
         font-size: general.$fs-base;
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
         .defaulttemplate-listentry {
             background-color: general.$grey1;
             border: none;
@@ -79,6 +85,9 @@
                         }
                         .col-4 {
                             width: initial;
+                            .btn.btn-icon {
+                                background-color: general.$grey2;
+                            }
                         }
                     }
                 }
