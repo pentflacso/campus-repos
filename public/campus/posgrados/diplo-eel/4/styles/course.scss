@@ -31,6 +31,25 @@
 
 /* BASE DE DATOS: ESPACIO DE TRABAJO - CITAR CANCIONES - EMBARQUE */
 
+
+/* Oculto buscador avanzado - con edición desactivada */
+
+.cmid-2974749:not(.editing) {
+    div[role="main"] {
+        hr {
+            display: none;
+        }
+        .datapreferences {
+            hr {
+                display: none;
+            }
+            form#options {
+                display: none;
+            }
+        }
+    }
+}
+
 .cmid-2974749 {
     #data-listview-content {
         display: grid;
