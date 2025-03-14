@@ -874,6 +874,8 @@ body.home:not(.editing) {
     }
     /* solapa derecha */
     #theme_boost-drawers-blocks {
+        width: 100%;
+        max-width: 340px;
         .drawerheader {
             .drawertoggle {
                 background-color: $primary !important;
