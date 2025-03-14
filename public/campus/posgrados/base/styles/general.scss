@@ -667,6 +667,7 @@ body.home:not(.editing) {
     }
     h3 {
         @include subtitle;
+        border-top: 0 !important;
     }
     p {
         @include body;
