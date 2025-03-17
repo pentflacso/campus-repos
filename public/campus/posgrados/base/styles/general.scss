@@ -1923,6 +1923,68 @@ body:not(.home) {
                     }
                 }
             }
+            .mdl-left {
+                a.comment-link {
+                    margin-bottom: 1rem;
+                    .icon {
+                        color: $primary;
+                        &:hover {
+                            color: $grey3;
+                        }
+                    }
+                    span {
+                        color: $primary !important;
+                        text-decoration: none !important;
+                        &:hover {
+                            color: $grey3 !important;
+                        }
+                        &:focus {
+                            box-shadow: none;
+                            background: transparent;
+                        }
+                    }
+                }
+                .comment-ctrl {
+                    .comment-list {
+                        li {
+                            border-top: 1px solid $grey2;
+                            background-color: transparent !important;
+                        }
+                        .comment-message {
+                            .comment-message-meta {
+                                span.time {
+                                    font-size: $fs-sm;
+                                    color: $grey3;
+                                }
+                            }
+                            .text {
+                                color: $primary;
+                                font-size: $fs-base;
+                                .comment-delete {
+                                    .icon {
+                                        color: $primary;
+                                        &:hover {
+                                            color: $grey3;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .comment-area {
+                        textarea {
+                            background-color: white;
+                            color: $primary;
+                            margin-bottom: 1rem;
+                        }
+                        a {
+                            //@include btn-primario();
+                            //text-decoration: none !important;
+                            font-size: $fs-base;
+                        }
+                    }
+                }
+            }
             /* Añadir entrada */
             #defaulttemplate-addentry {}
             /* Vista individual */
