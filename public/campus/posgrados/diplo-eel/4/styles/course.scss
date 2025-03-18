@@ -29,6 +29,9 @@
 }
 
 
+/* ---------------------------- */
+
+
 /* BASE DE DATOS: ESPACIO DE TRABAJO - CITAR CANCIONES - EMBARQUE */
 
 
@@ -111,6 +114,36 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+/* ---------------------------- */
+
+
+/* FICHA TECNICA DE MESSI CON HEAD Y DOS COLUMNAS PARA ACTIVIDAD - CONEXIONES INESPERADAS - EMBARQUE */
+
+.ficha {
+    border: 1px solid general.$grey2;
+    width: 100%;
+    background-color: general.$grey1;
+    margin-bottom: 2rem;
+    .ficha-head {
+        padding: general.$p-base;
+        text-align: center;
+    }
+    .ficha-body {
+        display: flex;
+        border-top: 1px solid general.$grey2;
+        .columna {
+            flex: 1;
+            padding: general.$p-md;
+            border-right: 1px solid general.$grey2;
+            text-align: center;
+        }
+        .columna:last-child {
+            border-right: none;
         }
     }
 }
