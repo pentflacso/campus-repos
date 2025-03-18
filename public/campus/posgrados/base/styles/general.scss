@@ -1016,6 +1016,8 @@ body.home:not(.editing) {
                             background-color: transparent;
                             padding: 0;
                             border: none;
+                            font-family: 'Roboto';
+                            color: $primary;
                             h1 {
                                 @include title;
                                 margin-top: 4rem;
