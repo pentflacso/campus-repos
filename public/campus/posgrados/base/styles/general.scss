@@ -2139,7 +2139,8 @@ body:not(.home) {
 #page-mod-label-mod,
 #page-mod-page-mod,
 #page-mod-url-mod,
-#page-mod-data-mod {
+#page-mod-data-mod,
+#page-mod-data-field- {
     h3 {
         font-family: 'Roboto' !important;
     }
@@ -2158,5 +2159,11 @@ body:not(.home) {
     .visibleifjs,
     .availability-button button {
         @include btn-secundario();
+    }
+    .pl-3 a {
+        @include btn-secundario();
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
