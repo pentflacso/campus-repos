@@ -602,11 +602,9 @@ body.home:not(.editing) {
                 }
             }
             .sectionbadges {
-                span.badge.badge-pill {
-                    position: absolute;
-                    right: 1.5rem;
-                    top: 1.5rem;
-                }
+                position: absolute;
+                right: 1.5rem;
+                top: 1.5rem;
             }
         }
         .content {
