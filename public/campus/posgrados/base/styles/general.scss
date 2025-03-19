@@ -382,6 +382,11 @@ body.home {
                 div[role="main"] {
                     .course-content {
                         ul.topics {
+                            .sectionbadges {
+                                .badge-warning {
+                                    background-color: $accent;
+                                }
+                            }
                             li#section-0 {
                                 border-bottom: none;
                                 .mdl-left.py-2.changenumsections {
