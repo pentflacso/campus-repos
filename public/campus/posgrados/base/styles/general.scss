@@ -382,11 +382,6 @@ body.home {
                 div[role="main"] {
                     .course-content {
                         ul.topics {
-                            .sectionbadges {
-                                .badge-warning {
-                                    background-color: $accent;
-                                }
-                            }
                             li#section-0 {
                                 border-bottom: none;
                                 .mdl-left.py-2.changenumsections {
@@ -1077,6 +1072,9 @@ body.home:not(.editing) {
                             }
                             .course-content {
                                 ul.topics {
+                                    span.badge.badge-warning {
+                                        background-color: $accent;
+                                    }
                                     li.section {
                                         &::before {
                                             display: none !important;
