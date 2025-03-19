@@ -2144,9 +2144,6 @@ body:not(.home) {
     h3 {
         font-family: 'Roboto' !important;
     }
-    a {
-        color: $primary;
-    }
     .fp-file-download,
     .fp-file-cancel {
         @include btn-secundario();
@@ -2175,6 +2172,13 @@ body:not(.home) {
 /* BOTONES DE CONFIGURACION CAMBIO DE ROL */
 
 #page-course-switchrole {
+    a {
+        color: $primary;
+        &:hover {
+            color: $grey3;
+            text-decoration: none;
+        }
+    }
     .mx-3 {
         margin: 0 !important;
         .singlebutton {
