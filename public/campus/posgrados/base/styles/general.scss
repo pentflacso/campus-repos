@@ -2133,7 +2133,7 @@ body:not(.home) {
 }
 
 
-/* CONTROLES DE EDICIÓN EL CURSO */
+/* BOTONES DE CONTROLES DE EDICIÓN EL CURSO */
 
 #page-course-edit,
 #page-mod-label-mod,
@@ -2143,6 +2143,9 @@ body:not(.home) {
 #page-mod-data-field- {
     h3 {
         font-family: 'Roboto' !important;
+    }
+    a {
+        color: $primary;
     }
     .fp-file-download,
     .fp-file-cancel {
@@ -2164,6 +2167,28 @@ body:not(.home) {
         @include btn-secundario();
         &:hover {
             text-decoration: none;
+        }
+    }
+}
+
+
+/* BOTONES DE CONFIGURACION CAMBIO DE ROL */
+
+#page-course-switchrole {
+    .mx-3 {
+        margin: 0 !important;
+        .singlebutton {
+            margin-bottom: 2rem !important;
+            button.btn-secondary {
+                margin: 0;
+                @include btn-secundario();
+            }
+        }
+        a {
+            @include btn-primario();
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }
