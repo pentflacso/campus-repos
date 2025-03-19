@@ -116,6 +116,18 @@
             }
         }
     }
+    #data-singleview-content {
+        background-color: general.$grey1 !important;
+        padding: general.$p-xl;
+        #defaulttemplate-single {
+            .btn.btn-icon {
+                background-color: general.$grey2;
+            }
+            a.data-field-link img {
+                max-width: 15rem;
+            }
+        }
+    }
 }
 
 
