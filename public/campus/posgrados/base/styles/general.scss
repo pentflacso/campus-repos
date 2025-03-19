@@ -2128,3 +2128,32 @@ body:not(.home) {
         @include btn-secundario;
     }
 }
+
+
+/* CONTROLES DE EDICIÓN EL CURSO */
+
+#page-course-edit,
+#page-mod-label-mod,
+#page-mod-page-mod,
+#page-mod-url-mod,
+#page-mod-data-mod {
+    h3 {
+        font-family: 'Roboto' !important;
+    }
+    .fp-file-download,
+    .fp-file-cancel {
+        @include btn-secundario();
+    }
+    .fp-file-delete,
+    .fp-file-update {
+        @include btn-primario();
+    }
+    input.btn-primary {
+        @include btn-primario();
+    }
+    input.btn-secondary,
+    .visibleifjs,
+    .availability-button button {
+        @include btn-secundario();
+    }
+}
