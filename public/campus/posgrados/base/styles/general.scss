@@ -1560,7 +1560,8 @@ body:not(.home) {
                     .box.py-3.generalbox.center.clearfix {
                         .no-overflow {
                             .page-actividad {
-                                img {
+                                .img-portada img,
+                                img.img-portada {
                                     margin: 4rem 0;
                                 }
                                 a {
@@ -1922,126 +1923,101 @@ body:not(.home) {
 
 /* BASE DE DATOS */
 
-#page-mod-data-view {
-    #page-content {
-        div[role="main"] {
-            /* Buscador */
-            form#options {
-                #advsearch-save-sec {
-                    .btn-secondary {
-                        background-color: white !important;
-                        color: $primary !important;
-                        background-image: none;
-                        padding: 0.5rem 1rem;
-                        border-radius: 500px;
-                        border: 1px solid $grey2;
-                        height: initial;
-                        &:hover {
-                            background-color: $grey2 !important;
-                            color: $primary;
-                            outline: none;
-                            box-shadow: none !important;
-                        }
-                        &:focus {
-                            box-shadow: none !important;
-                            outline: none !important;
-                        }
-                    }
-                }
-            }
-            .mdl-left {
-                a.comment-link {
-                    margin-bottom: 1rem;
-                    .icon {
-                        color: $primary;
-                        &:hover {
-                            color: $grey3;
-                        }
-                    }
-                    span {
-                        color: $primary !important;
-                        text-decoration: none !important;
-                        &:hover {
-                            color: $grey3 !important;
-                        }
-                        &:focus {
-                            box-shadow: none;
-                            background: transparent;
-                        }
-                    }
-                }
-                .comment-ctrl {
-                    .comment-list {
-                        li {
-                            border-top: 1px solid $grey2;
-                            background-color: transparent !important;
-                        }
-                        .comment-message {
-                            .comment-message-meta {
-                                span.time {
-                                    font-size: $fs-sm;
-                                    color: $grey3;
-                                }
-                            }
-                            .text {
+body {
+    &#page-mod-data-view {
+        #page-content {
+            div[role="main"] {
+                /* Buscador */
+                form#options {
+                    #advsearch-save-sec {
+                        .btn-secondary {
+                            background-color: white !important;
+                            color: $primary !important;
+                            background-image: none;
+                            padding: 0.5rem 1rem;
+                            border-radius: 500px;
+                            border: 1px solid $grey2;
+                            height: initial;
+                            &:hover {
+                                background-color: $grey2 !important;
                                 color: $primary;
-                                font-size: $fs-base;
-                                .comment-delete {
-                                    .icon {
-                                        color: $primary;
-                                        &:hover {
-                                            color: $grey3;
+                                outline: none;
+                                box-shadow: none !important;
+                            }
+                            &:focus {
+                                box-shadow: none !important;
+                                outline: none !important;
+                            }
+                        }
+                    }
+                }
+                .mdl-left {
+                    a.comment-link {
+                        margin-bottom: 1rem;
+                        .icon {
+                            color: $primary;
+                            &:hover {
+                                color: $grey3;
+                            }
+                        }
+                        span {
+                            color: $primary !important;
+                            text-decoration: none !important;
+                            &:hover {
+                                color: $grey3 !important;
+                            }
+                            &:focus {
+                                box-shadow: none;
+                                background: transparent;
+                            }
+                        }
+                    }
+                    .comment-ctrl {
+                        .comment-list {
+                            li {
+                                border-top: 1px solid $grey2;
+                                background-color: transparent !important;
+                            }
+                            .comment-message {
+                                .comment-message-meta {
+                                    span.time {
+                                        font-size: $fs-sm;
+                                        color: $grey3;
+                                    }
+                                }
+                                .text {
+                                    color: $primary;
+                                    font-size: $fs-base;
+                                    .comment-delete {
+                                        .icon {
+                                            color: $primary;
+                                            &:hover {
+                                                color: $grey3;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                    }
-                    .comment-area {
-                        textarea {
-                            background-color: white;
-                            color: $primary;
-                            margin-bottom: 1rem;
+                        .comment-area {
+                            textarea {
+                                background-color: white;
+                                color: $primary;
+                                margin-bottom: 1rem;
+                            }
+                            a {
+                                //@include btn-primario();
+                                //text-decoration: none !important;
+                                font-size: $fs-base;
+                            }
                         }
-                        a {
-                            //@include btn-primario();
-                            //text-decoration: none !important;
-                            font-size: $fs-base;
-                        }
                     }
                 }
-            }
-            /* Añadir entrada */
-            #defaulttemplate-addentry {}
-            /* Vista individual */
-            #data-singleview-content {
-                a:not(.btn-icon) {
-                    color: $primary !important;
-                    text-decoration: underline;
-                    &:hover {
-                        color: $grey3 !important;
-                    }
-                    &:focus {
-                        box-shadow: none;
-                        background: transparent;
-                    }
-                }
-            }
-            /* Vista de lista */
-            #data-listview-content {
-                a:not(.btn-icon):not(.dropdown-item):not(.data-field-link) {
-                    color: $primary !important;
-                    text-decoration: underline;
-                    &:hover {
-                        color: $grey3 !important;
-                    }
-                    &:focus {
-                        box-shadow: none;
-                        background: transparent;
-                    }
-                }
-                .defaulttemplate-listentry {
-                    a {
+                /* Añadir entrada */
+                #defaulttemplate-addentry {}
+                /* Vista individual */
+                #data-singleview-content {
+                    a:not(.btn-icon) {
                         color: $primary !important;
                         text-decoration: underline;
                         &:hover {
@@ -2052,11 +2028,38 @@ body:not(.home) {
                             background: transparent;
                         }
                     }
-                    .row.my-6 {
-                        .col {
-                            .row.h-100 {
-                                .col-4.col-md-6.text-right.align-self-center.data-timeinfo {
-                                    color: $grey3;
+                }
+                /* Vista de lista */
+                #data-listview-content {
+                    a:not(.btn-icon):not(.dropdown-item):not(.data-field-link) {
+                        color: $primary !important;
+                        text-decoration: underline;
+                        &:hover {
+                            color: $grey3 !important;
+                        }
+                        &:focus {
+                            box-shadow: none;
+                            background: transparent;
+                        }
+                    }
+                    .defaulttemplate-listentry {
+                        a {
+                            color: $primary !important;
+                            text-decoration: underline;
+                            &:hover {
+                                color: $grey3 !important;
+                            }
+                            &:focus {
+                                box-shadow: none;
+                                background: transparent;
+                            }
+                        }
+                        .row.my-6 {
+                            .col {
+                                .row.h-100 {
+                                    .col-4.col-md-6.text-right.align-self-center.data-timeinfo {
+                                        color: $grey3;
+                                    }
                                 }
                             }
                         }
@@ -2065,58 +2068,56 @@ body:not(.home) {
             }
         }
     }
-}
-
-#sticky-footer {
-    border-top: 0 !important;
-    .btn-primary {
-        background-color: $primary !important;
-        color: white !important;
-        background-image: none;
-        padding: 0.5rem 1rem;
-        border-radius: 500px;
-        border: 1px solid $primary;
-        height: initial;
-        &:hover {
-            background-color: $grey2 !important;
+    #sticky-footer {
+        border-top: 0 !important;
+        .btn-primary {
+            background-color: $primary !important;
+            color: white !important;
+            background-image: none;
+            padding: 0.5rem 1rem;
+            border-radius: 500px;
+            border: 1px solid $primary;
+            height: initial;
+            &:hover {
+                background-color: $grey2 !important;
+                color: $primary !important;
+                outline: none;
+                box-shadow: none !important;
+                border-color: $grey2 !important;
+            }
+            &:focus {
+                box-shadow: none !important;
+                outline: none !important;
+            }
+        }
+        .btn-secondary {
+            background-color: white !important;
             color: $primary !important;
-            outline: none;
-            box-shadow: none !important;
-            border-color: $grey2 !important;
-        }
-        &:focus {
-            box-shadow: none !important;
-            outline: none !important;
-        }
-    }
-    .btn-secondary {
-        background-color: white !important;
-        color: $primary !important;
-        background-image: none;
-        padding: 0.5rem 1rem;
-        border-radius: 500px;
-        border: 1px solid $grey2;
-        height: initial;
-        &:hover {
-            background-color: $grey2 !important;
-            color: $primary;
-            outline: none;
-            box-shadow: none !important;
-        }
-        &:focus {
-            box-shadow: none !important;
-            outline: none !important;
+            background-image: none;
+            padding: 0.5rem 1rem;
+            border-radius: 500px;
+            border: 1px solid $grey2;
+            height: initial;
+            &:hover {
+                background-color: $grey2 !important;
+                color: $primary;
+                outline: none;
+                box-shadow: none !important;
+            }
+            &:focus {
+                box-shadow: none !important;
+                outline: none !important;
+            }
         }
     }
-}
-
-.defaulttemplate-single-body,
-.defaulttemplate-list-body,
-#defaulttemplate-addentry {
-    color: $primary;
-    .font-weight-bold {
-        color: $primary !important;
-        font-weight: 500 !important;
+    .defaulttemplate-single-body,
+    .defaulttemplate-list-body,
+    #defaulttemplate-addentry {
+        color: $primary;
+        .font-weight-bold {
+            color: $primary !important;
+            font-weight: 500 !important;
+        }
     }
 }
 
@@ -2133,74 +2134,86 @@ body:not(.home) {
 }
 
 
-/* BOTONES DE CONTROLES DE EDICIÓN EL CURSO */
+/* ESTILOS BOTONES DE EDICIÓN EL CURSO */
 
-#page-course-edit,
-#page-mod-label-mod,
-#page-mod-page-mod,
-#page-mod-url-mod,
-#page-mod-data-mod,
-#page-mod-data-field- {
-    h3 {
-        font-family: 'Roboto' !important;
-    }
-    .fp-file-download,
-    .fp-file-cancel {
-        @include btn-secundario();
-    }
-    .fp-file-delete,
-    .fp-file-update {
-        @include btn-primario();
-    }
-    input.btn-primary {
-        @include btn-primario();
-    }
-    input.btn-secondary,
-    .visibleifjs,
-    .availability-button button {
-        @include btn-secundario();
-    }
-    .pl-3 a {
-        @include btn-secundario();
-        &:hover {
-            text-decoration: none;
+body {
+    /* Botones varios de configuracion de recursos */
+    &#page-course-edit,
+    &#page-mod-label-mod,
+    &#page-mod-page-mod,
+    &#page-mod-url-mod,
+    &#page-mod-data-mod,
+    &#page-mod-data-field- {
+        h3 {
+            font-family: 'Roboto' !important;
         }
-    }
-    /* .modal-footer {
-        button.btn-primary {
-            @include btn-primario-animado();
-            min-width: 4rem !important;
+        .fp-file-download,
+        .fp-file-cancel {
+            @include btn-secundario();
         }
-        button.btn-secondary {
-            @include btn-secundario-animado();
-        }
-    } */
-}
-
-
-/* BOTONES DE CONFIGURACION CAMBIO DE ROL */
-
-#page-course-switchrole {
-    a {
-        color: $primary;
-        &:hover {
-            color: $grey3;
-            text-decoration: none;
-        }
-    }
-    .mx-3 {
-        margin: 0 !important;
-        .singlebutton {
-            margin-bottom: 2rem !important;
-            button.btn-secondary {
-                margin: 0;
-                @include btn-secundario();
-            }
-        }
-        a {
+        .fp-file-delete,
+        .fp-file-update {
             @include btn-primario();
+        }
+        input.btn-primary {
+            @include btn-primario();
+        }
+        input.btn-secondary,
+        .visibleifjs,
+        .availability-button button {
+            @include btn-secundario();
+        }
+        .pl-3 a {
+            @include btn-secundario();
             &:hover {
                 text-decoration: none;
+            }
+        }
+    }
+    /* Modal de borrar un recurso */
+    &#page-course-view-topics {
+        .modal-content {
+            h5 {
+                font-family: 'Roboto';
+                color: $primary;
+            }
+            .modal-body {
+                color: $primary;
+            }
+            .modal-footer {
+                button.btn-primary {
+                    @include btn-primario-animado();
+                    min-width: 4rem !important;
+                }
+                button.btn-secondary {
+                    @include btn-secundario-animado();
+                }
+            }
+        }
+    }
+    /* Botones de cambio de rol */
+    &#page-course-switchrole {
+        a {
+            color: $primary;
+            &:hover {
+                color: $grey3;
+                text-decoration: none;
+            }
+        }
+        .mx-3 {
+            margin: 0 !important;
+            .singlebutton {
+                margin-bottom: 2rem !important;
+                button.btn-secondary {
+                    margin: 0;
+                    @include btn-secundario();
+                }
+            }
+            a {
+                @include btn-primario();
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }
