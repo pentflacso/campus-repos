@@ -2140,7 +2140,8 @@ body:not(.home) {
 #page-mod-page-mod,
 #page-mod-url-mod,
 #page-mod-data-mod,
-#page-mod-data-field- {
+#page-mod-data-field-,
+#page-course-view-topics {
     h3 {
         font-family: 'Roboto' !important;
     }
@@ -2164,6 +2165,15 @@ body:not(.home) {
         @include btn-secundario();
         &:hover {
             text-decoration: none;
+        }
+    }
+    .modal-footer {
+        button.btn-primary {
+            @include btn-primario-animado();
+            min-width: 4rem !important;
+        }
+        button.btn-secondary {
+            @include btn-secundario-animado();
         }
     }
 }
