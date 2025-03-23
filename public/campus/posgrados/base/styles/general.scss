@@ -751,6 +751,60 @@ body.home:not(.editing) {
             border: 0;
         }
     }
+    /* Acordeón bootstrap */
+    #accordion {
+        .panel {
+            //border-bottom: 1px solid $grey2;
+            .panel-heading {
+                h3.panel-title {
+                    padding-block: 1rem;
+                    a {
+                        font-family: 'Roboto';
+                        color: $primary;
+                        text-decoration: none;
+                        &:hover {
+                            color: $grey3;
+                        }
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            .panel-body {
+                margin-block: 1rem;
+                background-color: $grey1;
+                padding: 2rem;
+                a {
+                    text-decoration-style: solid;
+                    text-decoration-color: $primary;
+                    text-decoration-thickness: .10em;
+                    text-underline-offset: .15em;
+                    color: $primary;
+                    font-family: 'Roboto';
+                    font-weight: bold;
+                    word-wrap: break-word;
+                    &:hover {
+                        color: $grey3;
+                        text-decoration-color: $grey3;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+                ul,
+                ol {
+                    //margin-bottom: 2.2rem;
+                    li {
+                        @include body;
+                    }
+                }
+                h3 {
+                    margin: 2rem 0 2rem 0;
+                }
+            }
+        }
+    }
     button[data-action="open-chooser"] {
         color: $primary;
         background-color: $grey1;
