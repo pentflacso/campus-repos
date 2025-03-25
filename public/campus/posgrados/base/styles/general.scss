@@ -748,9 +748,7 @@ body.home:not(.editing) {
                 }
             }
             .sectionbadges {
-                position: absolute;
-                right: 1.5rem;
-                top: 1.5rem;
+                display: none !important;
             }
         }
         .content {
