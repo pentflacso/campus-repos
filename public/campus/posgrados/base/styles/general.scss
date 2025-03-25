@@ -1800,6 +1800,11 @@ body:not(.home) {
 /* MODULOS: EXCLUSIVO CON EDICIÓN DESACTIVADA */
 
 body:not(.editing) {
+    .moremenu {
+        li[data-key="grades"] {
+            display: none;
+        }
+    }
     .sectionbadges {
         display: none !important;
     }
