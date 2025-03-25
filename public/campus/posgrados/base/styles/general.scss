@@ -996,6 +996,9 @@ body.home:not(.editing) {
             }
         }
     }
+    .drawer-left {
+        display: none !important;
+    }
     /* boton primario animado */
     a.btn.btn-primary {
         position: relative;
@@ -1181,6 +1184,9 @@ body.home:not(.editing) {
         }
     }
     #page {
+        &.drawers.show-drawer-left {
+            margin-left: 0;
+        }
         #topofscroll {
             /* solapa izquierda */
             .drawer-toggles {
