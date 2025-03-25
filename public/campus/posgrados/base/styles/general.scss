@@ -1800,6 +1800,9 @@ body:not(.home) {
 /* MODULOS: EXCLUSIVO CON EDICIÓN DESACTIVADA */
 
 body:not(.editing) {
+    .sectionbadges {
+        display: none !important;
+    }
     ul.section {
         li.activity {
             .activityiconcontainer {
