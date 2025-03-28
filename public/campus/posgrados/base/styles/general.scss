@@ -179,15 +179,6 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 }
 
 @mixin hoja-recursos {
-    body:not(.editing) {
-        #sticky-footer {
-            .navitem {
-                a {
-                    display: none;
-                }
-            }
-        }
-    }
     // Estilos para filtros
     #filtros {
         display: flex;
