@@ -880,6 +880,38 @@ body.home:not(.editing) {
         box-shadow: none !important;
         //line-height: initial;
     }
+    .destacado-ticket {
+        padding: 2.5rem;
+        position: relative;
+        background-color: transparent;
+        width: 100%;
+        margin-bottom: 2.4rem;
+        overflow-x: hidden;
+        background: $grey1;
+    }
+    /* Círculos recortados en los lados (tipo perforación) */
+    .destacado-ticket::before,
+    .destacado-ticket::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 97%;
+        //background-color: white;
+        /* mismo color que el fondo de la página */
+        border-radius: 0;
+        z-index: 1;
+        border-left: 13px dotted white;
+    }
+    .destacado-ticket::before {
+        left: -6px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .destacado-ticket::after {
+        right: -6px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     .video-responsive {
         position: relative;
         width: 100%;
