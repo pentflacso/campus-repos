@@ -2511,6 +2511,10 @@ body {
         }
     }
     /* Modal de borrar un recurso */
+    &#page-course-view-topics:is(.format-topics) #section-0 [data-for="sectioninfo"], &#page-course-view-topics:is(.format-topics) [data-for="sectioninfo"] {
+      padding: 0 !important;
+      border: 0 !important;
+    }
     &#page-course-view-topics {
         .modal-content {
             h5 {
