@@ -34,3 +34,7 @@
 .cmid-2975439 {
     @include general.hoja-recursos;
 }
+
+.cmid-2975252, .cmid-2975253 {
+    @include general.bbdd-1col;
+}
