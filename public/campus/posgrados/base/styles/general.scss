@@ -1398,8 +1398,8 @@ body.home:not(.editing) {
                                         }
                                         .content {
                                             .my-3 {
-                                                padding: 0;
-                                                border: 0;
+                                                padding: 0 !important;
+                                                border: 0 !important;
                                                 .course-description-item.summarytext {
                                                     .description-inner {
                                                         .no-overflow {}
