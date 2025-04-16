@@ -458,6 +458,72 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     }
 }
 
+@mixin bbdd-postit {
+    #data-listview-content {
+        --gutter: 2rem;
+        column-count: 2;
+        column-gap: var(--gutter);
+        margin-top: var(--gutter);
+        margin-bottom: var(--gutter);
+        padding: var(--gutter);
+        counter-reset: chapter;
+    }
+    .pent-post {
+        background: #DBFCEC;
+        padding: 28px;
+        position: relative;
+        margin-bottom: 28px;
+        break-inside: avoid;
+        display: inline-block;
+        vertical-align: top;
+        min-width: 100%;
+    }
+    .pent-post:nth-child(3n+1) {
+        background-color: #FBFFD0;
+    }
+    .pent-post:nth-child(3n+2) {
+        background-color: #F2E5FF;
+    }
+    .pent-usuario {
+        margin-bottom: 28px;
+    }
+    .pent-usuario img {
+        width: 56px;
+    }
+    .pent-tipo {
+        background-color: $grey2;
+        display: inline-block;
+        color: $primary;
+        padding: 4px 13px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        position: absolute;
+        bottom: 28px;
+        right: 28px;
+    }
+    .pent-texto {
+        font-family: 'Roboto Mono' !important;
+        margin-bottom: 28px;
+    }
+    @media (max-width: 990px) {
+        .pent-post {
+            padding: 28px 28px 56px 28px;
+        }
+        #region-main form {
+            column-count: auto;
+            column-gap: 0;
+            padding: 0;
+        }
+    }
+    span.highlight {
+        color: inherit !important;
+    }
+    .alert.alert-success.alert-block.fade.in {
+        display: none;
+    }
+}
+
 
 /* NAVBAR DE ADMINISTRACION DEL CURSO */
 

@@ -41,7 +41,9 @@
 
 /* BASE DE DATOS: ESPACIO DE TRABAJO - CITAR CANCIONES - EMBARQUE */
 
-.cmid-2974749, .cmid-2980020, .cmid-2980021 {
+.cmid-2974749,
+.cmid-2980020,
+.cmid-2980021 {
     @include general.bbdd-2col;
 }
 
@@ -73,4 +75,11 @@
             border-right: none;
         }
     }
+}
+
+
+/* BBDD KIT DE IDEAS - POSTITS - DIEL */
+
+.cmid-2981106 {
+    @include general.bbdd-postit;
 }
