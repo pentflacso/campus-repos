@@ -2475,8 +2475,7 @@ body {
     &#page-mod-url-mod,
     &#page-mod-data-mod,
     &#page-mod-data-field-,
-    &#page-mod-data-view,
-    &#page-mod-choice-view {
+    &#page-mod-data-view {
         h3 {
             font-family: 'Roboto' !important;
         }
@@ -2512,10 +2511,6 @@ body {
         }
     }
     /* Modal de borrar un recurso */
-    &#page-course-view-topics:is(.format-topics) #section-0 [data-for="sectioninfo"], &#page-course-view-topics:is(.format-topics) [data-for="sectioninfo"] {
-      padding: 0 !important;
-      border: 0 !important;
-    }
     &#page-course-view-topics {
         .modal-content {
             h5 {
@@ -2564,45 +2559,6 @@ body {
     }
 }
 
-/* RECURSO LIBRO */
-
-#page-mod-book-view {
-    .book_content {
-        a {
-            text-decoration-style: solid;
-            text-decoration-color: $primary;
-            text-decoration-thickness: .10em;
-            text-underline-offset: .15em;
-            color: $primary;
-            font-family: 'Roboto';
-            font-weight: bold;
-            word-wrap: break-word;
-            &:hover {
-                color: $grey3;
-                text-decoration-color: $grey3;
-            }
-            &:focus {
-                box-shadow: none;
-            }
-        }
-        ul, ol{
-            li{
-                @include body;
-            }
-        }
-        h3{
-            border-bottom: 2px solid $secondary;
-        }
-        h4 {
-            font-family: 'Roboto' !important;    
-            color: $primary !important;
-            font-weight: 500 !important;
-        }
-        h5, h5 span {
-            @include subtitle;
-        }
-    }
-}
 
 /* OPACITY */
 
