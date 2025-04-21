@@ -3,32 +3,6 @@
 /* HOJA DE RECURSOS */
 
 
-/* Oculto buscador avanzado y el boton añadir entrada - con edición desactivada */
-
-.cmid-2975751:not(.editing) {
-    div[role="main"] {
-        hr {
-            display: none;
-        }
-        .datapreferences {
-            #sticky-footer {
-                .navitem {
-                    a {
-                        display: none;
-                    }
-                }
-            }
-            hr {
-                display: none;
-            }
-            form#options {
-                display: none;
-            }
-        }
-    }
-}
-
-
 /* Le pongo los estilos con mixin */
 
 .cmid-2975751 {
