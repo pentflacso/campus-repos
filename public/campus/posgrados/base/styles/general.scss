@@ -179,6 +179,28 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 }
 
 @mixin hoja-recursos {
+    &#page-mod-data-view:not(.editing) {
+        div[role="main"] {
+            hr {
+                display: none;
+            }
+            .datapreferences {
+                #sticky-footer {
+                    .navitem {
+                        a {
+                            display: none;
+                        }
+                    }
+                }
+                hr {
+                    display: none;
+                }
+                form#options {
+                    display: none;
+                }
+            }
+        }
+    }
     // Estilos para filtros
     #filtros {
         display: flex;
@@ -459,7 +481,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 }
 
 @mixin bbdd-postit {
-    #page-mod-data-view:not(.editing) {
+    &#page-mod-data-view:not(.editing) {
         form#options {
             display: none !important;
         }
