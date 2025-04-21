@@ -459,7 +459,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 }
 
 @mixin bbdd-postit {
-    #page-mod-data-view.editing {
+    #page-mod-data-view:not(.editing) {
         form#options {
             display: none !important;
         }
