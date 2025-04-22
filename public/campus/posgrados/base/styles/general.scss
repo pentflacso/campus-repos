@@ -944,6 +944,11 @@ body.home:not(.editing) {
 /* GENERAL - para elementos repetidos en home, modulos y demás */
 
 #page-wrapper {
+    .dropdown-item:hover,
+    .dropdown-item:active {
+        background-color: $grey2 !important;
+        color: $primary !important;
+    }
     h1 {
         @include title;
     }
