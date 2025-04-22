@@ -2575,6 +2575,25 @@ body {
 }
 
 
+/* RECURSO URL */
+
+#page-mod-url-view {
+    div[role="main"] {
+        a {
+            color: $primary !important;
+            text-decoration: underline;
+            &:hover {
+                color: $grey3 !important;
+            }
+            &:focus {
+                box-shadow: none;
+                background: transparent;
+            }
+        }
+    }
+}
+
+
 /* PARTICIPANTES */
 
 #page-course-view-participants {
