@@ -491,7 +491,8 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     }
     #data-singleview-content {
         .pent-post {
-            background: $grey1;
+            background: transparent;
+            border: 1px solid $grey2;
             padding: 28px;
             position: relative;
             margin-bottom: 28px;
