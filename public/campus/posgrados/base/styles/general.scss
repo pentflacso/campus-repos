@@ -626,7 +626,8 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
                         transform: translate(-50%, -50%) scale(30);
                     }
                     // Ajuste especial para el botón activo
-                    &.active.active_tree_node {
+                    &.active.active_tree_node,
+                    &.active {
                         background: $primary;
                         color: white;
                         &:hover {
@@ -1202,6 +1203,7 @@ body.home:not(.editing) {
         position: relative;
         background-color: white !important;
         color: $primary !important;
+        font-weight: 400 !important;
         background-image: none;
         overflow: hidden; // Evita desbordamientos
         padding: 0.5rem 1rem;
