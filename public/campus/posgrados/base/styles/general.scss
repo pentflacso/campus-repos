@@ -952,6 +952,11 @@ body.home:not(.editing) {
         background: transparent;
         padding-inline: initial;
     }
+    h4 {
+        @include subtitle;
+        /* font-family: 'Roboto';
+        color: $primary !important; */
+    }
     h6 {
         font-size: $fs-sm;
         font-family: 'Roboto';
@@ -2008,6 +2013,23 @@ body:not(.home) {
                 div[role="main"] {
                     .box.py-3.generalbox.center.clearfix {
                         .no-overflow {
+                            a {
+                                text-decoration-style: solid;
+                                text-decoration-color: $primary;
+                                text-decoration-thickness: .10em;
+                                text-underline-offset: .15em;
+                                color: $primary;
+                                font-family: 'Roboto';
+                                font-weight: bold;
+                                word-wrap: break-word;
+                                &:hover {
+                                    color: $grey3;
+                                    text-decoration-color: $grey3;
+                                }
+                                &:focus {
+                                    box-shadow: none;
+                                }
+                            }
                             .page-actividad {
                                 .img-portada img,
                                 img.img-portada {
@@ -2588,6 +2610,34 @@ body {
             &:focus {
                 box-shadow: none;
                 background: transparent;
+            }
+        }
+    }
+}
+
+
+/* RECURSO LIBRO - BOOK */
+
+#page-mod-book-view {
+    div[role="main"] {
+        .book_content {
+            a {
+                font-family: 'Roboto';
+                font-weight: 500;
+                font-size: $fs-base;
+                color: $primary !important;
+                text-decoration: underline;
+                text-underline-offset: 0.2em;
+                text-decoration-thickness: 0.1em;
+                text-decoration-color: $primary;
+                &:hover {
+                    color: $grey3 !important;
+                    text-decoration-color: $grey3;
+                }
+                &:focus {
+                    box-shadow: none;
+                    background: transparent;
+                }
             }
         }
     }
