@@ -1896,6 +1896,9 @@ body:not(.home) {
                                             .btn-ed:after {
                                                 background-image: url(../../../base/img/icon_chat.svg);
                                             }
+                                            .btn-recursos:after {
+                                                background-image: url(../../../base/img/pasaporte-icon.svg);
+                                            }
                                             .btn-wp:after {
                                                 background-image: url(../../../base/img/wp-icon.svg);
                                             }
@@ -2631,6 +2634,11 @@ body {
 #page-mod-book-view {
     div[role="main"] {
         .book_content {
+            ol, ul{
+                li{
+                    @include body;
+                }
+            }
             a {
                 font-family: 'Roboto';
                 font-weight: 500;
