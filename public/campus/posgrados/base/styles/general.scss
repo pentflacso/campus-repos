@@ -520,7 +520,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     }
     #data-listview-content {
         --gutter: 2rem;
-        column-count: 2;
+        column-count: 1;
         column-gap: var(--gutter);
         margin-top: var(--gutter);
         margin-bottom: var(--gutter);
