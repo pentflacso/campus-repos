@@ -1,1 +1,8 @@
 @use '../../../base/styles/general';
+
+
+/* BBDD - GALERIA DE REMIX */
+
+.cmid-2981177 {
+    @include general.bbdd-1col;
+}
