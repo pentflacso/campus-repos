@@ -766,7 +766,7 @@ body.home {
                             li.section.current {
                                 background-color: $primary;
                                 &::before {
-                                    display: none !important;                                   
+                                    display: none !important;
                                 }
                                 .course-section-header {
                                     h3.sectionname {
@@ -929,7 +929,7 @@ body.home:not(.editing) {
             }
         }
     }
-    li.section.current {       
+    li.section.current {
         .course-section-header {
             h3.sectionname {
                 a {
@@ -1001,6 +1001,23 @@ body.home:not(.editing) {
         line-height: 1.4;
         margin-bottom: 2.4rem !important;
         border: 1px solid $grey2;
+        a {
+            text-decoration-style: solid;
+            text-decoration-color: $primary;
+            text-decoration-thickness: .10em;
+            text-underline-offset: .15em;
+            color: $primary;
+            font-family: 'Roboto';
+            font-weight: bold;
+            word-wrap: break-word;
+            &:hover {
+                color: $grey3;
+                text-decoration-color: $grey3;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
     }
     .destacado {
         background-color: $grey1;
@@ -1519,7 +1536,7 @@ body.home:not(.editing) {
                                 }
                             }
                             .course-content {
-                                .current::before{
+                                .current::before {
                                     border-left: 0;
                                 }
                                 ul.topics {
@@ -2636,8 +2653,9 @@ body {
 #page-mod-book-view {
     div[role="main"] {
         .book_content {
-            ol, ul{
-                li{
+            ol,
+            ul {
+                li {
                     @include body;
                 }
             }
