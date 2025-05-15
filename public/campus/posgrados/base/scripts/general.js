@@ -201,3 +201,74 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // TP - TABS ETAPAS
+
+    // Función para actualizar los botones y el contenido
+    function updateTabs() {
+        let lastAvailableStage = -1;
+        for (let i = 0; i <= 4; i++) {
+            const button = document.getElementById(`etapa-${i}`);
+            const contents = document.querySelectorAll(`.etapa-${i}`);
+
+            if (contents.length > 0) {
+                lastAvailableStage = i;
+                button.classList.add('completed');
+                button.classList.remove('inactive');
+                button.disabled = false;
+            } else {
+                button.classList.add('inactive');
+                button.classList.remove('completed', 'active');
+                button.disabled = true;
+            }
+        }
+
+        if (lastAvailableStage >= 0) {
+            const activeButton = document.getElementById(`etapa-${lastAvailableStage}`);
+            const activeContents = document.querySelectorAll(`.etapa-${lastAvailableStage}`);
+
+            activeButton.classList.add('active');
+            activeContents.forEach(content => {
+                content.classList.add('active');
+                const liParent = content.closest('li');
+                if (liParent) liParent.style.display = 'list-item';
+            });
+        }
+    }
+
+    // Función para manejar el clic en los botones
+    function handleButtonClick(event) {
+        const selectedStage = parseInt(event.target.id.split('-')[1]);
+
+        for (let i = 0; i <= 4; i++) {
+            const button = document.getElementById(`etapa-${i}`);
+            const contents = document.querySelectorAll(`.etapa-${i}`);
+
+            if (i === selectedStage) {
+                button.classList.add('active');
+                contents.forEach(content => {
+                    content.classList.add('active');
+                    const liParent = content.closest('li');
+                    if (liParent) liParent.style.display = 'list-item';
+                });
+            } else {
+                button.classList.remove('active');
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    const liParent = content.closest('li');
+                    if (liParent) liParent.style.display = 'none';
+                });
+            }
+        }
+    }
+
+    // Añadimos event listeners a los botones
+    for (let i = 0; i <= 4; i++) {
+        const button = document.getElementById(`etapa-${i}`);
+        button.addEventListener('click', handleButtonClick);
+    }
+
+    // Actualizamos las tabs inicialmente
+    updateTabs();
+});

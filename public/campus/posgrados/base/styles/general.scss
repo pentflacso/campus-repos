@@ -1280,6 +1280,43 @@ body.home:not(.editing) {
             }
         }
     }
+    /*BOTONERA TP*/
+    .tp-botonera {
+        display: flex;
+    }
+    .tp-botonera .tab-btn {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 5px;
+        font-size: 72px;
+        font-weight: 300;
+        line-height: 0;
+        background-color: #152F4E;
+        color: white;
+        cursor: pointer;
+    }
+    .tp-botonera .completed {
+        background-color: #EDEDED;
+        color: #152F4E;
+    }
+    .tp-botonera .active {
+        background-color: #FFD658;
+        color: #152F4E;
+    }
+    .tp-botonera .inactive {
+        background-color: #EDEDED;
+        color: #BCBCBC;
+        cursor: not-allowed !important;
+    }
+    .tp-botonera .tab-text {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .tp-botonera .col {
+        min-width: 150px;
+    }
     /* solapa derecha */
     #theme_boost-drawers-blocks {
         width: 100%;
@@ -1411,6 +1448,61 @@ body.home:not(.editing) {
                             }
                         }
                         div[role="main"] {
+                            .momento {
+                                background-color: #fff;
+                                background-repeat: no-repeat;
+                                background-size: 50px auto;
+                                background-position: left 2.5rem top 3.5rem;
+                                padding: 4rem 2.5rem 4rem 8rem;
+                                /* box-shadow: 0px 0px 10px 0px #ccc; */
+                                text-align: left;
+                                border: 1px solid $grey2;
+                                margin-bottom: 4rem;
+                                @media (max-width: 576px) {
+                                    padding: 8rem 3rem 4rem 3rem;
+                                }
+                                h3 {
+                                    margin-bottom: 2rem;
+                                    padding: initial !important;
+                                    margin-top: initial !important;
+                                }
+                                a {
+                                    text-decoration: underline;
+                                    text-decoration-style: solid;
+                                    text-decoration-color: $primary;
+                                    text-decoration-thickness: .10em;
+                                    text-underline-offset: .15em;
+                                    color: $primary;
+                                    font-family: 'Roboto';
+                                    font-weight: bold;
+                                    word-wrap: break-word;
+                                    &:hover {
+                                        color: $grey3;
+                                        text-decoration-color: $grey3;
+                                    }
+                                    &:focus {
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                            .mom-1 {
+                                background-image: url(../../../base/img/sesion1.svg);
+                            }
+                            .mom-2 {
+                                background-image: url(../../../base/img/sesion2.svg);
+                            }
+                            .mom-3 {
+                                background-image: url(../../../base/img/sesion3.svg);
+                            }
+                            .mom-4 {
+                                background-image: url(../../../base/img/sesion4.svg);
+                            }
+                            .mom-5 {
+                                background-image: url(../../../base/img/sesion5.svg);
+                            }
+                            .mom-6 {
+                                background-image: url(../../../base/img/sesion6.svg);
+                            }
                             .page-actividad {
                                 .img-portada img,
                                 img.img-portada {
@@ -1448,43 +1540,6 @@ body.home:not(.editing) {
                                         color: $primary;
                                         font-size: 1.5rem;
                                     }
-                                }
-                                .momento {
-                                    background-color: #fff;
-                                    background-repeat: no-repeat;
-                                    background-size: 50px auto;
-                                    background-position: left 2.5rem top 3.5rem;
-                                    padding: 4rem 2.5rem 4rem 8rem;
-                                    /* box-shadow: 0px 0px 10px 0px #ccc; */
-                                    text-align: left;
-                                    border: 1px solid $grey2;
-                                    margin-bottom: 4rem;
-                                    @media (max-width: 576px) {
-                                        padding: 8rem 3rem 4rem 3rem;
-                                    }
-                                    h3 {
-                                        margin-bottom: 2rem;
-                                        padding: initial !important;
-                                        margin-top: initial !important;
-                                    }
-                                }
-                                .mom-1 {
-                                    background-image: url(../../../base/img/sesion1.svg);
-                                }
-                                .mom-2 {
-                                    background-image: url(../../../base/img/sesion2.svg);
-                                }
-                                .mom-3 {
-                                    background-image: url(../../../base/img/sesion3.svg);
-                                }
-                                .mom-4 {
-                                    background-image: url(../../../base/img/sesion4.svg);
-                                }
-                                .mom-5 {
-                                    background-image: url(../../../base/img/sesion5.svg);
-                                }
-                                .mom-6 {
-                                    background-image: url(../../../base/img/sesion6.svg);
                                 }
                             }
                             /* marquesina */
