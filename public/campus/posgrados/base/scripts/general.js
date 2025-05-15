@@ -211,17 +211,19 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i <= 4; i++) {
             const button = document.getElementById(`etapa-${i}`);
             const contents = document.querySelectorAll(`.etapa-${i}`);
-
-            if (contents.length > 0) {
-                lastAvailableStage = i;
-                button.classList.add('completed');
-                button.classList.remove('inactive');
-                button.disabled = false;
-            } else {
-                button.classList.add('inactive');
-                button.classList.remove('completed', 'active');
-                button.disabled = true;
+            if (button) {
+                if (contents.length > 0) {
+                    lastAvailableStage = i;
+                    button.classList.add('completed');
+                    button.classList.remove('inactive');
+                    button.disabled = false;
+                } else {
+                    button.classList.add('inactive');
+                    button.classList.remove('completed', 'active');
+                    button.disabled = true;
+                }
             }
+
         }
 
         if (lastAvailableStage >= 0) {
@@ -244,29 +246,34 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i <= 4; i++) {
             const button = document.getElementById(`etapa-${i}`);
             const contents = document.querySelectorAll(`.etapa-${i}`);
-
-            if (i === selectedStage) {
-                button.classList.add('active');
-                contents.forEach(content => {
-                    content.classList.add('active');
-                    const liParent = content.closest('li');
-                    if (liParent) liParent.style.display = 'list-item';
-                });
-            } else {
-                button.classList.remove('active');
-                contents.forEach(content => {
-                    content.classList.remove('active');
-                    const liParent = content.closest('li');
-                    if (liParent) liParent.style.display = 'none';
-                });
+            if (button) {
+                if (i === selectedStage) {
+                    button.classList.add('active');
+                    contents.forEach(content => {
+                        content.classList.add('active');
+                        const liParent = content.closest('li');
+                        if (liParent) liParent.style.display = 'list-item';
+                    });
+                } else {
+                    button.classList.remove('active');
+                    contents.forEach(content => {
+                        content.classList.remove('active');
+                        const liParent = content.closest('li');
+                        if (liParent) liParent.style.display = 'none';
+                    });
+                }
             }
+
         }
     }
 
     // Añadimos event listeners a los botones
     for (let i = 0; i <= 4; i++) {
         const button = document.getElementById(`etapa-${i}`);
-        button.addEventListener('click', handleButtonClick);
+        if (button) {
+            button.addEventListener('click', handleButtonClick);
+        }
+
     }
 
     // Actualizamos las tabs inicialmente
