@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Función para actualizar los botones y el contenido
     function updateTabs() {
         let lastAvailableStage = -1;
-        for (let i = 0; i <= 4; i++) {
+        for (let i = 0; i <= 6; i++) {
             const button = document.getElementById(`etapa-${i}`);
             const contents = document.querySelectorAll(`.etapa-${i}`);
             if (button) {
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleButtonClick(event) {
         const selectedStage = parseInt(event.target.id.split('-')[1]);
 
-        for (let i = 0; i <= 4; i++) {
+        for (let i = 0; i <= 6; i++) {
             const button = document.getElementById(`etapa-${i}`);
             const contents = document.querySelectorAll(`.etapa-${i}`);
             if (button) {
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Añadimos event listeners a los botones
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i <= 6; i++) {
         const button = document.getElementById(`etapa-${i}`);
         if (button) {
             button.addEventListener('click', handleButtonClick);
