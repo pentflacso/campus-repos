@@ -227,11 +227,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if (lastAvailableStage >= 0) {
+
             const activeButton = document.getElementById(`etapa-${lastAvailableStage}`);
-            const activeContents = document.querySelectorAll(`.etapa-${lastAvailableStage}`);
+            const activeContent = document.querySelectorAll(`.etapa-${lastAvailableStage}`);
+            const activeContents = document.querySelectorAll(".tp-tab-content");
 
             activeButton.classList.add('active');
             activeContents.forEach(content => {
+                content.classList.add('active');
+                const liParent = content.closest('li');
+                if (liParent) liParent.style.display = 'none';
+            });
+            activeContent.forEach(content => {
                 content.classList.add('active');
                 const liParent = content.closest('li');
                 if (liParent) liParent.style.display = 'list-item';
