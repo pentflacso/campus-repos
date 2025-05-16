@@ -481,6 +481,15 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 }
 
 @mixin bbdd-postit {
+    @media print {
+        * {
+            break-inside: auto !important;
+            page-break-inside: auto !important;
+        }
+        body {
+            height: auto !important;
+        }
+    }
     &#page-mod-data-view:not(.editing) {
         form#options {
             display: none !important;
