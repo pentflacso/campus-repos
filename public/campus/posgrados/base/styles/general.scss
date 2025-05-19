@@ -972,6 +972,13 @@ body.home:not(.editing) {
     p {
         @include body;
     }
+    ul,
+    ol {
+        //margin-bottom: 2.2rem;
+        li {
+            @include body;
+        }
+    }
     .alert-info {
         color: $primary;
         background-color: $grey2;
