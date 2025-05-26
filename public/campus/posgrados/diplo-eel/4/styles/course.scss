@@ -58,8 +58,13 @@
     @include general.bbdd-postit;
 }
 
+
 /* BBDD MI EXPERIENCIA CON LA IA - DIEL */
 
 .cmid-2982976 {
+    @include general.bbdd-1col;
+}
+
+.cmid-2983971 {
     @include general.bbdd-1col;
 }
