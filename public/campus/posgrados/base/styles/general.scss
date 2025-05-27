@@ -392,14 +392,23 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
         padding: $p-md;
         margin-top: 2rem;
         #defaulttemplate-single {
-            .btn.btn-icon {
-                background-color: $grey2;
-            }
             a.data-field-link img {
                 max-width: 15rem;
             }
             .mt-4 {
                 border: none;
+            }
+        }
+    }
+    .dropdown {
+        .btn.btn-icon {
+            color: $primary !important;
+            background-color: $grey2 !important;
+            &:hover {
+                background-color: $grey3 !important;
+            }
+            i {
+                color: $primary !important;
             }
         }
     }
@@ -2633,6 +2642,16 @@ body {
                                         color: $grey3;
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+                .action-menu.moodle-actionmenu.entry-actionsmenu {
+                    .action-menu-trigger {
+                        a {
+                            text-decoration: none !important;
+                            span {
+                                color: $primary !important;
                             }
                         }
                     }
