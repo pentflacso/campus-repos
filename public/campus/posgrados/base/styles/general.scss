@@ -2710,6 +2710,19 @@ body {
             font-weight: 500 !important;
         }
     }
+    &#page-mod-data-field- {
+        div[role="main"] {
+            form#editfield {
+                table {
+                    td {
+                        textarea {
+                            background-color: rgb(59, 59, 59) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
