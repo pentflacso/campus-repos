@@ -1333,6 +1333,12 @@ body.home:not(.editing) {
     .tp-botonera .col {
         min-width: 150px;
     }
+    .zoom-meetings {
+        margin-top: 40px;
+    }
+    .zoom-meetings .card-body p {
+        margin-bottom: 0.5rem;
+    }
     /* solapa derecha */
     #theme_boost-drawers-blocks {
         width: 100%;
