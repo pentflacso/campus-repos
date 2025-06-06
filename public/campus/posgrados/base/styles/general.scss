@@ -1333,6 +1333,26 @@ body.home:not(.editing) {
     .tp-botonera .col {
         min-width: 150px;
     }
+    .tp-consigna {
+        a {
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-color: $primary;
+            text-decoration-thickness: .10em;
+            text-underline-offset: .15em;
+            color: $primary;
+            font-family: 'Roboto';
+            font-weight: bold;
+            word-wrap: break-word;
+            &:hover {
+                color: $grey3;
+                text-decoration-color: $grey3;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
     .zoom-meetings {
         margin-top: 40px;
     }
