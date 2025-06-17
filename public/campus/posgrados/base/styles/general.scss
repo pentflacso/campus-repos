@@ -1516,7 +1516,7 @@ body.home:not(.editing) {
                                     padding: initial !important;
                                     margin-top: initial !important;
                                 }
-                                a {
+                                a:not(.btn.btn-primary) {
                                     text-decoration: underline;
                                     text-decoration-style: solid;
                                     text-decoration-color: $primary;
