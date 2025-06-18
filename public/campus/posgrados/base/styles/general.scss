@@ -414,6 +414,91 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     }
 }
 
+@mixin bbdd-1col-sinfiltro {
+    &#page-mod-data-view:not(.editing) {
+        form#options {
+            display: none !important;
+        }
+    }
+    #data-listview-content {
+        font-size: $fs-base;
+        .defaulttemplate-listentry {
+            background-color: $grey1;
+            border: none;
+            margin-bottom: 0 !important;
+            .row.my-6 {
+                margin: 0 !important;
+                flex-wrap: initial;
+                .col-auto {
+                    padding: 0;
+                }
+                .col {
+                    padding: 0;
+                    .row.h-100 {
+                        margin-left: initial;
+                        align-items: center;
+                        .col-3 {
+                            display: block;
+                            flex: initial;
+                            max-width: initial;
+                        }
+                        .col-4 {
+                            width: initial;
+                            .btn.btn-icon {
+                                background-color: $grey2;
+                            }
+                        }
+                    }
+                }
+            }
+            .defaulttemplate-list-body {
+                margin-top: initial;
+                //color: $primary;
+                .row.my-3 {
+                    display: block;
+                    border-bottom: none;
+                    margin-right: initial;
+                    margin-left: initial;
+                    .col-4.col-lg-3 {
+                        max-width: initial;
+                        padding: 0;
+                        font-weight: 600 !important;
+                    }
+                    .col-8.col-lg-9.ml-n3 {
+                        border-left: none;
+                        max-width: initial;
+                    }
+                }
+            }
+        }
+    }
+    #data-singleview-content {
+        background-color: $grey1 !important;
+        padding: $p-md;
+        margin-top: 2rem;
+        #defaulttemplate-single {
+            a.data-field-link img {
+                max-width: 15rem;
+            }
+            .mt-4 {
+                border: none;
+            }
+        }
+    }
+    .dropdown {
+        .btn.btn-icon {
+            color: $primary !important;
+            background-color: $grey2 !important;
+            &:hover {
+                background-color: $grey3 !important;
+            }
+            i {
+                color: $primary !important;
+            }
+        }
+    }
+}
+
 @mixin bbdd-2col {
     #data-listview-content {
         display: grid;
