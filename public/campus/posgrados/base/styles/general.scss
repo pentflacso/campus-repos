@@ -420,6 +420,9 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
             display: none !important;
         }
     }
+    .highlight {
+            color: $primary !important;
+        }
     #data-listview-content {
         font-size: $fs-base;
         .defaulttemplate-listentry {
