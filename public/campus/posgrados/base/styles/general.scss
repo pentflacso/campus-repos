@@ -1434,12 +1434,11 @@ body.home:not(.editing) {
     }
     /* Estados opcionales */
     .liprof-botonera .completed {
-        border-color: #F0F0F0;
-        ;
+        background-color: $grey2;
         opacity: 1;
     }
     .liprof-botonera .active {
-        border-color: #FFD658;
+        background-color: $accent;
         opacity: 1;
     }
     .liprof-botonera .inactive {
