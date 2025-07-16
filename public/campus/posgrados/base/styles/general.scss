@@ -1408,8 +1408,8 @@ body.home:not(.editing) {
         display: flex;
     }
     .liprof-botonera .tab-btn {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
         display: inline-block;
         margin: 5px;
@@ -1421,19 +1421,21 @@ body.home:not(.editing) {
     }
     /* Etapas con imágenes personalizadas */
     .liprof-botonera .btn-etapa-1 {
-        background-image: url('../../../base/img/liprof-btn-1.png');
+        background-image: url('../../../base/img/liprof-btn-1.svg');
     }
     .liprof-botonera .btn-etapa-2 {
-        background-image: url('../../../base/img/liprof-btn-2.png');
+        background-image: url('../../../base/img/liprof-btn-2.svg');
     }
     .liprof-botonera .btn-etapa-3 {
-        background-image: url('../../../base/img/liprof-btn-3.png');
+        background-image: url('../../../base/img/liprof-btn-3.svg');
     }
     .liprof-botonera .btn-etapa-4 {
-        background-image: url('../../../base/img/liprof-btn-4.png');
+        background-image: url('../../../base/img/liprof-btn-4.svg');
     }
     /* Estados opcionales */
     .liprof-botonera .completed {
+        border-color: #F0F0F0;
+        ;
         opacity: 1;
     }
     .liprof-botonera .active {
