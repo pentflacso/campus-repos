@@ -1420,14 +1420,17 @@ body.home:not(.editing) {
         border: 2px solid transparent;
     }
     /* Etapas con imágenes personalizadas */
-    .liprof-botonera .btn-etapa-0 {
-        background-image: url('../../../base/img/boton-1.png');
-    }
     .liprof-botonera .btn-etapa-1 {
-        background-image: url('../../../base/img/boton-2.png');
+        background-image: url('../../../base/img/liprof-btn-1.png');
     }
     .liprof-botonera .btn-etapa-2 {
-        background-image: url('../../../base/img/boton-3.png');
+        background-image: url('../../../base/img/liprof-btn-2.png');
+    }
+    .liprof-botonera .btn-etapa-3 {
+        background-image: url('../../../base/img/liprof-btn-3.png');
+    }
+    .liprof-botonera .btn-etapa-4 {
+        background-image: url('../../../base/img/liprof-btn-4.png');
     }
     /* Estados opcionales */
     .liprof-botonera .completed {
