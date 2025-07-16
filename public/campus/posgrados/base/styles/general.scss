@@ -421,8 +421,8 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
         }
     }
     .highlight {
-            color: $primary !important;
-        }
+        color: $primary !important;
+    }
     #data-listview-content {
         font-size: $fs-base;
         .defaulttemplate-listentry {
@@ -1402,6 +1402,46 @@ body.home:not(.editing) {
                 box-shadow: none;
             }
         }
+    }
+    /*BOTONERA LIPROF*/
+    .liprof-botonera {
+        display: flex;
+    }
+    .liprof-botonera .tab-btn {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 5px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+    /* Etapas con imágenes personalizadas */
+    .liprof-botonera .btn-etapa-0 {
+        background-image: url('../../../base/img/boton-1.png');
+    }
+    .liprof-botonera .btn-etapa-1 {
+        background-image: url('../../../base/img/boton-2.png');
+    }
+    .liprof-botonera .btn-etapa-2 {
+        background-image: url('../../../base/img/boton-3.png');
+    }
+    /* Estados opcionales */
+    .liprof-botonera .completed {
+        border-color: #152F4E;
+        opacity: 1;
+    }
+    .liprof-botonera .active {
+        border-color: #FFD658;
+        opacity: 1;
+    }
+    .liprof-botonera .inactive {
+        filter: grayscale(1);
+        opacity: 0.5;
+        cursor: not-allowed !important;
     }
     /*BOTONERA TP*/
     .tp-botonera {
@@ -2832,14 +2872,15 @@ body {
             font-weight: 500 !important;
         }
     }
-    &#page-mod-data-field-, &#page-mod-data-field-menu {
+    &#page-mod-data-field-,
+    &#page-mod-data-field-menu {
         div[role="main"] {
             form#editfield {
                 table {
                     td {
                         textarea {
                             background-color: rgb(59, 59, 59) !important;
-                            color: white;               
+                            color: white;
                         }
                     }
                 }
