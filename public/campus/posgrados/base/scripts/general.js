@@ -286,3 +286,81 @@ document.addEventListener("DOMContentLoaded", function() {
     // Actualizamos las tabs inicialmente
     updateTabs();
 });
+
+// SCRIPT PARA LIPROF
+
+document.addEventListener("DOMContentLoaded", function() {
+    // LIPROF - TABS ETAPAS
+
+    function updateTabs() {
+        for (let i = 0; i <= 6; i++) {
+            const button = document.getElementById(`etapa-${i}`);
+            const contents = document.querySelectorAll(`.etapa-${i}`);
+            if (button) {
+                if (contents.length > 0) {
+                    button.classList.add('completed');
+                    button.classList.remove('inactive');
+                    button.disabled = false;
+                } else {
+                    button.classList.add('inactive');
+                    button.classList.remove('completed', 'active');
+                    button.disabled = true;
+                }
+            }
+        }
+
+        // Activamos siempre la etapa 0 por defecto
+        const firstButton = document.getElementById(`etapa-0`);
+        const firstContent = document.querySelectorAll(`.etapa-0`);
+        const allContents = document.querySelectorAll(".liprof");
+
+        if (firstButton) firstButton.classList.add('active');
+
+        allContents.forEach(content => {
+            content.classList.remove('active');
+            const liParent = content.closest('li');
+            if (liParent) liParent.style.display = 'none';
+        });
+
+        firstContent.forEach(content => {
+            content.classList.add('active');
+            const liParent = content.closest('li');
+            if (liParent) liParent.style.display = 'list-item';
+        });
+    }
+
+    function handleButtonClick(event) {
+        const selectedStage = parseInt(event.target.id.split('-')[1]);
+
+        for (let i = 0; i <= 6; i++) {
+            const button = document.getElementById(`etapa-${i}`);
+            const contents = document.querySelectorAll(`.etapa-${i}`);
+            if (button) {
+                if (i === selectedStage) {
+                    button.classList.add('active');
+                    contents.forEach(content => {
+                        content.classList.add('active');
+                        const liParent = content.closest('li');
+                        if (liParent) liParent.style.display = 'list-item';
+                    });
+                } else {
+                    button.classList.remove('active');
+                    contents.forEach(content => {
+                        content.classList.remove('active');
+                        const liParent = content.closest('li');
+                        if (liParent) liParent.style.display = 'none';
+                    });
+                }
+            }
+        }
+    }
+
+    for (let i = 0; i <= 6; i++) {
+        const button = document.getElementById(`etapa-${i}`);
+        if (button) {
+            button.addEventListener('click', handleButtonClick);
+        }
+    }
+
+    updateTabs();
+});
