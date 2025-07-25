@@ -293,6 +293,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // LIPROF - TABS ETAPAS
 
     function updateTabs() {
+        // Primero limpiamos todas las clases active
+        for (let i = 0; i <= 6; i++) {
+            const button = document.getElementById(`etapa-${i}`);
+            if (button) {
+                button.classList.remove('active'); // Agregamos esta línea
+            }
+        }
         for (let i = 0; i <= 6; i++) {
             const button = document.getElementById(`etapa-${i}`);
             const contents = document.querySelectorAll(`.etapa-${i}`);
