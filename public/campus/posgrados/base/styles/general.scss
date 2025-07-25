@@ -677,6 +677,118 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     }
 }
 
+@mixin bbdd-mochilas-liprof {
+    &#page-mod-data-view:not(.editing) {
+        form#options {
+            display: none !important;
+        }
+    }
+    hr {
+        display: none;
+    }
+    #data-singleview-content {
+        .pent-post {
+            background: transparent;
+            border: 1px solid $grey2;
+            padding: 28px;
+            position: relative;
+            margin-bottom: 28px;
+            break-inside: avoid;
+            display: inline-block;
+            vertical-align: top;
+            min-width: 100%;
+        }
+        .pent-tipo {
+            background-color: $grey2;
+            display: inline-block;
+            color: $primary;
+            padding: 4px 13px;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 600;
+            position: absolute;
+            bottom: 28px;
+            right: 28px;
+        }
+        .pent-texto {
+            font-family: 'Roboto' !important;
+            margin: 28px 0;
+        }
+    }
+    #data-listview-content {
+        --gutter: 2rem;
+        column-count: 2;
+        column-gap: var(--gutter);
+        margin-top: var(--gutter);
+        margin-bottom: var(--gutter);
+        padding: 0;
+        counter-reset: chapter;
+        @media (max-width: 990px) {
+            column-count: auto;
+            column-gap: 0;
+            padding: 0;
+        }
+        .pent-post {
+            background: #DBFCEC;
+            padding: 28px;
+            position: relative;
+            margin-bottom: 28px;
+            break-inside: avoid;
+            display: inline-block;
+            vertical-align: top;
+            min-width: 100%;
+            /* @media (max-width: 990px) {
+                padding: 28px 28px 56px 28px;
+            } */
+            &:nth-of-type(3n+1) {
+                background-color: #FBFFD0;
+            }
+            &:nth-of-type(3n+2) {
+                background-color: #F2E5FF;
+            }
+            .pent-usuario {
+                margin-bottom: 28px;
+                img {
+                    width: 56px;
+                }
+            }
+            .pent-tipo {
+                background-color: $grey2;
+                display: inline-block;
+                color: $primary;
+                padding: 4px 13px;
+                text-transform: uppercase;
+                font-size: 11px;
+                font-weight: 600;
+                position: absolute;
+                bottom: 28px;
+                right: 28px;
+            }
+            .pent-texto {
+                margin-bottom: 28px;
+            }
+        }
+    }
+    span.highlight {
+        color: inherit !important;
+    }
+    .alert.alert-success.alert-block.fade.in {
+        display: none;
+    }
+    .mochila-header {
+        background-image: url(https://beta.pent.org.ar/diplo/22/liprof/img/mochila-header.svg);
+        background-size: 250px auto;
+        background-repeat: no-repeat;
+        background-position: top -7% right 2%;
+        padding: 50px;
+        background-color: #F0F0F0;
+    }
+    .mochila-header h1 {
+        margin-top: 0 !important;
+        margin-bottom: 4rem !important;
+    }
+}
+
 
 /* NAVBAR DE ADMINISTRACION DEL CURSO */
 
