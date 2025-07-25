@@ -2288,6 +2288,23 @@ body:not(.home) {
                 div[role="main"] {
                     .box.py-3.generalbox.center.clearfix {
                         .no-overflow {
+                            a {
+                                text-decoration-style: solid;
+                                text-decoration-color: $primary;
+                                text-decoration-thickness: .10em;
+                                text-underline-offset: .15em;
+                                color: $primary;
+                                font-family: 'Roboto';
+                                font-weight: bold;
+                                word-wrap: break-word;
+                                &:hover {
+                                    color: $grey3;
+                                    text-decoration-color: $grey3;
+                                }
+                                &:focus {
+                                    box-shadow: none;
+                                }
+                            }
                             li a {
                                 text-decoration-style: solid;
                                 text-decoration-color: $primary;
@@ -3053,26 +3070,6 @@ body {
                     text-decoration: none;
                 }
             }
-        }
-    }
-}
-
-#page-mod-page-view .box {
-    a {
-        text-decoration-style: solid;
-        text-decoration-color: $primary;
-        text-decoration-thickness: .10em;
-        text-underline-offset: .15em;
-        color: $primary;
-        font-family: 'Roboto';
-        font-weight: bold;
-        word-wrap: break-word;
-        &:hover {
-            color: $grey3;
-            text-decoration-color: $grey3;
-        }
-        &:focus {
-            box-shadow: none;
         }
     }
 }
