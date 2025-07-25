@@ -686,7 +686,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     hr {
         display: none;
     }
-    #data-singleview-content {
+    /* #data-singleview-content {
         .pent-post {
             background: transparent;
             border: 1px solid $grey2;
@@ -698,23 +698,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
             vertical-align: top;
             min-width: 100%;
         }
-        .pent-tipo {
-            background-color: $grey2;
-            display: inline-block;
-            color: $primary;
-            padding: 4px 13px;
-            text-transform: uppercase;
-            font-size: 11px;
-            font-weight: 600;
-            position: absolute;
-            bottom: 28px;
-            right: 28px;
-        }
-        .pent-texto {
-            font-family: 'Roboto' !important;
-            margin: 28px 0;
-        }
-    }
+    } */
     #data-listview-content {
         --gutter: 2rem;
         column-count: 2;
@@ -728,44 +712,51 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
             column-gap: 0;
             padding: 0;
         }
-        .pent-post {
-            background: #DBFCEC;
-            padding: 28px;
-            position: relative;
-            margin-bottom: 28px;
-            break-inside: avoid;
-            display: inline-block;
-            vertical-align: top;
-            min-width: 100%;
-            /* @media (max-width: 990px) {
+    }
+    .pent-post {
+        background: #DBFCEC;
+        padding: 28px;
+        position: relative;
+        margin-bottom: 28px;
+        break-inside: avoid;
+        display: inline-block;
+        vertical-align: top;
+        min-width: 100%;
+        /* @media (max-width: 990px) {
                 padding: 28px 28px 56px 28px;
             } */
-            &:nth-of-type(3n+1) {
-                background-color: #FBFFD0;
+        &:nth-of-type(3n+1) {
+            background-color: #FBFFD0;
+        }
+        &:nth-of-type(3n+2) {
+            background-color: #F2E5FF;
+        }
+        .pent-usuario {
+            margin-bottom: 28px;
+            img {
+                width: 56px;
             }
-            &:nth-of-type(3n+2) {
-                background-color: #F2E5FF;
+        }
+        .pent-texto {
+            font-family: 'Roboto' !important;
+            margin-bottom: 28px;
+        }
+        a {
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-color: $primary;
+            text-decoration-thickness: .10em;
+            text-underline-offset: .15em;
+            color: $primary;
+            font-family: 'Roboto';
+            font-weight: bold;
+            word-wrap: break-word;
+            &:hover {
+                color: $grey3;
+                text-decoration-color: $grey3;
             }
-            .pent-usuario {
-                margin-bottom: 28px;
-                img {
-                    width: 56px;
-                }
-            }
-            .pent-tipo {
-                background-color: $grey2;
-                display: inline-block;
-                color: $primary;
-                padding: 4px 13px;
-                text-transform: uppercase;
-                font-size: 11px;
-                font-weight: 600;
-                position: absolute;
-                bottom: 28px;
-                right: 28px;
-            }
-            .pent-texto {
-                margin-bottom: 28px;
+            &:focus {
+                box-shadow: none;
             }
         }
     }
