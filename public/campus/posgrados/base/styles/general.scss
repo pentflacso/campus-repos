@@ -1192,6 +1192,18 @@ body.home:not(.editing) {
         padding: 0.5rem 1rem;
         //border-radius: 500px;
     }
+    .pildora-verde {
+        background-color: $secondary;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        //border-radius: 500px;
+    }
+    .pildora-amarilla {
+        background-color: $accent;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        //border-radius: 500px;
+    }
     .act-importante {
         background-color: $accent;
         margin-left: 0 !important;
