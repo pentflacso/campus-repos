@@ -686,19 +686,6 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     hr {
         display: none;
     }
-    /* #data-singleview-content {
-        .pent-post {
-            background: transparent;
-            border: 1px solid $grey2;
-            padding: 28px;
-            position: relative;
-            margin-bottom: 28px;
-            break-inside: avoid;
-            display: inline-block;
-            vertical-align: top;
-            min-width: 100%;
-        }
-    } */
     #data-listview-content {
         --gutter: 2rem;
         column-count: 2;
@@ -768,6 +755,14 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     }
     .mochila-header {
         background-image: url(https://beta.pent.org.ar/diplo/22/liprof/img/mochila-header.svg);
+        background-size: 250px auto;
+        background-repeat: no-repeat;
+        background-position: top -7% right 2%;
+        padding: 50px;
+        background-color: #F0F0F0;
+    }
+    .header-booktubers {
+        background-image: url(https://beta.pent.org.ar/diplo/22/liprof/img/header-booktubers.png);
         background-size: 250px auto;
         background-repeat: no-repeat;
         background-position: top -7% right 2%;
