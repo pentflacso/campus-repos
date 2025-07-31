@@ -202,8 +202,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+// TP - TABS ETAPAS
 document.addEventListener("DOMContentLoaded", function() {
-    // TP - TABS ETAPAS
+
 
     // Función para actualizar los botones y el contenido
     function updateTabs() {
@@ -287,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateTabs();
 });
 
-// SCRIPT PARA LIPROF
+// SCRIPT PARA TABS LIPROF
 
 document.addEventListener("DOMContentLoaded", function() {
     // LIPROF - TABS ETAPAS
@@ -370,4 +371,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     updateTabs();
+});
+
+/* SCRIPT PARA QUE LOS RECURSOS URL SE ABRAN EN UNA NUEVA PESTAÑA */
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="/mod/url/view.php"]').forEach(function(link) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+    });
 });
