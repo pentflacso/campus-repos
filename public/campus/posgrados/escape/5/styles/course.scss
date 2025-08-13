@@ -1,1 +1,7 @@
 @use '../../../base/styles/general';
+
+/* Base de datos Nuestros juegos de escape */
+
+.cmid-2987702 {
+    @include general.bbdd-1col;
+}

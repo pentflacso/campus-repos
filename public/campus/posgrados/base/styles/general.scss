@@ -335,6 +335,9 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 }
 
 @mixin bbdd-1col {
+    button.visibleifjs {
+        @include btn-secundario-animado();
+    }
     #data-listview-content {
         font-size: $fs-base;
         .defaulttemplate-listentry {
