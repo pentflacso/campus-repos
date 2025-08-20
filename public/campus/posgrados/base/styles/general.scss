@@ -2310,6 +2310,23 @@ body:not(.home) {
                                                 margin-bottom: 2rem;
                                                 line-height: 120%;
                                             }
+                                            a {
+                                                text-decoration-style: solid !important;
+                                                text-decoration-color: $primary;
+                                                text-decoration-thickness: .10em;
+                                                text-underline-offset: .15em;
+                                                color: $primary;
+                                                font-family: 'Roboto';
+                                                font-weight: bold;
+                                                word-wrap: break-word;
+                                                &:hover {
+                                                    color: $grey3;
+                                                    text-decoration-color: $grey3;
+                                                }
+                                                &:focus {
+                                                    box-shadow: none;
+                                                }
+                                            }
                                         }
                                         .pent-sesion-1 {
                                             background-image: url(../../../base/img/sesion1.svg);
