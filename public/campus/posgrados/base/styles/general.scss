@@ -779,7 +779,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 }
 
 @mixin bbdd-anotadores-bata {
-    #region-main form {
+    #region-main .datapreferences.my-5 form:has(#data-listview-content) {
     --gutter: 2rem;
     column-count: 2;
     column-gap: var(--gutter);
@@ -799,7 +799,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     break-inside: avoid;
     display: inline-block;
     vertical-align: top;
-min-width: 100%;
+    min-width: 100%;
 }
 
 .pent-post:nth-child(3n+1) {
@@ -843,11 +843,11 @@ background-color: #F2E5FF;
     margin-bottom: 28px;
 }
 
-.pent-controles .fa-cog::before {
+/* .pent-controles .fa-cog::before {
 display: none
-}
+} */
 
-.pent-controles .fa-cog {
+/* .pent-controles .fa-cog {
 background-image: url(https://beta.pent.org.ar/elearning/3/img/pencil-icon.svg)
 }
 
@@ -858,13 +858,13 @@ background-image: url(https://beta.pent.org.ar/elearning/3/img/pencil-icon.svg)
     background-size: 36px;
     display: inline-block;
     background-repeat: no-repeat;
-}
+} */
 
-.pent-controles .fa-trash::before {
+/* .pent-controles .fa-trash::before {
 display: none;
-}
+} */
 
-.pent-controles .fa-trash {
+/* .pent-controles .fa-trash {
 background-image: url(https://beta.pent.org.ar/elearning/3/img/trash-icon.svg)
 }
 
@@ -875,61 +875,30 @@ background-image: url(https://beta.pent.org.ar/elearning/3/img/trash-icon.svg)
     background-size: 24px;
     display: inline-block;
     background-repeat: no-repeat;
-}
+} */
 
 @media (max-width: 990px) {
-.pent-post {
-padding: 28px 28px 56px 28px;
+    .pent-post {
+    padding: 28px 28px 56px 28px;
+    }
+
+    #region-main .datapreferences.my-5 form:has(#data-listview-content) {
+            column-count: auto;
+            column-gap: 0;
+            padding: 0;
+    }
 }
 
-#region-main form {
-         column-count: auto;
-         column-gap: 0;
-         padding: 0;
-}
-}
-
-#region-main ul.nav.nav-tabs.mb-3, #options {
+body:not(.editing) #region-main ul.nav.nav-tabs.mb-3, #options {
 display: none;
 }
 
-.editing #region-main ul.nav.nav-tabs.mb-3, .editing #options {
+/* .editing #region-main ul.nav.nav-tabs.mb-3, .editing #options {
 display: block;
-}
-
-a#botonmas:hover {
-    color: black;
-    background-color: white;
-}
-
-a#botonmas {
-    background-color: black;
-    font-size: 17px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 100px;
-    color: white;
-    text-decoration: none !important;
-}
+} */
 
 span.highlight {
     color: inherit !important;
-}
-
-.botones-filtros a:hover {
-    background-color: black;
-    color: white;
-}
-
-.botones-filtros a {
-    color: black;
-    border: 1px solid black;
-    padding: 2px 12px;
-    border-radius: 100px;
-    margin: 5px;
-    text-decoration: none;
-    text-transform: uppercase; 
-font-size: 14px;
 }
 
 .alert.alert-success.alert-block.fade.in {
