@@ -901,6 +901,10 @@ display: none;
 display: none;
 }
 
+&#page-mod-data-view:not(.editing) #sticky-footer .navitem a {
+display: none;
+}
+
 /* .editing #region-main ul.nav.nav-tabs.mb-3, .editing #options {
 display: block;
 } */
