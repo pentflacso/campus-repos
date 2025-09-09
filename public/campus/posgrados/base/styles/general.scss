@@ -778,6 +778,165 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     }
 }
 
+@mixin bbdd-anotadores-bata {
+    #region-main form {
+    --gutter: 2rem;
+    column-count: 2;
+    column-gap: var(--gutter);
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+    padding: var(--gutter);
+    counter-reset: chapter;
+}
+
+.pent-post {
+    background: #DBFCEC;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 28px;
+    position: relative;
+    margin-bottom: 28px;
+    break-inside: avoid;
+    display: inline-block;
+    vertical-align: top;
+min-width: 100%;
+}
+
+.pent-post:nth-child(3n+1) {
+background-color: #FBFFD0;
+}
+
+.pent-post:nth-child(3n+2) {
+background-color: #F2E5FF;
+}
+
+.pent-usuario {
+    margin-bottom: 28px;
+}
+
+.pent-usuario a {
+    font-family: roboto;
+    font-weight: 600;
+    color: black !important;
+}
+
+.pent-usuario img {
+    width: 56px;
+    border: 2px solid black;
+}
+
+.pent-tipo {
+    background-color: black;
+    display: inline-block;
+    color: white;
+    padding: 1px 13px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-size: 11px;
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+}
+
+.pent-texto {
+    font-family: 'Roboto Mono';
+    margin-bottom: 28px;
+}
+
+.pent-controles .fa-cog::before {
+display: none
+}
+
+.pent-controles .fa-cog {
+background-image: url(https://beta.pent.org.ar/elearning/3/img/pencil-icon.svg)
+}
+
+.pent-controles .fa-cog {
+    background-image: url(https://beta.pent.org.ar/elearning/3/img/pencil-icon.svg);
+    width: 40px;
+    height: 37px;
+    background-size: 36px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.pent-controles .fa-trash::before {
+display: none;
+}
+
+.pent-controles .fa-trash {
+background-image: url(https://beta.pent.org.ar/elearning/3/img/trash-icon.svg)
+}
+
+.pent-controles .fa-trash {
+    background-image: url(https://beta.pent.org.ar/elearning/3/img/trash-icon.svg);
+    width: 30px;
+    height: 30px;
+    background-size: 24px;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 990px) {
+.pent-post {
+padding: 28px 28px 56px 28px;
+}
+
+#region-main form {
+         column-count: auto;
+         column-gap: 0;
+         padding: 0;
+}
+}
+
+#region-main ul.nav.nav-tabs.mb-3, #options {
+display: none;
+}
+
+.editing #region-main ul.nav.nav-tabs.mb-3, .editing #options {
+display: block;
+}
+
+a#botonmas:hover {
+    color: black;
+    background-color: white;
+}
+
+a#botonmas {
+    background-color: black;
+    font-size: 17px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100px;
+    color: white;
+    text-decoration: none !important;
+}
+
+span.highlight {
+    color: inherit !important;
+}
+
+.botones-filtros a:hover {
+    background-color: black;
+    color: white;
+}
+
+.botones-filtros a {
+    color: black;
+    border: 1px solid black;
+    padding: 2px 12px;
+    border-radius: 100px;
+    margin: 5px;
+    text-decoration: none;
+    text-transform: uppercase; 
+font-size: 14px;
+}
+
+.alert.alert-success.alert-block.fade.in {
+    display: none;
+}
+}
+
 
 /* NAVBAR DE ADMINISTRACION DEL CURSO */
 
