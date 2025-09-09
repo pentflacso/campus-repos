@@ -790,9 +790,9 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 }
 
 .pent-post {
-    background: #DBFCEC;
-    border: 2px solid #000000;
-    border-radius: 20px;
+    background: #F2F4F5;
+    border: 2px solid #1B97D5;
+    //border-radius: 20px;
     padding: 28px;
     position: relative;
     margin-bottom: 28px;
@@ -802,13 +802,13 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
     min-width: 100%;
 }
 
-.pent-post:nth-child(3n+1) {
+/* .pent-post:nth-child(3n+1) {
 background-color: #FBFFD0;
 }
 
 .pent-post:nth-child(3n+2) {
 background-color: #F2E5FF;
-}
+} */
 
 .pent-usuario {
     margin-bottom: 28px;
@@ -817,19 +817,19 @@ background-color: #F2E5FF;
 .pent-usuario a {
     font-family: roboto;
     font-weight: 600;
-    color: black !important;
+    color: #262D30 !important;
 }
 
 .pent-usuario img {
     width: 56px;
-    border: 2px solid black;
+    border: 2px solid #262D30;
 }
 
 .pent-tipo {
-    background-color: black;
+    background-color: #005D88;
     display: inline-block;
     color: white;
-    padding: 1px 13px;
+    padding: 3px 13px;
     border-radius: 100px;
     text-transform: uppercase;
     font-size: 11px;
