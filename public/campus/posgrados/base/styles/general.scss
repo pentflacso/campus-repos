@@ -889,7 +889,11 @@ background-image: url(https://beta.pent.org.ar/elearning/3/img/trash-icon.svg)
     }
 }
 
-body:not(.editing) #region-main ul.nav.nav-tabs.mb-3, #options {
+body:not(.editing) #region-main ul.nav.nav-tabs.mb-3 {
+display: none;
+}
+
+body:not(.editing) div[role="main"] .datapreferences.my-5 form#options {
 display: none;
 }
 
