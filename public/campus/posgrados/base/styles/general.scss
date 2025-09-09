@@ -889,12 +889,16 @@ background-image: url(https://beta.pent.org.ar/elearning/3/img/trash-icon.svg)
     }
 }
 
-&body#page-mod-data-view:not(.editing) #region-main ul.nav.nav-tabs.mb-3 {
+&#page-mod-data-view:not(.editing) #region-main .mb-3 {
 display: none;
 }
 
-&body#page-mod-data-view:not(.editing) div[role="main"] .datapreferences.my-5 form#options {
-display: none !important;
+div[role="main"] hr {
+display: none;
+}
+
+&#page-mod-data-view:not(.editing) div[role="main"] .datapreferences.my-5 form#options {
+display: none;
 }
 
 /* .editing #region-main ul.nav.nav-tabs.mb-3, .editing #options {
