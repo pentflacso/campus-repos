@@ -93,3 +93,10 @@
 .cmid-2985102 {
     @include general.bbdd-1col-sinfiltro;
 }
+
+/* MESA GECO - Solapa derecha ocultada */
+.cmid-2989446 {
+   .drawer-right {
+       display: none;
+    }
+}
