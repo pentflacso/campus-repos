@@ -99,4 +99,10 @@
    .drawer-right {
        display: none;
     }
+    .secondary-navigation .navigation {
+       background-color: transparent;
+       .nav-tabs {
+        background-color: transparent;
+        }
+    }
 }
