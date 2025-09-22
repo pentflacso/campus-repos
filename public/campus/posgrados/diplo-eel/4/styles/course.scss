@@ -69,24 +69,26 @@
     @include general.bbdd-1col;
 }
 
+
 /* estilos para videos verticales de MD en Modal */
 
 .cmid-2983761 {
-.video-vertical {
-  position: relative;
-  width: 100%;
-  padding-top: 177.78%; /* 16:9 invertido = 9/16 = 0.5625 -> 100 / 0.5625 = 177.78% */
+    .video-vertical {
+        position: relative;
+        width: 100%;
+        padding-top: 177.78%;
+        /* 16:9 invertido = 9/16 = 0.5625 -> 100 / 0.5625 = 177.78% */
+    }
+    .video-vertical iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
 }
 
-.video-vertical iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-}
 
 /* BBDD Propuestas de asesoría - EVAIEL */
 
@@ -94,15 +96,24 @@
     @include general.bbdd-1col-sinfiltro;
 }
 
+
 /* MESA GECO - Solapa derecha ocultada */
+
 .cmid-2989446 {
-   .drawer-right {
-       display: none;
+    .drawer-right {
+        display: none;
     }
     .secondary-navigation .navigation {
-       background-color: transparent;
-       .nav-tabs {
         background-color: transparent;
+        .nav-tabs {
+            background-color: transparent;
         }
     }
+}
+
+
+/* BBDD GECO cartas */
+
+.cmid-2989448 {
+    @include general.bbdd-cartas;
 }

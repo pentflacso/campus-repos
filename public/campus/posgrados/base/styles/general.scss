@@ -780,74 +780,65 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
 
 @mixin bbdd-anotadores-bata {
     #region-main .datapreferences.my-5 form:has(#data-listview-content) {
-    --gutter: 2rem;
-    column-count: 2;
-    column-gap: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    padding: var(--gutter);
-    counter-reset: chapter;
-}
-
-.pent-post {
-    background: #F2F4F5;
-    border: 2px solid #1B97D5;
-    //border-radius: 20px;
-    padding: 28px;
-    position: relative;
-    margin-bottom: 28px;
-    break-inside: avoid;
-    display: inline-block;
-    vertical-align: top;
-    min-width: 100%;
-}
-
-/* .pent-post:nth-child(3n+1) {
+        --gutter: 2rem;
+        column-count: 2;
+        column-gap: var(--gutter);
+        margin-top: var(--gutter);
+        margin-bottom: var(--gutter);
+        padding: var(--gutter);
+        counter-reset: chapter;
+    }
+    .pent-post {
+        background: #F2F4F5;
+        border: 2px solid #1B97D5;
+        //border-radius: 20px;
+        padding: 28px;
+        position: relative;
+        margin-bottom: 28px;
+        break-inside: avoid;
+        display: inline-block;
+        vertical-align: top;
+        min-width: 100%;
+    }
+    /* .pent-post:nth-child(3n+1) {
 background-color: #FBFFD0;
 }
 
 .pent-post:nth-child(3n+2) {
 background-color: #F2E5FF;
 } */
-
-.pent-usuario {
-    margin-bottom: 28px;
-}
-
-.pent-usuario a {
-    font-family: roboto;
-    font-weight: 600;
-    color: #262D30 !important;
-}
-
-.pent-usuario img {
-    width: 56px;
-    border: 2px solid #1B97D5;
-}
-
-.pent-tipo {
-    background-color: #005D88;
-    display: inline-block;
-    color: white;
-    padding: 3px 13px;
-    border-radius: 100px;
-    text-transform: uppercase;
-    font-size: 11px;
-    position: absolute;
-    bottom: 28px;
-    right: 28px;
-}
-
-.pent-texto {
-    font-family: 'Roboto Mono';
-    margin-bottom: 28px;
-}
-
-/* .pent-controles .fa-cog::before {
+    .pent-usuario {
+        margin-bottom: 28px;
+    }
+    .pent-usuario a {
+        font-family: roboto;
+        font-weight: 600;
+        color: #262D30 !important;
+    }
+    .pent-usuario img {
+        width: 56px;
+        border: 2px solid #1B97D5;
+    }
+    .pent-tipo {
+        background-color: #005D88;
+        display: inline-block;
+        color: white;
+        padding: 3px 13px;
+        border-radius: 100px;
+        text-transform: uppercase;
+        font-size: 11px;
+        position: absolute;
+        bottom: 28px;
+        right: 28px;
+    }
+    .pent-texto {
+        font-family: 'Roboto Mono';
+        margin-bottom: 28px;
+    }
+    /* .pent-controles .fa-cog::before {
 display: none
 } */
-
-/* .pent-controles .fa-cog {
+    /* .pent-controles .fa-cog {
 background-image: url(https://beta.pent.org.ar/elearning/3/img/pencil-icon.svg)
 }
 
@@ -859,12 +850,10 @@ background-image: url(https://beta.pent.org.ar/elearning/3/img/pencil-icon.svg)
     display: inline-block;
     background-repeat: no-repeat;
 } */
-
-/* .pent-controles .fa-trash::before {
+    /* .pent-controles .fa-trash::before {
 display: none;
 } */
-
-/* .pent-controles .fa-trash {
+    /* .pent-controles .fa-trash {
 background-image: url(https://beta.pent.org.ar/elearning/3/img/trash-icon.svg)
 }
 
@@ -876,50 +865,61 @@ background-image: url(https://beta.pent.org.ar/elearning/3/img/trash-icon.svg)
     display: inline-block;
     background-repeat: no-repeat;
 } */
-
-@media (max-width: 990px) {
-    .pent-post {
-    padding: 28px 28px 56px 28px;
-    }
-
-    #region-main .datapreferences.my-5 form:has(#data-listview-content) {
+    @media (max-width: 990px) {
+        .pent-post {
+            padding: 28px 28px 56px 28px;
+        }
+        #region-main .datapreferences.my-5 form:has(#data-listview-content) {
             column-count: auto;
             column-gap: 0;
             padding: 0;
+        }
+    }
+    &#page-mod-data-view:not(.editing) #region-main .mb-3 {
+        display: none;
+    }
+    div[role="main"] hr {
+        display: none;
+    }
+    &#page-mod-data-view:not(.editing) div[role="main"] .datapreferences.my-5 form#options {
+        display: none;
+    }
+    .datapreferences.my-5 form .box.py-3.generalbox a {
+        color: $secondary;
+    }
+    &#page-mod-data-view:not(.editing) #sticky-footer .navitem a {
+        display: none;
+    }
+    /* .editing #region-main ul.nav.nav-tabs.mb-3, .editing #options {
+display: block;
+} */
+    span.highlight {
+        color: inherit !important;
+    }
+    .alert.alert-success.alert-block.fade.in {
+        display: none;
     }
 }
 
-&#page-mod-data-view:not(.editing) #region-main .mb-3 {
-display: none;
-}
-
-div[role="main"] hr {
-display: none;
-}
-
-&#page-mod-data-view:not(.editing) div[role="main"] .datapreferences.my-5 form#options {
-display: none;
-}
-
-.datapreferences.my-5 form .box.py-3.generalbox a {
-color: $secondary;
-}
-
-&#page-mod-data-view:not(.editing) #sticky-footer .navitem a {
-display: none;
-}
-
-/* .editing #region-main ul.nav.nav-tabs.mb-3, .editing #options {
-display: block;
-} */
-
-span.highlight {
-    color: inherit !important;
-}
-
-.alert.alert-success.alert-block.fade.in {
-    display: none;
-}
+@mixin bbdd-cartas {
+    .carta {
+        background-color: #fdf6e3;
+        /* color crema */
+        border: 15px solid transparent;
+        /* grosor del marco */
+        padding: 1.5rem;
+        position: relative;
+        /* Borde con franjas diagonales: rojo, crema, azul, crema */
+        border-image: repeating-linear-gradient( 45deg, #d32f2f 0 20px, /* rojo */
+        #fdf6e3 20px 40px, /* crema */
+        #1e3a8a 40px 60px, /* azul */
+        #fdf6e3 60px 80px/* crema */
+        ) 15;
+        border-image-slice: 20;
+        border-image-repeat: round;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        margin-bottom: 2rem;
+    }
 }
 
 
