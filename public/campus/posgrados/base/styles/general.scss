@@ -1945,6 +1945,40 @@ body.home:not(.editing) {
                             .mom-6 {
                                 background-image: url(../../../base/img/sesion6.svg);
                             }
+                            .group-icon {
+                                background-image: url(../../../base/img/group-icon.png);
+                            }
+
+                            .person-icon {
+                                background-image: url(../../../base/img/person-icon.png);
+                            }
+                            .btn-actividad-icon {
+                                border-radius: 500px;
+                                text-decoration: none !important;
+                                background-color: #152F4E;
+                                color: white !important;
+                                font-weight: 400 !important;
+                                margin: 15px 15px 15px 0;
+                                padding: 7px 18px 7px 45px !important;
+                            }
+
+                            .btn-actividad-icon:hover {
+                                background-color: #4C5661;
+                            }
+
+                            .icono-grupal {
+                                background-image: url(../../../base/img/whiteicon-group.png);
+                                background-repeat: no-repeat;
+                                background-size: 22px;
+                                background-position: center left 14px;
+                            }
+
+                            .icono-individual {
+                                background-image: url(../../../base/img/whiteicon-person.png);
+                                background-repeat: no-repeat;
+                                background-size: 15px;
+                                background-position: center left 14px;
+                            }
                             .page-actividad {
                                 .img-portada img,
                                 img.img-portada {
