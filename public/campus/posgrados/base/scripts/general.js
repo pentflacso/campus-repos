@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Verificar si el body tiene la clase "editing"
-  if (!document.body.classList.contains("editing")) {
+  if (localStorage.getItem("developer") === null) {
+    // Si 'developer' NO está en localStorage, sal del script.
     return;
   }
 
