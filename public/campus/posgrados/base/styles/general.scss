@@ -1007,6 +1007,11 @@ body.home {
                 .section-item {
                   border: none;
                   padding: 0;
+                  .course-section-header {
+                    .section_goto {
+                      display: none;
+                    }
+                  }
                 }
               }
               li.section:not(#section-0) {
@@ -1187,72 +1192,74 @@ body.home:not(.editing) {
     min-height: 12rem;
     border-bottom: 0;
     padding: 0 !important;
-    .course-section-header {
+    .section-item {
       position: absolute;
       width: 100%;
       height: 100%;
-      h3.sectionname {
+      .course-section-header {
         position: absolute;
         width: 100%;
         height: 100%;
-        //display: block;
-        //z-index: 1000;
-        a:first-of-type {
-          @include title;
-          text-transform: uppercase;
-          text-decoration: none;
+        h3.sectionname {
           position: absolute;
-          top: 0;
-          left: 0;
-          padding: 3rem 1.5rem;
           width: 100%;
           height: 100%;
-          display: block;
-          z-index: 2;
-          &:before {
-            content: "";
+          //display: block;
+          //z-index: 1000;
+          a:first-of-type {
+            @include title;
+            text-transform: uppercase;
+            text-decoration: none;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 10px; // Tamaño inicial pequeño
-            height: 10px;
-            background-color: rgba(0, 0, 0, 0.15);
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform 0.3s ease-out;
-            z-index: -1;
-          }
-          &:hover:before {
-            transform: translate(-50%, -50%) scale(110); // Crece uniformemente
-          }
-          @media (max-width: 576px) {
-            padding: 1.5rem 1.5rem;
+            top: 0;
+            left: 0;
+            padding: 3rem 1.5rem;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 2;
+            &:before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 10px; // Tamaño inicial pequeño
+              height: 10px;
+              background-color: rgba(0, 0, 0, 0.15);
+              border-radius: 50%;
+              transform: translate(-50%, -50%) scale(0);
+              transition: transform 0.3s ease-out;
+              z-index: -1;
+            }
+            &:hover:before {
+              transform: translate(-50%, -50%) scale(110); // Crece uniformemente
+            }
+            @media (max-width: 576px) {
+              padding: 1.5rem 1.5rem;
+            }
           }
         }
+        .sectionbadges {
+          display: none !important;
+        }
       }
-      .sectionbadges {
-        display: none !important;
-      }
-    }
-    .content {
-      //padding-top: 50px !important;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      .my-3 {
+
+      .content {
+        //padding-top: 50px !important;
         position: absolute;
         width: 100%;
         height: 100%;
-        margin-top: 0 !important;
-        .course-description-item.summarytext {
-          margin: 0 !important;
+        .my-3 {
           position: absolute;
           width: 100%;
           height: 100%;
-          .description-inner {
+          margin-top: 0 !important;
+          .summarytext {
+            margin: 0 !important;
             position: absolute;
             width: 100%;
             height: 100%;
+
             .no-overflow {
               position: relative;
               width: 100%;
@@ -1285,6 +1292,9 @@ body.home:not(.editing) {
               }
             }
           }
+        }
+        .section-summary-activities {
+          display: none !important;
         }
       }
     }
