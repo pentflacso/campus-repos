@@ -1,5 +1,4 @@
 /* SCRIPT PARA HABILITAR UN CSS DE MODO DEV */
-
 document.addEventListener("DOMContentLoaded", () => {
   const DEV_CSS_HOST = "https://localhost:3000";
   const ORIGINAL_CSS_PATH = document.getElementById("pent-styles").href;
@@ -137,21 +136,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Función para controlar la visibilidad del h1 y la etiqueta a
   function controlarVisibilidad() {
-    var singleSection = document.querySelector(
-      ".course-content .single-section"
-    );
-    var section0H1 = document.querySelector(".course-content #section-0 h1");
-    var section0Link = document.querySelector(
-      ".course-content #section-0 p#volver a"
+    var isHome = document.querySelector(
+      "#page-course-view-topics"
     );
 
-    if (singleSection) {
-      // Si existe el div .single-section, ocultar el h1
-      section0H1.style.display = "none";
-    } else {
-      // Si no existe el div .single-section, ocultar la etiqueta a
-      section0Link.style.display = "none";
-      // Agregar la clase .home al body
+    if (isHome) {
       document.body.classList.add("home");
     }
   }

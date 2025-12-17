@@ -1034,6 +1034,8 @@ body.home {
                     .summarytext {
                       .no-overflow {
                         margin-top: 0 !important;
+                        overflow-x: hidden !important;
+
                         h2 {
                           font-family: "Roboto" !important;
                           font-size: $fs-base !important;
@@ -1313,6 +1315,23 @@ body.home:not(.editing) {
 /* GENERAL - para elementos repetidos en home, modulos y demás */
 
 #page-wrapper {
+    .badge.bg-primary {
+        background-color: $primary;
+        color: white !important;
+    }
+    .badge.bg-secondary {
+        background-color: rgb(241, 221, 163) !important;
+        
+    }
+    .section-item {
+        .content {
+            ul.section {
+                .activity {
+                    border-top: 0;
+                }
+            }
+        }
+    }
   .dropdown-item:hover,
   .dropdown-item:active {
     background-color: $grey2 !important;
@@ -2054,7 +2073,8 @@ body.home:not(.editing) {
                 .marquesina {
                   position: absolute; // Se sale del flujo normal de los divs padres
                   //left: 0;
-                  top: 40px;
+                  //top: 40px;
+                  //top: 280px;
                   width: 100vw; // Ocupa todo el ancho de la pantalla
                   white-space: nowrap;
                   height: 100%;
@@ -2298,6 +2318,11 @@ body:not(.home) {
   #page {
     #topofscroll {
       /* contenido general */
+      #page-header {
+        .page-header-headings {
+            display: none;
+        }
+      }
       #page-content {
         #region-main-box {
           #region-main {
@@ -2312,15 +2337,13 @@ body:not(.home) {
                     }
                     .content {
                       .my-3 {
-                        .course-description-item.summarytext {
-                          .description-inner {
+                        .summarytext {                          
                             .no-overflow {
                               h2,
                               p.fecha {
                                 display: none;
                               }
-                            }
-                          }
+                            }                          
                         }
                       }
                     }
@@ -2623,7 +2646,7 @@ body:not(.home) {
     #region-main-box {
       #region-main {
         h2 {
-          display: none;
+          display: none !important;
         }
         div[role="main"] {
           .box.py-3.generalbox.center.clearfix {
@@ -2690,7 +2713,7 @@ body:not(.home) {
                 }
                 h3 {
                   @include subtitle;
-                  border-bottom: 0;
+                  border-bottom: 0 !important;
                   margin-bottom: 2rem;
                 }
                 ul {
@@ -3408,10 +3431,29 @@ body {
 
 /* OPACITY */
 
-body {
+/* body {
   #page {
     opacity: 1;
     display: block;
     transition: all 1s ease !important;
   }
+} */
+
+
+
+/* CURSOS USINA - FORMATO DE CURSO TEMA EN PESTAÑAS */
+
+#page-course-view-onetopic{
+    li.activity {
+        border-top: 0;
+    }
+    #tabs-tree-start{
+        .tabs-wrapper{
+            padding: 0;
+            border: none !important;
+        }
+    }
+    .activity-altcontent{
+        border: none;
+    }
 }
