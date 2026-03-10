@@ -226,6 +226,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
       color: rgba(21, 47, 78, 1);
       display: flex;
       align-items: center;
+      font-family: "Roboto";
     }
 
     select {
@@ -301,6 +302,8 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
       font-weight: 500 !important;
       font-family: "Roboto";
       color: $primary;
+      border-block: 0 !important;
+      margin-bottom: initial;
     }
 
     .extra {
@@ -327,6 +330,7 @@ $p-xxxl: clamp(40px, 5vi + 18px, 80px);
       background-repeat: no-repeat;
       background-size: 10px;
       background-position: center right 20px;
+      font-family: "Roboto";
 
       &:hover {
         border: 1px solid $secondary;
