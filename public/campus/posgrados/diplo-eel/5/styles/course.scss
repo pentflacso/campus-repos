@@ -15,9 +15,9 @@
 
 /* BASE DE DATOS: ESPACIO DE TRABAJO - CITAR CANCIONES - EMBARQUE */
 
-.cmid-2974749,
-.cmid-2980020,
-.cmid-2980021 {
+.cmid-3000590,
+.cmid-3000591,
+.cmid-3000592 {
     @include general.bbdd-2col;
 }
 
@@ -32,19 +32,23 @@
     width: 100%;
     background-color: general.$grey1;
     margin-bottom: 2rem;
+
     .ficha-head {
         padding: general.$p-base;
         text-align: center;
     }
+
     .ficha-body {
         display: flex;
         border-top: 1px solid general.$grey2;
+
         .columna {
             flex: 1;
             padding: general.$p-md;
             border-right: 1px solid general.$grey2;
             text-align: center;
         }
+
         .columna:last-child {
             border-right: none;
         }
@@ -79,6 +83,7 @@
         padding-top: 177.78%;
         /* 16:9 invertido = 9/16 = 0.5625 -> 100 / 0.5625 = 177.78% */
     }
+
     .video-vertical iframe {
         position: absolute;
         top: 0;
@@ -103,8 +108,10 @@
     .drawer-right {
         display: none;
     }
+
     .secondary-navigation .navigation {
         background-color: transparent;
+
         .nav-tabs {
             background-color: transparent;
         }
