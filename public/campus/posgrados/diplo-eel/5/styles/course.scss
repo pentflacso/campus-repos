@@ -1,0 +1,119 @@
+@use '../../../base/styles/general';
+
+/* HOJA DE RECURSOS */
+
+
+/* Le pongo los estilos con mixin */
+
+.cmid-2975751 {
+    @include general.hoja-recursos;
+}
+
+
+/* ---------------------------- */
+
+
+/* BASE DE DATOS: ESPACIO DE TRABAJO - CITAR CANCIONES - EMBARQUE */
+
+.cmid-2974749,
+.cmid-2980020,
+.cmid-2980021 {
+    @include general.bbdd-2col;
+}
+
+
+/* ---------------------------- */
+
+
+/* FICHA TECNICA DE MESSI CON HEAD Y DOS COLUMNAS PARA ACTIVIDAD - CONEXIONES INESPERADAS - EMBARQUE */
+
+.ficha {
+    border: 1px solid general.$grey2;
+    width: 100%;
+    background-color: general.$grey1;
+    margin-bottom: 2rem;
+    .ficha-head {
+        padding: general.$p-base;
+        text-align: center;
+    }
+    .ficha-body {
+        display: flex;
+        border-top: 1px solid general.$grey2;
+        .columna {
+            flex: 1;
+            padding: general.$p-md;
+            border-right: 1px solid general.$grey2;
+            text-align: center;
+        }
+        .columna:last-child {
+            border-right: none;
+        }
+    }
+}
+
+
+/* BBDD KIT DE IDEAS - POSTITS - DIEL */
+
+.cmid-2981106 {
+    @include general.bbdd-postit;
+}
+
+
+/* BBDD MI EXPERIENCIA CON LA IA - DIEL */
+
+.cmid-2982976 {
+    @include general.bbdd-1col;
+}
+
+.cmid-2983971 {
+    @include general.bbdd-1col;
+}
+
+
+/* estilos para videos verticales de MD en Modal */
+
+.cmid-2983761 {
+    .video-vertical {
+        position: relative;
+        width: 100%;
+        padding-top: 177.78%;
+        /* 16:9 invertido = 9/16 = 0.5625 -> 100 / 0.5625 = 177.78% */
+    }
+    .video-vertical iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+
+
+/* BBDD Propuestas de asesoría - EVAIEL */
+
+.cmid-2985102 {
+    @include general.bbdd-1col-sinfiltro;
+}
+
+
+/* MESA GECO - Solapa derecha ocultada */
+
+.cmid-2989446 {
+    .drawer-right {
+        display: none;
+    }
+    .secondary-navigation .navigation {
+        background-color: transparent;
+        .nav-tabs {
+            background-color: transparent;
+        }
+    }
+}
+
+
+/* BBDD GECO cartas */
+
+.cmid-2989448 {
+    @include general.bbdd-cartas;
+}
