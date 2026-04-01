@@ -12,25 +12,6 @@ const options = {
   cert: fs.readFileSync('cert.pem'), // Certificado
 };
 
-// Rutas auxiliares para el entorno de desarrollo
-app.get('/dev', (req, res) => {
-  res.send(`
-    <script>
-      localStorage.setItem("developer", "true");
-      alert("✅ Modo Developer habilitado para los estilos.");
-    </script>
-  `);
-});
-
-app.get('/undev', (req, res) => {
-  res.send(`
-    <script>
-      localStorage.removeItem("developer");
-      alert("🛑 Modo Developer deshabilitado.");
-    </script>
-  `);
-});
-
 // Servir archivos estáticos desde la carpeta actual
 app.use(express.static(path.join(__dirname, 'public')));
 

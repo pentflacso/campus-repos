@@ -60,13 +60,4 @@ Si en lugar de correr todo junto prefieres arrancar los procesos por separado en
 - **`npm run build`**: Compila Sass a CSS una única vez y se detiene (ideal si solo quieres ver cómo construirá la versión final).
 
 ---
-
-## 🛠️ Modo Developer (Switch de Estilos)
-
-Si cuentas con una lógica front-end que utiliza una variable de `localStorage` para habilitar componentes de desarrollo (como el switch de estilos recargables en tiempo real), puedes activarlo y desactivarlo fácilmente accediendo a estas rutas desde tu navegador web, sin necesidad de abrir el inspector de elementos:
-
-- 👉 **Activar:** [https://localhost:3000/dev](https://localhost:3000/dev) (Crea la variable `developer="true"` en tu navegador y te regresa a la página anterior).
-- 👉 **Desactivar:** [https://localhost:3000/undev](https://localhost:3000/undev) (Remueve la variable y desactiva el modo de desarrollo).
-
----
 ¡Eso es todo! Ya estás listo para editar los archivos dentro de la carpeta `public/` y presionar F5 en tu navegador para ver tus creaciones.
