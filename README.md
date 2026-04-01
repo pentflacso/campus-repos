@@ -46,6 +46,7 @@ npm run dev
 
 Luego, abre tu navegador de internet y entra a la siguiente dirección:
 👉 **https://localhost:3000**
+o directamente a la hoja de estilos compilada: **https://localhost:3000/campus/posgrados/base/styles/general.css**
 
 > [!WARNING]
 > **Aviso sobre el navegador:** Al entrar, es muy probable que Google Chrome, Firefox o Edge te muestren una pantalla de advertencia roja alertándote que "**La conexión no es privada**" o el sitio no es seguro. Esto es completamente **normal** al trabajar en tu PC local con HTTPS. Solo debes hacer clic en el botón de "**Configuración avanzada**" (o Avanzado) en esa misma pantalla, y luego en **"Continuar a localhost (inseguro)"** para poder ver la página.
@@ -57,6 +58,15 @@ Si en lugar de correr todo junto prefieres arrancar los procesos por separado en
 - **`npm run server`**: Inicia *solo* el servidor web.
 - **`npm run watch`**: Inicia *solo* el observador de Sass (re-compila automáticamente en tiempo real).
 - **`npm run build`**: Compila Sass a CSS una única vez y se detiene (ideal si solo quieres ver cómo construirá la versión final).
+
+---
+
+## 🛠️ Modo Developer (Switch de Estilos)
+
+Si cuentas con una lógica front-end que utiliza una variable de `localStorage` para habilitar componentes de desarrollo (como el switch de estilos recargables en tiempo real), puedes activarlo y desactivarlo fácilmente accediendo a estas rutas desde tu navegador web, sin necesidad de abrir el inspector de elementos:
+
+- 👉 **Activar:** [https://localhost:3000/dev](https://localhost:3000/dev) (Crea la variable `developer="true"` en tu navegador y te regresa a la página anterior).
+- 👉 **Desactivar:** [https://localhost:3000/undev](https://localhost:3000/undev) (Remueve la variable y desactiva el modo de desarrollo).
 
 ---
 ¡Eso es todo! Ya estás listo para editar los archivos dentro de la carpeta `public/` y presionar F5 en tu navegador para ver tus creaciones.
