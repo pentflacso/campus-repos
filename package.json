@@ -6,7 +6,8 @@
     "scripts": {
         "build": "sass public/campus:public/campus --no-source-map --style compressed",
         "watch": "sass --watch public/campus:public/campus --no-source-map --style compressed",
-        "server": "node server.js"
+        "server": "node server.js",
+        "dev": "npm-run-all --parallel server watch"
     },
     "keywords": [],
     "author": "",
