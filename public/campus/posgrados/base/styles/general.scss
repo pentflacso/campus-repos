@@ -3547,6 +3547,8 @@ body:not(.home) {
 
 body {
   &#page-mod-data-view {
+
+
     #page-content {
       div[role="main"] {
         h5 {
@@ -3656,11 +3658,14 @@ body {
           }
         }
 
+
+
         /* Añadir entrada */
         #defaulttemplate-addentry {}
 
         /* Vista individual */
         #data-singleview-content {
+
           a:not(.btn-icon) {
             color: $primary !important;
             text-decoration: underline;
@@ -4024,4 +4029,12 @@ body {
   .activity-altcontent {
     border: none;
   }
+}
+
+
+strong,
+select,
+a,
+div {
+  font-family: "Roboto" !important;
 }
