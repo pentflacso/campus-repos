@@ -4038,3 +4038,7 @@ a,
 div {
   font-family: "Roboto" !important;
 }
+
+.btn-danger {
+  @include btn-primario();
+}
