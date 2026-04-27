@@ -1,0 +1,31 @@
+@use '../../../base/styles/general';
+
+/* HOJA DE RECURSOS */
+
+
+/* Le pongo los estilos con mixin */
+
+.cmid-2985499 {
+    @include general.hoja-recursos;
+}
+
+
+/* BBDD - VALS CON CHATGPT - MODULO I */
+
+.cmid-2978019,
+.cmid-2980996 {
+    @include general.bbdd-1col;
+}
+
+
+/* Base de datos La EDA en el aula */
+
+.cmid-2984906, .cmid-2985521 {
+    @include general.bbdd-1col;
+}
+
+/* Base de datos MODULO III Evaluar la evaluacion */
+
+.cmid-2992143 {
+    @include general.bbdd-1col;
+}
