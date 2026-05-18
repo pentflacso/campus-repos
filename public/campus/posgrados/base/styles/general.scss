@@ -1729,6 +1729,10 @@ body.home:not(.editing) {
 
   /* Acordeón bootstrap */
   #accordion {
+    a {
+      color: $primary;
+    }
+
     .panel {
 
       //border-bottom: 1px solid $grey2;
