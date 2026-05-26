@@ -1729,10 +1729,6 @@ body.home:not(.editing) {
 
   /* Acordeón bootstrap */
   #accordion {
-    a {
-      color: $primary;
-    }
-
     .panel {
 
       //border-bottom: 1px solid $grey2;
@@ -2412,7 +2408,7 @@ body.home:not(.editing) {
                   //top: 280px;
                   width: 100vw; // Ocupa todo el ancho de la pantalla
                   white-space: nowrap;
-                  height: 100%;
+                  //height: 100%;
                 }
 
                 .texto {
