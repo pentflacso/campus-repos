@@ -1543,6 +1543,7 @@ body.home:not(.editing) {
     border-top: 0 !important;
     background: transparent;
     padding-inline: initial;
+    border-block: none !important;
   }
 
   h4 {
