@@ -2943,6 +2943,7 @@ body:not(.home) {
                       @media (max-width: 576px) {
                         padding-left: 0;
                         padding-top: 5rem;
+                        margin-top: 0;
                       }
 
                       h3 {
@@ -2984,12 +2985,12 @@ body:not(.home) {
                       }
                     }
 
+                    .pent-sesion-0 {
+                      background-image: url(../../../base/img/sesion0.svg);
+                    }
+
                     .pent-sesion-1 {
                       background-image: url(../../../base/img/sesion1.svg);
-
-                      @media (max-width: 768px) {
-                        margin-top: 0;
-                      }
                     }
 
                     .pent-sesion-2 {
