@@ -3084,10 +3084,12 @@ body:not(.home) {
         }
 
         h6 {
-          font-size: $fs-sm;
-          font-family: "Roboto";
+          color: $grey3 !important;
+          font-size: $fs-base;
           font-weight: 400 !important;
-          color: $primary;
+          font-family: "Roboto";
+          margin-bottom: 2rem;
+          line-height: 120%;
         }
 
         div[role="main"] {
