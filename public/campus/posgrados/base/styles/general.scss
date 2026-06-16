@@ -3083,6 +3083,13 @@ body:not(.home) {
           display: none !important;
         }
 
+        h6 {
+          font-size: $fs-sm;
+          font-family: "Roboto";
+          font-weight: 400 !important;
+          color: $primary;
+        }
+
         div[role="main"] {
           .box.py-3.generalbox.center.clearfix {
             .no-overflow {
