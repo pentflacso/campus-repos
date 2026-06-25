@@ -4057,3 +4057,31 @@ div {
 .btn-danger {
   @include btn-primario();
 }
+
+#equipoCarousel {
+  .carousel-item img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+  }
+
+  a:hover,
+  .my-arrow:hover {
+    color: $grey3 !important;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    color: $primary !important;
+  }
+
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover,
+  .carousel-control-prev:focus,
+  .carousel-control-next:focus {
+    color: $grey3 !important;
+    text-decoration: none !important;
+    outline: none !important;
+  }
+
+}
