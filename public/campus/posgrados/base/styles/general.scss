@@ -1548,6 +1548,7 @@ body.home:not(.editing) {
 
   h4 {
     @include subtitle;
+    border-bottom: none !important;
     /* font-family: 'Roboto';
         color: $primary !important; */
   }
